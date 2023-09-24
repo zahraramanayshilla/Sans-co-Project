@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        body {
+            background: url(./img/SC6.jpeg) rgba(0, 0, 0, 0.8);
+            background-blend-mode: multiply;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 1440px;
+            height: 1024px;
+        }
+
+        @media(max-width:990px) {
+            .sidebar {
+                background-color: rgba(255, 255, 255, 0.15);
+                backdrop-filter: blur(10px);
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+        <div class="container">
+            <!-- logo-nav -->
+            <a class="navbar-brand" href="#"><img src="./img/logo-nav.png" alt=""></a>
+            <!-- togler btn(garis3) -->
+            <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- sidebar -->
+            <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <!-- sidebar head -->
+                <div class="offcanvas-header text-white border-bottom">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="./img/logo-nav.png" alt=""></h5>
+                    <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <!-- sidebar-body -->
+                <div class="offcanvas-body d-flex flex-column flex-lg-row p-4"> <!--font size-->
+                    <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+                        <li class="nav-item mx-2">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="#about us">About us</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="#menu">Menu</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="#gallery">Gallery</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="#special offers">Special Offers</a>
+                        </li>
+                    </ul>
+                    <!-- reservation btn -->
+                    <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
+                        <a href="#reservation" class="text-white text-decoration-none px-3 py-1"
+                            style="background-color: #382D33;">RESERVATION</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <center>
+        <h2> </h2>
+    </center>
+   <!-- footer -->
+   <footer class="text-white pt-5 pb-4" style="background-color: #382D33;">
+    <div class="container text-center text-md-start">
+        <div class="row text-center text-md-start">
+            <!-- logo footer -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <img src="./img/logo-footer.png" alt="">
+            </div>
+            <!-- conten -->
+                <h5 class="text-uppercase mb-4 font-weight-bold text-white">Content</h5>
+                <p>
+                    <a href="#" class="text-white" style="text-decoration: none;"> Home</a>
+                </p>
+                <p>
+                    <a href="#" class="text-white" style="text-decoration: none;"> About Us</a>
+                </p>
+                <p>
+                    <a href="#" class="text-white" style="text-decoration: none;"> Menu</a>
+                </p>
+                <p> <a href="#" class="text-white" style="text-decoration: none;"> Contact</a>
+                </p>
+            </div>
+            <!-- contac -->
+            <div class="col-md-3 col-lg-2 col-md-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-white"> Contacts</h5>
+                <p>
+                    <a href="#" class="text-white" style="text-decoration: none;"> 022-20458359</a>
+                </p>
+                <p>
+                    <a href="#" class="text-white" style="text-decoration: none;"> sanscoworking@gmail.com</a>
+                </p>
+                <p>
+                    <i class="bi bi-instagram "></i>
+                </p>
+            </div>
+            <!-- open hour -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-white"> Opening Hours</h5>
+                <p>
+                    <a href="#" class="text-white" style="text-decoration: none;"> Everyday 10.00 - 05.00</a>
+                </p>
+            </div>
+        </div>
+        <hr class=" mt-4 mb-4">
+        <div class="row text-md-center">
+            <div class="col-md-12">
+                <p>Copyrights ⓒ 2023 Sans Co Cafe & CoWorking Space</p>
+            </div>
+        </div>
+    </div>
+</footer>
+   
+</body>
+
+</html>
