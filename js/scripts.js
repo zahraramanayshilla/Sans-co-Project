@@ -8,12 +8,7 @@ window.addEventListener('scroll', function(){
     }
 });
 
-// const modal = document.getElementById('reservasi-modal')[0];
-// window.addEventListener('onclick', function(){
-//     console.log(window.onclick);
-//     if(window.onclick >1){
-//         modal.classList.replace('reservasi-modal');
-//     } else if(this.window.onclick <= 0){
-//         modal.classList.replace('reservasi-modal')
-//     }
-// });
+document.querySelector('.click').addEventListener('click',(e) => {
+    
+    e.target.textContent = 'Clicked!';
+})
