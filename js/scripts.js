@@ -1,3 +1,4 @@
+// navbar
 const navbar = document.getElementsByTagName('nav')[0];
 window.addEventListener('scroll', function(){
     console.log(window.scrollY);
@@ -8,7 +9,14 @@ window.addEventListener('scroll', function(){
     }
 });
 
-document.querySelector('.click').addEventListener('click',(e) => {
-    
-    e.target.textContent = 'Clicked!';
-})
+// btn-reservasi-modal
+const modal= document.querySelector('#reservasi-modal');
+const openModal= document.querySelector('.open-button');
+const closeModal= document.querySelector('.close-button');
+
+openModal.addEventListener('click',() => {
+    modal.showModal();
+});
+closeModal.addEventListener('click',() => {
+    modal.close();
+});
