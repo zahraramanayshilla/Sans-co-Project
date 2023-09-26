@@ -60,8 +60,8 @@
 
             box-shadow: 0px 0px 10px 0px rgb(209, 209, 209, 0.3);
             background-color: #382D33;
-            /* 
-            display: none; */
+            
+            display: none;
 
         }
 
@@ -84,7 +84,7 @@
 
         /* hero */
         #hero {
-            background-image: url(./img/background\ home.png);
+            background-image: url(./img/img-home/background\ home.png);
             background-blend-mode: multiply;
             background-repeat: no-repeat;
             background-position: center;
@@ -109,7 +109,21 @@
             height: 240px;
         }
     </style>
+<script>
+    function reservasiModal() {
+       let status = $('#reservasi-modal').css('display')
+       if (status == 'block') {
+           $('#reservasi-modal').hide()       
+       } else {
+           $('#reservasi-modal').show()
 
+       }
+   }
+
+   $('#myButton').on('click',function(event){
+    event.preventDefault();
+   });
+</script>
 </head>
 
 <body>
@@ -142,9 +156,8 @@
 
                 </ul>
                 <!-- reservation btn -->
-                <div onclick="reservasiModal()"
-                    class="btn-reservasi d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
-                    <a href="#reservation" class="text-white text-decoration-none px-3 py-1"
+                <div class="btn-reservasi d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
+                    <a onclick="reservasiModal();" href="#reservation" class="text-white text-decoration-none px-3 py-1"
                         style="border: 4px solid #382D33; border-radius: 0;">RESERVATION</a>
 
                 </div>
@@ -167,7 +180,7 @@
         <div class="container h-100">
             <div class="row h-100">
                 <div class="col-md-6 my-auto d-md-flex">
-                    <img class="accent" style="width: 391px; height: 145px;" src="./img/Sans co home.png">
+                    <img class="accent" style="width: 391px; height: 145px;" src="./img/img-home/Sans co home.png">
                 </div>
             </div>
         </div>
@@ -186,23 +199,23 @@
                         eligendi voluptas! Maxime, enim?</h5>
                 </div>
                 <img class="img-about position-absolute start-50 "
-                    style="width: 532px; height: 410px; margin-top:100px;" src="./img/Group 73.png" alt="">
+                    style="width: 532px; height: 410px; margin-top:100px;" src="./img/img-home/Group 73.png" alt="">
             </div>
         </div>
     </section>
 
     <!-- menu -->
-    <section id="menu">
+    <section id="menu page">
         <img style=" margin-left: 560px; margin-bottom: -80px; position: relative; width: 226px; height: 25px;"
-            src="./img/tulisan-menu.png" alt="">
+            src="./img/img-home/tulisan-menu.png" alt="">
         <div class="container-fluid pb-5">
             <div class="row">
                 <div class=" col " style="vertical-align: bottom; margin-left: 10px;">
-                    <img src="./img/menu1.png" alt="">
-                    <img src="./img/menu2.png" alt="">
-                    <img style="margin-top: 70px;" src="./img/menu3.png" alt="">
-                    <img src="./img/menu4.png" alt="">
-                    <img src="./img/menu5.png" alt="">
+                    <img src="./img/img-home/menu1.png" alt="">
+                    <img src="./img/img-home/menu2.png" alt="">
+                    <img style="margin-top: 70px;" src="./img/img-home/menu3.png" alt="">
+                    <img src="./img/img-home/menu4.png" alt="">
+                    <img src="./img/img-home/menu5.png" alt="">
                 </div>
             </div>
         </div>
