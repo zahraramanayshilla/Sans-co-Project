@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- icon bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <title>reservation</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #251e22;
+        }
+
+        .navbar {
+            z-index: 3;
+        }
+
+        .nav-link {
+            font-size: 16px;
+        }
+
+        .nav-link.active {
+            font-weight: 700;
+        }
+
+        /* navbar-color */
+        .nav-color {
+            background-color: #251e22;
+            transition: all ease-in-out 0.3s;
+        }
+
+        .bg-transparent {
+            transition: all ease-in 0.3s;
+        }
+
+        /* buton hover */
+        .btn-reservasi:hover {
+            background-color: #382D33;
+        }
+
+        .modal-body a:hover {
+            background-color: #382D33;
+        }
+
+        .btn-here:hover {
+            color: #fff;
+            background-color: #382D33;
+            font-weight: 500;
+
+        }
+
+        .modal-footer>input {
+            background-color: #0a0000;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg  navbar-dark bg-transparent position-fixed w-100">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="../img/logo-nav.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#about-us">About us</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#menu">Menu</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#special-offers">Special offers</a>
+                    </li>
+
+                </ul>
+                <!-- reservation btn -->
+                <div
+                    class="btn-reservasi d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
+                    <a href="#reservation" class="text-white text-decoration-none px-3 py-1"
+                        style="border: 4px solid #382D33; border-radius: 0;">RESERVATION</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="reservasi" class="pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center text-white" style="margin-top: 100px;">
+                    <h2>RESERVATION</h2>
+                    <span class="sub-title">Event</span>
+                    <!-- reservation-modal- btn -->
+                    <div class="modal-body flex-column flex-lg-row justify-content-center align-items-center gap-3"
+                        style="margin-top: 20px;">
+                        <button class="btn-here" style="border:none; border-radius: 10px; padding: 5px;" type="button"
+                            data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            RESERVATION HERE
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <p class="text-white text-center mt-4">Syarat & Ktentuan</p>
+        </div>
+    </section>
+
+    <!-- Button trigger modal -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 " id="exampleModalLabel">Reservation Event</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body  ">
+                    <div class="form-group m-2">
+
+                        <input type="text" name="Nama" placeholder="Nama" class="form-control">
+                    </div>
+                    <div class="form-group m-2">
+
+                        <input type="text" placeholder="Nomer telepon" class="form-control">
+                    </div>
+                    <div class="form-group m-2">
+
+                        <input type="text" placeholder="Instansi/komunitas" class="form-control">
+                    </div>
+                    <div class="form-group m-2">
+
+                        <input type="date" placeholder="Hari/Tanggal" class="form-control">
+                    </div>
+                    <div class="form-group m-2">
+                        <label for="">jam </label>
+                        <input type="time" placeholder="Jam" class="form-control">
+                    </div>
+                    <div class="form-group m-2">
+
+                        <input type="text" placeholder="Durasi" class="form-control">
+                    </div>
+                    <div class="form-group m-2">
+
+                        <input type="text" placeholder="jumlah orang" class="form-control">
+                    </div>
+                    <div class="form-group m-2">
+
+                        <input type="text" placeholder="Area" class="form-control">
+                    </div>
+                    <div class="form-group m-2 col-6">
+                        <div class="text">
+                            <label for="">Menu</label>
+                        </div>
+                        <label class="radio-button">
+                            <input type="radio" name="radio-group" id="option1" placeholder="Area">
+                            <span class="radio-label">1. Paket Platinum A (45K) </span>
+                        </label>
+                        <label class="radio-button">
+                            <input type="radio" name="radio-group" id="option2" placeholder="Area">
+                            <span class="radio-label">2. Paket Platinum B (45K)
+                            </span>
+                        </label>
+                        <label class="radio-button">
+                            <input type="radio" name="radio-group" id="option3" placeholder="Area">
+                            <span class="radio-label">3. Paket Gold (40K) </span>
+                        </label>
+                        <label class="radio-button">
+                            <input type="radio" name="radio-group" id="option4" placeholder="Area">
+                            <span class="radio-label"> 4. Paket Silver (35K)
+                            </span>
+                        </label>
+                    </div>
+                    <div class="form-group m-2">
+                        <label for="">jam keluar menu </label>
+                        <input type="time" placeholder="Jam keluar Menu" class="form-control">
+                    </div>
+                    <div class="form-group m-2">
+
+                        <input type="text" placeholder="DP" class="form-control">
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn-here" style="border-radius:5px ;">BOOKING NOW</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card mb-3 " style="max-width: 400px;">
+            <div class="row g-0">
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Fasilitas
+                        </h5>
+                        <p class="card-text">
+                            <li>Projector,</li>
+                            <li>Screen</li>
+                            <li> Whiteboard, spidol, penghapus</li>
+                            <li>Full AC</li>
+                            <li> Free Wifi (Performance tergantung provider).</li>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3  " style="max-width: 400px;">
+            <div class="row g-0">
+                <div class="col-md-10">
+                    <div class="card-body">
+                        <h5 class="card-title">Biaya Sewa Tempat </h5>
+                        <p class="card-text">
+                            <span> minimal order 30K per orang per 2 jam</span>
+                            <li>2 Jam minimal order 30K per orang</li>
+                            <li> 4 jam minimal order 60K per orang</li>
+                            <li>6 jam minimal order 90K per orang</li>
+                            dst - Bersifat akumulatif
+                        </p>
+                        <p>Kapasitas maksimal
+                            <li><strong> Meeting room A : 13 orang</strong></li>
+                            <li><strong>Meeting room B : 6 orang</strong> </li>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <script src="../js/scripts.js"></script>
+</body>
+
+</html>

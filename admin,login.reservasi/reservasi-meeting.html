@@ -54,7 +54,11 @@
             color: #fff;
             background-color: #382D33;
             font-weight: 500;
-            
+
+        }
+
+        .modal-footer>input {
+            background-color: #0a0000;
         }
     </style>
 </head>
@@ -63,7 +67,7 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg  navbar-dark bg-transparent position-fixed w-100">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="./img/logo-nav.png" alt=""></a>
+            <a class="navbar-brand" href="#"><img src="../img/logo-nav.png" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -106,17 +110,17 @@
                     <!-- reservation-modal- btn -->
                     <div class="modal-body flex-column flex-lg-row justify-content-center align-items-center gap-3"
                         style="margin-top: 20px;">
-                        <button class="btn-here" style="border:none; border-radius: 0; padding: 5px;" type="button"
-                             data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <button class="btn-here" style="border:none; border-radius: 10px; padding: 5px;" type="button"
+                            data-bs-toggle="modal" data-bs-target="#exampleModal">
                             RESERVATION HERE
                         </button>
                     </div>
                 </div>
             </div>
+            <p class="text-white text-center mt-4">Syarat & Ktentuan</p>
         </div>
     </section>
 
-    <!-- Button trigger modal -->
 
 
     <!-- Modal -->
@@ -124,7 +128,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5 " id="exampleModalLabel">RESERVATION </h1>
+                    <h1 class="modal-title fs-5 " id="exampleModalLabel">Reservation Meeting Room</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body  ">
@@ -156,9 +160,18 @@
 
                         <input type="text" placeholder="jumlah orang" class="form-control">
                     </div>
-                    <div class="form-group m-2">
-
-                        <input type="text" placeholder="Area" class="form-control">
+                    <div class="form-group m-2 col-6">
+                        <div class="text">
+                            <label for="">Area</label>
+                        </div>
+                        <label class="radio-button">
+                            <input type="radio" name="radio-group" id="option1" placeholder="Area">
+                            <span class="radio-label">Meeting Room A</span>
+                        </label>
+                        <label class="radio-button">
+                            <input type="radio" name="radio-group" id="option2" placeholder="Area">
+                            <span class="radio-label">Meeting Room B</span>
+                        </label>
                     </div>
                     <div class="form-group m-2">
 
@@ -167,79 +180,91 @@
                 </div>
 
                 <div class="modal-footer">
-                    <input class="text-white text-decoration-none px-3 py-1"
-                        style="background-color: #382D33; border-radius: 4px; border: none;" type="submit" value="BOOKING NOW">
+                    <button type="button" class="btn-here" style="border-radius:5px ;">BOOKING NOW</button>
                 </div>
             </div>
         </div>
     </div>
+    <!-- card -->
+    <div class="container text-center">
+        <div class="row row-cols-3">
+            <div class="col">
+                <div class="card mb-3 " style="max-width: 400px;">
+                    <div class="row g-0">
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Fasilitas
+                                </h5>
+                                <p class="card-text">
+                                    <li>Projector,</li>
+                                    <li>Screen</li>
+                                    <li> Whiteboard, spidol, penghapus</li>
+                                    <li>Full AC</li>
+                                    <li> Free Wifi (Performance tergantung provider).</li>
+                                </p>
 
-    <!-- <div class="container">
-        <div class="form">
-            <div class="col">&times;</div>
-            <div class="text">
-                <h1>RESERVATION</h1>
-                <h5>Meeting Rooom</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-           
-        </div>
-    </div> -->
+            <div class="col">
+                <div class="card mb-3  " style="max-width: 400px;">
+                    <div class="row g-0">
+                        <div class="col-md-10">
+                            <div class="card-body">
+                                <h5 class="card-title">Biaya Sewa Tempat </h5>
+                                <p class="card-text">
+                                    <span> minimal order 30K per orang per 2 jam</span>
+                                    <li>2 Jam minimal order 30K per orang</li>
+                                    <li> 4 jam minimal order 60K per orang</li>
+                                    <li>6 jam minimal order 90K per orang</li>
+                                    dst - Bersifat akumulatif
+                                </p>
+                                <p>Kapasitas maksimal
+                                    <li><strong> Meeting room A : 13 orang</strong></li>
+                                    <li><strong>Meeting room B : 6 orang</strong> </li>
+                                </p>
 
-
-    <!-- <div class="card mb-3 " style="max-width: 540px;">
-        <div class="row g-0">
-            <div class="col-md-4">
-                <img src="..." class="img-fluid rounded-start" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="card-title">Fasilitas
-                    </h5>
-                    <p class="card-text">
-                        Projector,
-                        Screen,
-                        Whiteboard, spidol, penghapus,
-                        Full AC,
-                        Free Wifi (Performance tergantung provider).</p>
+            <div class="col">
+                <div class="card mb-3  " style="max-width: 400px;">
+                    <div class="row g-0">
+                        <div class="col-md-10">
+                            <div class="card-body">
+                                <h5 class="card-title">Biaya Sewa Tempat </h5>
+                                <p class="card-text">
+                                    <span> minimal order 30K per orang per 2 jam</span>
+                                    <li>2 Jam minimal order 30K per orang</li>
+                                    <li> 4 jam minimal order 60K per orang</li>
+                                    <li>6 jam minimal order 90K per orang</li>
+                                    dst - Bersifat akumulatif
+                                </p>
+                                <p>Kapasitas maksimal
+                                    <li><strong> Meeting room A : 13 orang</strong></li>
+                                    <li><strong>Meeting room B : 6 orang</strong> </li>
+                                </p>
 
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="card mb-3  " style="max-width: 540px;">
-        <div class="row g-0">
-            <div class="col-md-4">
-                <img src="..." class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="card-title">Biaya Sewa Tempat
-
-                    </h5>
-                    <p class="card-text">Rp 0</p>
-                    <p>
-                        - Yang ada minimal order 30K per orang per 2 jam
-                    <p>2 Jam minimal order 30K per orang</p>
-                    <p>4 jam minimal order 60K per orang</p>
-                    <p>6 jam minimal order 90K per orang</p>
-                    dst
-                    - Bersifat akumulatif
-                    </p>
-                    <p>
-                        B. Kapasitas maksimal
-                    <p> <strong> Meeting room A : 13 orang</strong></p>
-                    <p><strong>Meeting room B : 6 orang</strong> </p>
-                    </p>
-
-                </div>
-            </div>
-        </div>
-    </div> -->
+    </d>
 
 
 
 
-    <script src="js/scripts.js"></script>
+
+
+
+    <script src="../js/scripts.js"></script>
 </body>
 
 </html>
