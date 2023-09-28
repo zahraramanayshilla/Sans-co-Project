@@ -13,6 +13,7 @@
     <!-- icon bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <title>reservation</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
             background-color: #251e22;
@@ -43,6 +44,17 @@
         /* buton hover */
         .btn-reservasi:hover {
             background-color: #382D33;
+        }
+
+        .modal-body a:hover {
+            background-color: #382D33;
+        }
+
+        .btn-here:hover {
+            color: #fff;
+            background-color: #382D33;
+            font-weight: 500;
+            
         }
     </style>
 </head>
@@ -80,28 +92,101 @@
                     class="btn-reservasi d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
                     <a href="#reservation" class="text-white text-decoration-none px-3 py-1"
                         style="border: 4px solid #382D33; border-radius: 0;">RESERVATION</a>
-
                 </div>
             </div>
         </div>
     </nav>
+
     <section id="reservasi" class="pb-5">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center text-white" style="margin-top: 100px;">
                     <h2>RESERVATION</h2>
                     <span class="sub-title">Meeting Room</span>
-                    <!-- reservation btn -->
-                    <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3"
+                    <!-- reservation-modal- btn -->
+                    <div class="modal-body flex-column flex-lg-row justify-content-center align-items-center gap-3"
                         style="margin-top: 20px;">
-                        <a href="#reservation" class="text-white text-decoration-none px-3 py-1"
-                            style="border: 4px solid #382D33; border-radius: 0;">RESERVATION HERE   </a>
+                        <button class="btn-here" style="border:none; border-radius: 0; padding: 5px;" type="button"
+                             data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            RESERVATION HERE
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <div class="card mb-3 " style="max-width: 540px;">
+
+    <!-- Button trigger modal -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 " id="exampleModalLabel">RESERVATION </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body  ">
+                    <div class="form-group m-2">
+
+                        <input type="text" name="Nama" placeholder="Nama" class="form-control">
+                    </div>
+                    <div class="form-group m-2">
+
+                        <input type="text" placeholder="Nomer telepon" class="form-control">
+                    </div>
+                    <div class="form-group m-2">
+
+                        <input type="text" placeholder="Instansi/komunitas" class="form-control">
+                    </div>
+                    <div class="form-group m-2">
+
+                        <input type="date" placeholder="Hari/Tanggal" class="form-control">
+                    </div>
+                    <div class="form-group m-2">
+
+                        <input type="time" placeholder="Jam" class="form-control">
+                    </div>
+                    <div class="form-group m-2">
+
+                        <input type="text" placeholder="Durasi" class="form-control">
+                    </div>
+                    <div class="form-group m-2">
+
+                        <input type="text" placeholder="jumlah orang" class="form-control">
+                    </div>
+                    <div class="form-group m-2">
+
+                        <input type="text" placeholder="Area" class="form-control">
+                    </div>
+                    <div class="form-group m-2">
+
+                        <input type="text" placeholder="DP" class="form-control">
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <input class="text-white text-decoration-none px-3 py-1"
+                        style="background-color: #382D33; border-radius: 4px; border: none;" type="submit" value="BOOKING NOW">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="container">
+        <div class="form">
+            <div class="col">&times;</div>
+            <div class="text">
+                <h1>RESERVATION</h1>
+                <h5>Meeting Rooom</h5>
+            </div>
+           
+        </div>
+    </div> -->
+
+
+    <!-- <div class="card mb-3 " style="max-width: 540px;">
         <div class="row g-0">
             <div class="col-md-4">
                 <img src="..." class="img-fluid rounded-start" alt="...">
@@ -133,7 +218,7 @@
                     </h5>
                     <p class="card-text">Rp 0</p>
                     <p>
-                    - Yang ada minimal order 30K per orang per 2 jam
+                        - Yang ada minimal order 30K per orang per 2 jam
                     <p>2 Jam minimal order 30K per orang</p>
                     <p>4 jam minimal order 60K per orang</p>
                     <p>6 jam minimal order 90K per orang</p>
@@ -149,7 +234,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
 
