@@ -14,10 +14,7 @@
     <!-- link-font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap" />
     <style>
-       body {
-            background-color: #ff0090;
-            
-        }
+     
 
         .navbar {
             z-index: 3;
@@ -90,7 +87,7 @@
             left: 0;
             display: flex;
             overflow-x: scroll;
-            counter-reset: item;
+            counter-reset: unset;
             scroll-behavior: smooth;
             scroll-snap-type: x mandatory;
         }
@@ -99,13 +96,13 @@
         .carousel::after {
             content: "";
             position: absolute;
-            z-index: 2;
+            z-index: 3;
             left: 50%;
             translate: -50% 0;
             width: 500%;
             height: 500%;
             border-radius: 50%;
-            background: #ffffff;
+            background: black;
         }
 
         .carousel::before {
@@ -120,7 +117,7 @@
             position: relative;
             flex: 0 0 33.33%;
             width: 33.33%;
-            counter-increment: item;
+            counter-increment: inherit;
         }
 
         .carousel__snapper {
@@ -134,97 +131,117 @@
 
 
         }
+        
+        /* hero */
+        #hero {
+            
+            /* padding: 0 30px; */
+            background-image: url(./img/SC6.jpeg);
+            background-color: rgb(0, 0, 0, 0.5);
+            background-blend-mode: multiply;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+            width: 100%;
+        }
     </style>
 </head>
 
 <body>
- <!-- navbar -->
- <nav class="navbar navbar-expand-lg  navbar-dark bg-transparent position-fixed w-100">
-    <div class="container">
-        <a class="navbar-brand" href="#"><img src="./img/logo-nav.png" alt=""></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item mx-2">
-                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link" href="#about-us">About us</a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link" href="#menu">Menu</a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link" href="#gallery">Gallery</a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link" href="#special-offers">Special offers</a>
-                </li>
-
-            </ul>
-            <!-- reservation btn -->
-            <div
-                class="open-button btn-reservasi d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
-                <a onclick="reservasiModal();" href="#reservation" class="text-white text-decoration-none px-3 py-1"
-                    style="border: 4px solid #382D33; border-radius: 0;">RESERVATION</a>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg  navbar-dark bg-transparent position-fixed w-100">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="./img/logo-nav.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link " href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="about.html">About us</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link"  href="./menushela/sheilamenu.html">Menu</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link active" aria-current="page" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="special-offers.html">Special offers</a>
+                    </li>
+                </ul>
+                <!-- reservation btn -->
+                <div
+                    class="open-button btn-reservasi d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
+                    <a onclick="reservasiModal();" href="#reservation" class="text-white text-decoration-none px-3 py-1"
+                        style="border: 4px solid #382D33; border-radius: 0;">RESERVATION</a>
+                </div>
             </div>
         </div>
-    </div>
-</nav>
+    </nav>
+    <section id="hero">
+        <div class="container-fluid">
+            <div class="row h-100 ">
+                <section id="carousel" class="carousel">
+                    <ol class="carousel__viewport">
+                        <!-- more slide -->
+                        <li class="carousel__slide">
+                            <div class="carousel__snapper" style="background: url(./img/galeri1.png);">
 
-    <section class="carousel">
-        <ol class="carousel__viewport">
+                            </div>
+                        </li>
+                        <li class="carousel__slide">
+                            <div class="carousel__snapper" style="background: url(./img/galeri2.png);">
 
-            <!-- more slide -->
-            <li class="carousel__slide">
-                <div class="carousel__snapper" style="background: url(./img/galeri1.png);">
+                            </div>
+                        </li>
+                        <li class="carousel__slide">
+                            <div class="carousel__snapper" style="background: url(./img/galeri3.png);">
 
-                </div>
-            </li>
-            <li class="carousel__slide">
-                <div class="carousel__snapper" style="background: url(./img/galeri2.png);">
+                            </div>
+                        </li>
+                        <li class="carousel__slide">
+                            <div class="carousel__snapper" style="background: url(./img/galeri4.png);">
 
-                </div>
-            </li>
-            <li class="carousel__slide">
-                <div class="carousel__snapper" style="background: url(./img/galeri3.png);">
+                            </div>
+                        </li>
+                        <li class="carousel__slide">
+                            <div class="carousel__snapper" style="background: url(./img/galeri5.png);">
 
-                </div>
-            </li>
-            <li class="carousel__slide">
-                <div class="carousel__snapper" style="background: url(./img/galeri4.png);">
+                            </div>
+                        </li>
+                        <li class="carousel__slide">
+                            <div class="carousel__snapper" style="background: url(./img/galeri6.png);">
 
-                </div>
-            </li>
-            <li class="carousel__slide">
-                <div class="carousel__snapper" style="background: url(./img/galeri5.png);">
+                            </div>
+                        </li>
+                        <li class="carousel__slide">
+                            <div class="carousel__snapper" style="background: url(./img/galeri7.png);">
 
-                </div>
-            </li>
-            <li class="carousel__slide">
-                <div class="carousel__snapper" style="background: url(./img/galeri6.png);">
+                            </div>
+                        </li>
+                    </ol>
 
-                </div>
-            </li>
-            <li class="carousel__slide">
-                <div class="carousel__snapper" style="background: url(./img/galeri7.png);">
+                </section>
 
-                </div>
-            </li>
-        </ol>
 
+            </div>
+        </div>
     </section>
 
-     <!-- footer -->
-     <footer class="text-white pt-5 pb-4" style="background-color: #382D33;">
+
+    <!-- footer -->
+    <footer class="text-white pt-5 pb-4" style="background-color: #382D33;">
         <div class="container text-center text-md-start">
             <div class="row text-center text-md-start">
                 <!-- logo footer -->
                 <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <img src="../img/logo-footer.png" alt="">
+                    <img src="./img/logo-footer.png" alt="">
                 </div>
                 <!-- conten -->
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
@@ -285,7 +302,7 @@
     </footer>
 
 
-
+    <script src="./js/scripts.js"></script>
 </body>
 
 </html>
