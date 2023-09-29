@@ -4,64 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gallery</title>
+    <!-- link boostrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- link-font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap" />
     <style>
-        body {
-            background: url(./img/SC6.jpeg) rgba(0, 0, 0, 0.8);
-            background-blend-mode: multiply;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            width: 1440px;
-            height: 1024px;
+     
+
+        .navbar {
+            z-index: 3;
         }
 
-        @media(max-width:990px) {
-            .sidebar {
-                background-color: rgba(255, 255, 255, 0.15);
-                backdrop-filter: blur(10px);
-            }
-
+        .nav-link {
+            font-size: 16px;
         }
 
-        body {
-            font-family: sans-serif;
+        .nav-link.active {
+            font-weight: 700;
         }
 
-        .ellips1 {
-            width: 1440px;
-            height: 104px;
-            border-radius: 1440px;
-            background: url(<path-to-image>)
+        /* navbar-color */
+        .nav-color {
+            background-color: #251e22;
+            transition: all ease-in-out 0.3s;
         }
 
-        body {
-            font-family: sans-serif;
+        .bg-transparent {
+            transition: all ease-in 0.3s;
         }
 
-        .ellips2 {
-            width: 1440px;
-            height: 104px;
-            border-radius: 1440px;
-            background: url(<path-to-image>)
+        /* buton hover */
+        .btn-reservasi:hover {
+            background-color: #382D33;
         }
 
-        body {
-            display: grid;
-            place-items: center;
-            margin: 0;
-            height: 100vh;
-            padding: 0 50px;
-        }
+
 
         * {
             box-sizing: border-box;
-            scrollbar-color: transparent transparent;
+            scrollbar-color: transparent;
             scrollbar-width: 0px;
         }
 
@@ -88,7 +74,7 @@
         .carousel {
             position: relative;
             width: 100%;
-            height: 30vh;
+            height: 100vh;
             perspective: 100px;
             overflow: hidden;
         }
@@ -101,7 +87,7 @@
             left: 0;
             display: flex;
             overflow-x: scroll;
-            counter-reset: item;
+            counter-reset: unset;
             scroll-behavior: smooth;
             scroll-snap-type: x mandatory;
         }
@@ -110,13 +96,13 @@
         .carousel::after {
             content: "";
             position: absolute;
-            z-index: 2;
+            z-index: 3;
             left: 50%;
             translate: -50% 0;
             width: 500%;
             height: 500%;
             border-radius: 50%;
-
+            background: rgb(0, 0, 0);
         }
 
         .carousel::before {
@@ -131,168 +117,192 @@
             position: relative;
             flex: 0 0 33.33%;
             width: 33.33%;
-            counter-increment: item;
+            counter-increment: inherit;
         }
 
         .carousel__snapper {
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
+            width: 95%;
             height: 100%;
             scroll-snap-align: center;
             background-size: cover;
-            background-position: 50%;
 
+
+        }
+        
+        /* hero */
+        #hero {
+            
+            /* padding: 0 30px; */
+            background-image: url(./img/SC6.jpeg);
+            background-color: rgb(0, 0, 0, 0.5);
+            background-blend-mode: multiply;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+            width: 100%;
         }
     </style>
 </head>
 
 <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+    <nav class="navbar navbar-expand-lg  navbar-dark bg-transparent position-fixed w-100">
         <div class="container">
-            <!-- logo-nav -->
             <a class="navbar-brand" href="#"><img src="./img/logo-nav.png" alt=""></a>
-            <!-- togler btn(garis3) -->
-            <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <!-- sidebar -->
-            <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel">
-                <!-- sidebar head -->
-                <div class="offcanvas-header text-white border-bottom">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="./img/logo-nav.png" alt=""></h5>
-                    <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
-                </div>
-                <!-- sidebar-body -->
-                <div class="offcanvas-body d-flex flex-column flex-lg-row p-4"> <!--font size-->
-                    <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
-                        <li class="nav-item mx-2">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item mx-2">
-                            <a class="nav-link" href="#about us">About us</a>
-                        </li>
-                        <li class="nav-item mx-2">
-                            <a class="nav-link" href="#menu">Menu</a>
-                        </li>
-                        <li class="nav-item mx-2">
-                            <a class="nav-link" href="#gallery">Gallery</a>
-                        </li>
-                        <li class="nav-item mx-2">
-                            <a class="nav-link" href="#special offers">Special Offers</a>
-                        </li>
-                    </ul>
-                    <!-- reservation btn -->
-                    <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
-                        <a href="#reservation" class="text-white text-decoration-none px-3 py-1"
-                            style="background-color: #382D33;">RESERVATION</a>
-                    </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link " href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="about.html">About us</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link"  href="./menushela/sheilamenu.html">Menu</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link active" aria-current="page" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="special-offers.html">Special offers</a>
+                    </li>
+                </ul>
+                <!-- reservation btn -->
+                <div
+                    class="open-button btn-reservasi d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
+                    <a onclick="reservasiModal();" href="#reservation" class="text-white text-decoration-none px-3 py-1"
+                        style="border: 4px solid #382D33; border-radius: 0;">RESERVATION</a>
                 </div>
             </div>
         </div>
     </nav>
-    <center>
-        <h1> GALLER </h1>
-    </center>
-    <div class="ellips1"><img src="./img/Ellipse 37.png" alt=""></div>
-    <section class="carousel">
-        <ol class="carousel__viewport">
-            <li class="carousel__slide">
-                <div class="carousel__snapper" style="background-image: url('./img/galeri7.png');"></div>
-            </li>
-            <li class="carousel__slide">
-                <div class="carousel__snapper" style="background-image: url('./img/galeri6.png');"></div>
-            </li>
-            <li class="carousel__slide">
-                <div class="carousel__snapper" style="background-image: url('./img/galeri5.png');"></div>
-            </li>
-            <li class="carousel__slide">
-                <div class="carousel__snapper" style="background-image: url('./img/galeri4.png');"></div>
-            </li>
-            <li class="carousel__slide">
-                <div class="carousel__snapper" style="background-image: url('./img/galeri3.png');"></div>
-            </li>
-            <li class="carousel__slide">
-                <div class="carousel__snapper" style="background-image: url('./img/galeri2.png');"></div>
-            </li>
-            <li class="carousel__slide">
-                <div class="carousel__snapper" style="background-image: url('./img/galeri1.png');"></div>
-            </li>
-            <!-- more slides -->
-        </ol>
+    <section id="hero">
+        <div class="container-fluid">
+            <div class="row h-100 ">
+                <section id="carousel" class="carousel">
+                    <ol class="carousel__viewport">
+                        <!-- more slide -->
+                        <li class="carousel__slide">
+                            <div class="carousel__snapper" style="background: url(./img/galeri1.png);">
+
+                            </div>
+                        </li>
+                        <li class="carousel__slide">
+                            <div class="carousel__snapper" style="background: url(./img/galeri2.png);">
+
+                            </div>
+                        </li>
+                        <li class="carousel__slide">
+                            <div class="carousel__snapper" style="background: url(./img/galeri3.png);">
+
+                            </div>
+                        </li>
+                        <li class="carousel__slide">
+                            <div class="carousel__snapper" style="background: url(./img/galeri4.png);">
+
+                            </div>
+                        </li>
+                        <li class="carousel__slide">
+                            <div class="carousel__snapper" style="background: url(./img/galeri5.png);">
+
+                            </div>
+                        </li>
+                        <li class="carousel__slide">
+                            <div class="carousel__snapper" style="background: url(./img/galeri6.png);">
+
+                            </div>
+                        </li>
+                        <li class="carousel__slide">
+                            <div class="carousel__snapper" style="background: url(./img/galeri7.png);">
+
+                            </div>
+                        </li>
+                    </ol>
+
+                </section>
+
+
+            </div>
+        </div>
     </section>
-    <div class="ellips1"><img src="./img/Ellipse 38.png" alt=""></div>
-    
-  <!-- footer -->
-  <footer class="text-white pt-5 pb-4" style="background-color: #382D33;">
-    <div class="container text-center text-md-start">
-        <div class="row text-center text-md-start">
-            <!-- logo footer -->
-            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                <img src="./img/logo-footer.png" alt="">
+
+
+    <!-- footer -->
+    <footer class="text-white pt-5 pb-4" style="background-color: #382D33;">
+        <div class="container text-center text-md-start">
+            <div class="row text-center text-md-start">
+                <!-- logo footer -->
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <img src="./img/logo-footer.png" alt="">
+                </div>
+                <!-- conten -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-white">Content</h5>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;"> Home</a>
+                    </p>
+
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;"> About Us</a>
+                    </p>
+
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;"> Menu</a>
+                    </p>
+
+                    <p> <a href="#" class="text-white" style="text-decoration: none;"> Contact</a>
+                    </p>
+
+                </div>
+                <!-- contac -->
+                <div class="col-md-3 col-lg-2 col-md-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-white"> Contacts</h5>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;"> 022-20458359</a>
+                    </p>
+
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;"> sanscoworking@gmail.com</a>
+                    </p>
+
+                    <p>
+                        <i class="bi bi-instagram "></i>
+                    </p>
+
+                </div>
+                <!-- open hour -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-white"> Opening Hours</h5>
+
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;"> Everyday 10.00 - 05.00</a>
+                    </p>
+
+
+                </div>
             </div>
-            <!-- conten -->
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 font-weight-bold text-white">Content</h5>
-                <p>
-                    <a href="#" class="text-white" style="text-decoration: none;"> Home</a>
-                </p>
-
-                <p>
-                    <a href="#" class="text-white" style="text-decoration: none;"> About Us</a>
-                </p>
-
-                <p>
-                    <a href="#" class="text-white" style="text-decoration: none;"> Menu</a>
-                </p>
-
-                <p> <a href="#" class="text-white" style="text-decoration: none;"> Contact</a>
-                </p>
-
-            </div>
-            <!-- contac -->
-            <div class="col-md-3 col-lg-2 col-md-3 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 font-weight-bold text-white"> Contacts</h5>
-                <p>
-                    <a href="#" class="text-white" style="text-decoration: none;"> 022-20458359</a>
-                </p>
-
-                <p>
-                    <a href="#" class="text-white" style="text-decoration: none;"> sanscoworking@gmail.com</a>
-                </p>
-
-                <p>
-                    <i class="bi bi-instagram "></i>
-                </p>
-
-            </div>
-            <!-- open hour -->
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 font-weight-bold text-white"> Opening Hours</h5>
-
-                <p>
-                    <a href="#" class="text-white" style="text-decoration: none;"> Everyday 10.00 - 05.00</a>
-                </p>
 
 
+            <hr class=" mt-4 mb-4">
+
+            <div class="row text-md-center">
+                <div class="col-md-12">
+                    <p>Copymenus ⓒ 2023 Sans Co Cafe & CoWorking Space</p>
+                </div>
             </div>
         </div>
+    </footer>
 
 
-        <hr class=" mt-4 mb-4">
-
-        <div class="row text-md-center">
-            <div class="col-md-12">
-                <p>Copyrights ⓒ 2023 Sans Co Cafe & CoWorking Space</p>
-            </div>
-        </div>
-    </div>
-</footer>
+    <script src="./js/scripts.js"></script>
 </body>
 
 </html>
