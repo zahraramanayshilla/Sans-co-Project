@@ -15,7 +15,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
         body {
-            background-color: #251818;
+            background-color: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            z-index: 3;
         }
 
         .nav-link {
@@ -24,6 +29,73 @@
 
         .nav-link.active {
             font-weight: 700;
+        }
+
+        /* navbar-color */
+        .nav-color {
+            background-color: #251e22;
+            transition: all ease-in-out 0.3s;
+        }
+
+        .bg-transparent {
+            transition: all ease-in 0.3s;
+        }
+
+        /* buton hover */
+        .btn-reservasi:hover {
+            background-color: #382D33;
+        }
+
+
+        /* btn-modal */
+        .reservasi-modal {
+            cursor: pointer;
+            /* style-modal */
+            border: none;
+            left: 67rem;
+            bottom: 74vh;
+
+            position: fixed;
+            top: 75px;
+            right: 100px;
+            width: 165px;
+            padding: 5px;
+            box-sizing: border-box;
+            box-shadow: 0px 0px 10px 0px rgb(209, 209, 209, 0.3);
+            background-color: #382D33;
+
+        }
+
+        .reservasi-modal .button {
+            background-color: #251e22;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .reservasi-modal .button:hover {
+            background-color: #55444e;
+        }
+
+        .reservasi-modal::backdrop {
+            background-color: rgba(0, 0, 0, 0.5)
+        }
+
+        .reservasi-info {
+            text-align: center;
+            box-sizing: border-box;
+
+        }
+
+        .reservasi-info>div {
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        .reservasi-info>:hover {
+            font-weight: 500;
+            background-color: #251e22;
         }
 
         #hero {
@@ -58,36 +130,38 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item mx-2">
-                        <a class="nav-link " href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="home.html">Home</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="#">About us</a>
+                        <a class="nav-link" href="about.html">About us</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="#">Menu</a>
+                        <a class="nav-link" href="./menushela/sheilamenu.html">Menu</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="#">Gallery</a>
+                        <a class="nav-link" href="gallery.html">Gallery</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link active" aria-current="page" href="#">Special offers</a>
+                        <a class="nav-link" href="special-offers.html">Special offers</a>
                     </li>
 
                 </ul>
                 <!-- reservation btn -->
-                <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
-                    <a href="#reservation" class="text-white text-decoration-none px-3 py-1"
-                        style="background-color: #382D33;">RESERVATION</a>
+                <div
+                    class="open-button btn-reservasi d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
+                    <a onclick="reservasiModal();" href="#reservation" class="text-white text-decoration-none px-3 py-1"
+                        style="border: 4px solid #382D33; border-radius: 0;">RESERVATION</a>
                 </div>
             </div>
         </div>
     </nav>
+
     <!-- hero section -->
     <section id="hero">
         <div class="container h-100">
             <div class="row h-100 fw-bold">
                 <div class="col text-center text-white my-auto">
-                    <h1 class="fw-bold t">
+                    <h1 class="fw-bold">
                         SPECIAL OFFERS
                     </h1>
                 </div>
@@ -95,24 +169,141 @@
         </div>
     </section>
 
+    <section>
+        <div class="container mt-5">
+            <div class="row">
 
-    <div class="panto-masjid">
-        <img src="./img/panto masjid.png" alt="">
+                <div class="col-4">
+                    <img style="width: 542px; height: 385px;"
+                        src="./SPECIAL OFERS-RIFAL 01/image/cafe.jpeg">
+                    <p class="isi1 mt-5">Coworking space biasanya didesain dengannyaman dan <br>
+                        berbeda dengan perkantoran pada umumnya yangmemiliki suasana formal <br>
+                        dan “kaku”. Desain yang unik dan menarik pun ditawarkan,terlebih ada <br>
+                        beberapa yang menjadi satu dengancoffee shop, <br>
+                        jadi dedesain dengan unik dan nyaman.</p>
+                </div>
+                <div class="col-4">
+                    <img style="width: 542px; height: 385px;"
+                        src="./SPECIAL OFERS-RIFAL 01/image/meeting room.jpeg">
+                    <p class="isi1 mt-5">Sebagai pemenuhan ruang pertemuan, meeting room di kafememberikan<br>
+                        suasana baru. Berbagai fasilitas yang diberikanturut menunjang kebutuhan bisnis dalam<br>
+                        melakukan rapat. Karenanya memilih ruang tersebut haruslah sesuai fungsinya.Ruang<br>
+                        meeting di cafe cocok untuk pelaku bisnis yang sering rapat di luar.</p>
+                </div>
+                <div class="col-4">
+                    <img style="width: 542px; height: 385px;"
+                        src="./SPECIAL OFERS-RIFAL 01/image/event.jpeg">
+                    <p class="isi1 mt-5">empat yang Diciptakan untuk Mewujudkan Momen Luar Biasa. Ruangan <br>
+                        kami yang khusus didedikasikan untuk acara-acara istimewa, seperti pesta ulang tahun, <br>
+                        pertunjukan musik live, atau acara khusus lainnya. ruangan ini adalah tempat yang <br>
+                        sempurna untuk merayakan momen berharga dalam hidup Anda.Anda dapat merasa yakin <br>
+                        bahwa acara Anda akan berjalan dengan mulus Mari bergabung dengan kami dan ciptakan <br>
+                        kenangan berharga di Ruangan Event Kafe Kami.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="text-white pt-5 pb-4" style="background-color: #382D33;">
+        <div class="container text-center text-md-start">
+            <div class="row text-center text-md-start">
+                <!-- logo footer -->
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <img src="./img/logo-footer.png" alt="">
+                </div>
+                <!-- conten -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-white">Content</h5>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;"> Home</a>
+                    </p>
+
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;"> About Us</a>
+                    </p>
+
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;"> Menu</a>
+                    </p>
+
+                    <p> <a href="#" class="text-white" style="text-decoration: none;"> Contact</a>
+                    </p>
+
+                </div>
+                <!-- contac -->
+                <div class="col-md-3 col-lg-2 col-md-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-white"> Contacts</h5>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;"> 022-20458359</a>
+                    </p>
+
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;"> sanscoworking@gmail.com</a>
+                    </p>
+
+                    <p>
+                        <i class="bi bi-instagram "></i>
+                    </p>
+
+                </div>
+                <!-- open hour -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-white"> Opening Hours</h5>
+
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;"> Everyday 10.00 - 05.00</a>
+                    </p>
+                </div>
+            </div>
+
+
+            <hr class=" mt-4 mb-4">
+
+            <div class="row text-md-center">
+                <div class="col-md-12">
+                    <p>Copyrights ⓒ 2023 Sans Co Cafe & CoWorking Space</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- <div class="image22" style="margin-top: 120px;">
+        <img class="background-image1" src="./SPECIAL OFERS-RIFAL 01/image/cafe.jpeg">
+        <div class="background">
+            <h1 class="judul1">Cafe</h1>
+            <p class="isi1 mt-5">Coworking space biasanya didesain dengannyaman dan <br>
+                berbeda dengan perkantoran pada umumnya yangmemiliki suasana formal <br>
+                dan “kaku”. Desain yang unik dan menarik pun ditawarkan,terlebih ada <br>
+                beberapa yang menjadi satu dengancoffee shop, <br>
+                jadi dedesain dengan unik dan nyaman.</p>
+        </div>
     </div>
-    <main class="container pt-5">
-        <section class="row">
-            <div class="col">
-                <img src="./img/card-so1.png" alt="">
-            </div>
-            <div class="col">
-                <p>Coworking space biasanya didesain dengan nyaman dan berbeda dengan
-                    perkantoran pada umumnya yangmemiliki suasana formal dan “kaku”.
-                    Desain yang unik dan menarik pun ditawarkan, terlebih ada beberapa
-                    yang menjadi satu dengan coffee shop, jadi dedesain dengan unik dan nyaman.</p>
-            </div>
-        </section>
-    </main>
+    <div class="image22" style="margin-top: 120px;">
+        <img class="background-image2" src="./SPECIAL OFERS-RIFAL 01/image/meeting room.jpeg">
+        <div class="background">
+            <h1 class="judul2">Metting Room</h1>
+            <p class="isi2 mt-5">Sebagai pemenuhan ruang pertemuan, meeting room di kafememberikan<br>
+                suasana baru. Berbagai fasilitas yang diberikanturut menunjang kebutuhan bisnis dalam<br>
+                melakukan rapat. Karenanya memilih ruang tersebut haruslah sesuai fungsinya.Ruang<br>
+                meeting di cafe cocok untuk pelaku bisnis yang sering rapat di luar.</p>
+        </div>
+    </div>
+    <div class="image22" style="margin-top: 120px;">
+        <img class="background-image3" src="./SPECIAL OFERS-RIFAL 01/image/event.jpeg">
+        <div class="background">
+            <h1 class="judul3">Event</h1>
+            <p class="isi3 mt-5">Tempat yang Diciptakan untuk Mewujudkan Momen Luar Biasa. Ruangan <br>
+                kami yang khusus didedikasikan untuk acara-acara istimewa, seperti pesta ulang tahun, <br>
+                pertunjukan musik live, atau acara khusus lainnya. ruangan ini adalah tempat yang <br>
+                sempurna untuk merayakan momen berharga dalam hidup Anda.Anda dapat merasa yakin <br>
+                bahwa acara Anda akan berjalan dengan mulus Mari bergabung dengan kami dan ciptakan <br>
+                kenangan berharga di Ruangan Event Kafe Kami.</p>
+        </div>
+    </div> -->
 
+
+
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
