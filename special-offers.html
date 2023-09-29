@@ -107,8 +107,6 @@
             height: 100vh;
             width: 100%;
         }
-
-    
     </style>
 </head>
 
@@ -130,7 +128,7 @@
                         <a class="nav-link" href="about.html">About us</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link "  href="sheilamenu.html">Menu</a>
+                        <a class="nav-link " href="sheilamenu.html">Menu</a>
                     </li>
                     <li class="nav-item mx-2">
                         <a class="nav-link" href="gallery2.html">Gallery</a>
@@ -149,58 +147,89 @@
         </div>
     </nav>
 
+    <!-- reservasi-btn-modal -->
+    <dialog class="reservasi-modal" id="reservasi-modal">
+        <div class="reservasi-info text-white">
+            <div>Meeting Room</div>
+            <div>event</div>
+            <button class="button close-button m-2">Close</button>
+        </div>
+    </dialog>
     <!-- hero section -->
     <section id="hero">
         <div class="container h-100">
             <div class="row h-100 fw-bold">
                 <div class="col text-center text-white my-auto">
-                   
+
                     <h1 class="fw-bold">
                         SPECIAL OFFERS
                     </h1>
-                
+
                 </div>
             </div>
         </div>
     </section>
 
-    <section>
-        <div class="container mt-5">
-            <div class="row">
 
-                <div class="col-4">
-                    <img style="width: 542px; height: 385px;"
-                        src="./SPECIAL OFERS-RIFAL 01/image/cafe.jpeg">
-                    <p class="isi1 mt-5">Coworking space biasanya didesain dengannyaman dan <br>
-                        berbeda dengan perkantoran pada umumnya yangmemiliki suasana formal <br>
-                        dan “kaku”. Desain yang unik dan menarik pun ditawarkan,terlebih ada <br>
-                        beberapa yang menjadi satu dengancoffee shop, <br>
-                        jadi dedesain dengan unik dan nyaman.</p>
-                </div>
-                <div class="col-4">
-                    <img style="width: 542px; height: 385px;"
-                        src="./SPECIAL OFERS-RIFAL 01/image/meeting room.jpeg">
-                    <p class="isi1 mt-5">Sebagai pemenuhan ruang pertemuan, meeting room di kafememberikan<br>
-                        suasana baru. Berbagai fasilitas yang diberikanturut menunjang kebutuhan bisnis dalam<br>
-                        melakukan rapat. Karenanya memilih ruang tersebut haruslah sesuai fungsinya.Ruang<br>
-                        meeting di cafe cocok untuk pelaku bisnis yang sering rapat di luar.</p>
-                </div>
-                <div class="col-4">
-                    <img style="width: 542px; height: 385px;"
-                        src="./SPECIAL OFERS-RIFAL 01/image/event.jpeg">
-                    <p class="isi1 mt-5">empat yang Diciptakan untuk Mewujudkan Momen Luar Biasa. Ruangan <br>
-                        kami yang khusus didedikasikan untuk acara-acara istimewa, seperti pesta ulang tahun, <br>
-                        pertunjukan musik live, atau acara khusus lainnya. ruangan ini adalah tempat yang <br>
-                        sempurna untuk merayakan momen berharga dalam hidup Anda.Anda dapat merasa yakin <br>
-                        bahwa acara Anda akan berjalan dengan mulus Mari bergabung dengan kami dan ciptakan <br>
-                        kenangan berharga di Ruangan Event Kafe Kami.</p>
-                </div>
+
+    <div class="container mt-5">
+        <div class="row align-items-center m-4">
+            <div class="col-md-5 ">
+                <img src="./img/img-special/card-so1.png"
+                    class="img-fluid" alt="">
             </div>
+            <div class="col-md-7">
+                <h3>Cafe</h3>
+                <p class="fst-italic">
+                    Coworking space biasanya didesain dengannyaman dan 
+                        berbeda dengan perkantoran pada umumnya yangmemiliki suasana formal 
+                        dan “kaku”. Desain yang unik dan menarik pun ditawarkan,terlebih ada 
+                        beberapa yang menjadi satu dengancoffee shop, 
+                        jadi dedesain dengan unik dan nyaman.
+                </p>
+            </div>
+
         </div>
-    </section>
+        <div class="row align-items-center m-4">
+            <div class="col-md-5">
+                <img src="./img/img-special/card-so2.png"
+                    class="img-fluid" alt="">
+            </div>
+            <div class="col-md-7">
+                <h3>Meeting Room</h3>
+                <p class="fst-italic">
+                    Sebagai pemenuhan ruang pertemuan, meeting room di kafememberikan
+                        suasana baru. Berbagai fasilitas yang diberikanturut menunjang kebutuhan bisnis dalam
+                        melakukan rapat. Karenanya memilih ruang tersebut haruslah sesuai fungsinya.Ruang
+                        meeting di cafe cocok untuk pelaku bisnis yang sering rapat di luar.
+                </p>
+            </div>
+
+        </div>
+        <div class="row align-items-center m-4">
+            <div class="col-md-5">
+                <img src="./img/img-special/card-so3.png"
+                    class="img-fluid" alt="">
+            </div>
+            <div class="col-md-7">
+                <h3>Event</h3>
+                <p class="fst-italic">
+                    empat yang Diciptakan untuk Mewujudkan Momen Luar Biasa. Ruangan 
+                        kami yang khusus didedikasikan untuk acara-acara istimewa, seperti pesta ulang tahun, 
+                        pertunjukan musik live, atau acara khusus lainnya. ruangan ini adalah tempat yang 
+                        sempurna untuk merayakan momen berharga dalam hidup Anda.Anda dapat merasa yakin 
+                        bahwa acara Anda akan berjalan dengan mulus Mari bergabung dengan kami dan ciptakan 
+                        kenangan berharga di Ruangan Event Kafe Kami.
+                </p>
+            </div>
+
+        </div>
+    </div>
+    
+
 
     <!-- footer -->
-    <footer class="text-white pt-5 pb-4" style="background-color: #382D33;">
+    <footer class="text-white mt-5 pt-5 pb-4" style="background-color: #382D33;">
         <div class="container text-center text-md-start">
             <div class="row text-center text-md-start">
                 <!-- logo footer -->
@@ -262,7 +291,7 @@
             </div>
         </div>
     </footer>
-    
+
     <!-- <div class="image22" style="margin-top: 120px;">
         <img class="background-image1" src="./SPECIAL OFERS-RIFAL 01/image/cafe.jpeg">
         <div class="background">
