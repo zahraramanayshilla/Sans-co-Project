@@ -42,6 +42,56 @@
         .btn-reservasi:hover {
             background-color: #382D33;
         }
+ /* btn-modal */
+ .reservasi-modal {
+            cursor: pointer;
+            /* style-modal */
+            border: none;
+            left: 67rem;
+            bottom: 74vh;
+
+            position: fixed;
+            top: 75px;
+            right: 100px;
+            width: 165px;
+            padding: 5px;
+            box-sizing: border-box;
+            box-shadow: 0px 0px 10px 0px rgb(209, 209, 209, 0.3);
+            background-color: #382D33;
+
+        }
+
+        .reservasi-modal .button {
+            background-color: #251e22;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .reservasi-modal .button:hover {
+            background-color: #55444e;
+        }
+
+        .reservasi-modal::backdrop {
+            background-color: rgba(0, 0, 0, 0.5)
+        }
+
+        .reservasi-info {
+            text-align: center;
+            box-sizing: border-box;
+
+        }
+
+        .reservasi-info>div {
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        .reservasi-info>:hover {
+            font-weight: 500;
+            background-color: #251e22;
+        }
 
 
 
@@ -185,6 +235,17 @@
             </div>
         </div>
     </nav>
+
+    
+    <!-- reservasi-btn-modal -->
+    <dialog class="reservasi-modal" id="reservasi-modal">
+        <div class="reservasi-info text-white">
+            <div>Meeting Room</div>
+            <div>event</div>
+            <button class="button close-button m-2">Close</button>
+        </div>
+    </dialog>
+
     <section id="hero">
         <div class="container-fluid">
             <div class="row h-100 ">
@@ -192,37 +253,37 @@
                     <ol class="carousel__viewport">
                         <!-- more slide -->
                         <li class="carousel__slide">
-                            <div class="carousel__snapper" style="background: url(./img/galeri1.png);">
+                            <div class="carousel__snapper" style="background: url(./img/img-galery/galeri1.png);">
 
                             </div>
                         </li>
                         <li class="carousel__slide">
-                            <div class="carousel__snapper" style="background: url(./img/galeri2.png);">
+                            <div class="carousel__snapper" style="background: url(./img/img-galery/galeri2.png);">
 
                             </div>
                         </li>
                         <li class="carousel__slide">
-                            <div class="carousel__snapper" style="background: url(./img/galeri3.png);">
+                            <div class="carousel__snapper" style="background: url(./img/img-galery/galeri3.png);">
 
                             </div>
                         </li>
                         <li class="carousel__slide">
-                            <div class="carousel__snapper" style="background: url(./img/galeri4.png);">
+                            <div class="carousel__snapper" style="background: url(./img/img-galery/galeri4.png);">
 
                             </div>
                         </li>
                         <li class="carousel__slide">
-                            <div class="carousel__snapper" style="background: url(./img/galeri5.png);">
+                            <div class="carousel__snapper" style="background: url(./img/img-galery/galeri5.png);">
 
                             </div>
                         </li>
                         <li class="carousel__slide">
-                            <div class="carousel__snapper" style="background: url(./img/galeri6.png);">
+                            <div class="carousel__snapper" style="background: url(./img/img-galery/galeri6.png);">
 
                             </div>
                         </li>
                         <li class="carousel__slide">
-                            <div class="carousel__snapper" style="background: url(./img/galeri7.png);">
+                            <div class="carousel__snapper" style="background: url(./img/img-galery/galeri7.png);">
 
                             </div>
                         </li>
