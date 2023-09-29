@@ -5,13 +5,118 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link boostrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- link-font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap" />
+    <!-- icon bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <title>About Us</title>
     <link rel="stylesheet" href="style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200&family=Ubuntu&display=swap');
 
-        .nav {
+        body {
+            background-color: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            z-index: 3;
+        }
+
+        .nav-link {
+            font-size: 16px;
+        }
+
+        .nav-link.active {
+            font-weight: 700;
+        }
+
+        /* navbar-color */
+        .nav-color {
+            background-color: #251e22;
+            transition: all ease-in-out 0.3s;
+        }
+
+        .bg-transparent {
+            transition: all ease-in 0.3s;
+        }
+
+        /* buton hover */
+        .btn-reservasi:hover {
+            background-color: #382D33;
+        }
+
+
+        /* btn-modal */
+        .reservasi-modal {
+            cursor: pointer;
+            /* style-modal */
+            border: none;
+            left: 67rem;
+            bottom: 74vh;
+
+            position: fixed;
+            top: 75px;
+            right: 100px;
+            width: 165px;
+            padding: 5px;
+            box-sizing: border-box;
+            box-shadow: 0px 0px 10px 0px rgb(209, 209, 209, 0.3);
+            background-color: #382D33;
+
+        }
+
+        .reservasi-modal .button {
+            background-color: #251e22;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .reservasi-modal .button:hover {
+            background-color: #55444e;
+        }
+
+        .reservasi-modal::backdrop {
+            background-color: rgba(0, 0, 0, 0.5)
+        }
+
+        .reservasi-info {
+            text-align: center;
+            box-sizing: border-box;
+
+        }
+
+        .reservasi-info>div {
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        .reservasi-info>:hover {
+            font-weight: 500;
+            background-color: #251e22;
+        }
+
+        /* hero */
+        #hero {
+            background-image: url(./img/img-about/Rectangle\ 12.png);
+            background-blend-mode: multiply;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            height: 546px;
+        }
+
+        /* .nav {
             display: flex;
             justify-content: center;
             text-align: center;
@@ -40,7 +145,7 @@
             text-decoration: none;
             font-size: 18px;
             position: relative;
-        }
+        } */
 
         .container {}
 
@@ -56,15 +161,15 @@
             width: 450px;
             height: 200px;
             position: relative;
-            left: 450px;
-            bottom: 120px;
+            left: 370px;
+            bottom: -250px;
             border-radius: 30px;
         }
 
         .anak {
             position: relative;
             top: 80px;
-            left: 160px;
+            left: 140px;
             color: white;
             font-family: 'Ubuntu', sans-serif;
         }
@@ -73,11 +178,11 @@
             width: 400px;
             height: 550px;
             margin-left: 120px;
-            margin-top: 100px;
+            margin-top: 150px;
         }
 
         .budak {
-            margin-top: -570px;
+            margin-top: -450px;
             margin-left: 700px;
         }
 
@@ -93,7 +198,7 @@
         .service {
             font-family: 'Nutino Sans', sans-serif;
             text-align: center;
-            margin-top: 400px;
+            margin-top: 200px;
             font-size: 30px;
         }
 
@@ -178,7 +283,44 @@
 
 <body>
 
-    <nav class="nav">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg  navbar-dark bg-transparent position-fixed w-100">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="./img/logo-nav.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="about.html">About us</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="./menushela/sheilamenu.html">Menu</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="special-offers.html">Special offers</a>
+                    </li>
+
+                </ul>
+                <!-- reservation btn -->
+                <div
+                    class="open-button btn-reservasi d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
+                    <a onclick="reservasiModal();" href="#reservation" class="text-white text-decoration-none px-3 py-1"
+                        style="border: 4px solid #382D33; border-radius: 0;">RESERVATION</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- <nav class="nav">
         <img src="./img/img-about/logo-nav.png" class="logo">
         <ul id="sidemenu">
             <li><a href="#">Home</a></li>
@@ -187,15 +329,26 @@
             <li><a href="#">Gallery</a></li>
             <li><a href="#">Special Offers</a></li>
         </ul>
-    </nav>
+    </nav> -->
 
-
-    <div class="container">
-        <img src="./img/img-about/ats.jpg" alt="">
-        <div class="child">
-            <h1 class="anak">About Us</h1>
+    <!-- hero section -->
+    <section id="hero">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-md-6 my-auto d-md-flex">
+                    <div class="child">
+                        <h1 class="anak">About Us</h1>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
+
+    <!-- <div class="container">
+        <img src="./img/img-about/ats.jpg" alt="">
+       
+    </div> -->
 
     <div class="kedua">
         <img src="./img/img-about/sans.jpg" alt="">
@@ -251,11 +404,77 @@
         <div>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.13325136043!2d107.616053574222!3d-6.874633693124113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7cf90c5ca63%3A0x4c0cdd03d96d2f0b!2sSans%20Co.!5e0!3m2!1sid!2sid!4v1695566837031!5m2!1sid!2sid"
-                width="1400" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
 
+    
+    <!-- footer -->
+    <footer class="text-white pt-0 pb-4" style="background-color: #382D33;">
+        <div class="container text-center text-md-start">
+            <div class="row text-center text-md-start">
+                <!-- logo footer -->
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <img src="./img/logo-footer.png" alt="">
+                </div>
+                <!-- conten -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-white">Content</h5>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;"> Home</a>
+                    </p>
+
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;"> About Us</a>
+                    </p>
+
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;"> Menu</a>
+                    </p>
+
+                    <p> <a href="#" class="text-white" style="text-decoration: none;"> Contact</a>
+                    </p>
+
+                </div>
+                <!-- contac -->
+                <div class="col-md-3 col-lg-2 col-md-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-white"> Contacts</h5>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;"> 022-20458359</a>
+                    </p>
+
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;"> sanscoworking@gmail.com</a>
+                    </p>
+
+                    <p>
+                        <i class="bi bi-instagram "></i>
+                    </p>
+
+                </div>
+                <!-- open hour -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-white"> Opening Hours</h5>
+
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;"> Everyday 10.00 - 05.00</a>
+                    </p>
+                </div>
+            </div>
+
+
+            <hr class=" mt-4 mb-4">
+
+            <div class="row text-md-center">
+                <div class="col-md-12">
+                    <p>Copyrights ⓒ 2023 Sans Co Cafe & CoWorking Space</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
