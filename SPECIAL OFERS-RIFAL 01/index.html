@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            background: url(./img/background.jpg) rgba(255, 255, 255, 0.8);
+            background-blend-mode: multiply;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+
+        }
+
+        @media(max-width:990px) {
+            .sidebar {
+                background-color: rgba(0, 0, 0, 0.993);
+                backdrop-filter: blur(10px);
+            }
+        }
+    </style>
+</head>
+
+<body class=" vh-100">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+        <div class="container">
+            <!-- logo-nav -->
+            <a class="navbar-brand" href="#"><img src="./logo-nav.png.jpeg" alt=""></a>
+            <!-- togler btn(garis3) -->
+            <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- sidebar -->
+            <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <!-- sidebar head -->
+                <div class="offcanvas-header text-white border-bottom">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="./logo-nav.png.jpeg" alt="">
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <!-- sidebar-body -->
+                <div class="offcanvas-body d-flex flex-column flex-lg-row p-4">
+                    <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+                        <li class="nav-item mx-2">
+                            <a class="nav-link active fw-semibold" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="#about-us">About us</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="#menu">Menu</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="#gallery">Gallery</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="#special-offers">Special Offers</a>
+                        </li>
+                    </ul>
+                    <!-- reservation btn -->
+                    <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
+                        <a href="#reservation" class="text-white text-decoration-none px-3 py-1"
+                            style="background-color: #382D33;">RESERVATION</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <img class="tengah" src="image/123.jpeg" />
+
+    <img class="kubah" src="image/panto masjid.png" />
+
+    <div class="image22" style="margin-top: 120px;">
+        <img class="background-image1" src="image/cafe.jpeg">
+        <div class="background">
+            <h1 class="judul1">Cafe</h1>
+            <p class="isi1 mt-5">Coworking space biasanya didesain dengannyaman dan <br>
+                berbeda dengan perkantoran pada umumnya yangmemiliki suasana formal <br>
+                dan “kaku”. Desain yang unik dan menarik pun ditawarkan,terlebih ada <br>
+                beberapa yang menjadi satu dengancoffee shop, <br>
+                jadi dedesain dengan unik dan nyaman.</p>
+        </div>
+
+        <div class="image22" style="margin-top: 120px;">
+            <img class="background-image2" src="image/meeting room.jpeg">
+            <div class="background">
+                <h1 class="judul2">Metting Room</h1>
+                <p class="isi2 mt-5">Sebagai pemenuhan ruang pertemuan, meeting room di kafememberikan<br>
+                    suasana baru. Berbagai fasilitas yang diberikanturut menunjang kebutuhan bisnis dalam<br>
+                    melakukan rapat. Karenanya memilih ruang tersebut haruslah sesuai fungsinya.Ruang<br>
+                    meeting di cafe cocok untuk pelaku bisnis yang sering rapat di luar.</p>
+            </div>
+
+            <div class="image22" style="margin-top: 120px;">
+                <img class="background-image3" src="image/event.jpeg">
+                <div class="background">
+                    <h1 class="judul3">Event</h1>
+                    <p class="isi3 mt-5">Tempat yang Diciptakan untuk Mewujudkan Momen Luar Biasa. Ruangan <br>
+                        kami yang khusus didedikasikan untuk acara-acara istimewa, seperti pesta ulang tahun, <br>
+                        pertunjukan musik live, atau acara khusus lainnya. ruangan ini adalah tempat yang <br>
+                        sempurna untuk merayakan momen berharga dalam hidup Anda.Anda dapat merasa yakin <br>
+                        bahwa acara Anda akan berjalan dengan mulus Mari bergabung dengan kami dan ciptakan <br>
+                        kenangan berharga di Ruangan Event Kafe Kami.</p>
+                </div>
+
+
+                <!-- <div class="footer">
+                    <img class="logo-removebg-preview-2" src="../SPECIAL OFERS-RIFAL/image/icons1.png" />
+                    <div class="contecnt">
+                      <div class="content">Content</div>
+                      <div class="home">Home</div>
+                      <div class="about-me">About Me</div>
+                      <div class="menu">Menu</div>
+                      <div class="contact">Contact</div>
+                    </div>
+                    <img class="logo-removebg-preview-22" src="../SPECIAL OFERS-RIFAL/image/icons2.png" />
+                    <div class="contecnt2">
+                      <div class="contacts">Contacts</div>
+                      <div class="_022-20458359">022-20458359</div>
+                      <div class="gmail-com">@gmail.com</div>
+                    </div>
+                    <div class="contecnt3">
+                      <div class="opening-hours">Opening Hours</div>
+                      <div class="everyday-10-00-05-00">Everyday 10.00 - 05.00</div>
+                    </div>
+                  </div>
+                   -->
+</body>
+
+</html>
