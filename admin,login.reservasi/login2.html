@@ -18,18 +18,67 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
+         <!-- icon bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <title>Document</title>
     <style>
-        .login{
+        .login {
             height: 100vh;
 
         }
-        h1{
+
+        header h1 {
             font-style: normal;
             font-weight: 600;
             font-size: 32px;
             line-height: 48px;
-color: #000;
+            color: #000;
+        }
+
+        header p {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 21px;
+            color: #737373;
+            margin-bottom: 20px;
+        }
+        .login-form label{
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #000000;
+            margin-top: 20px;
+        }
+        .login-form input{
+            background: #fff;
+            border: 1px solid #bcbcbc;
+            box-sizing: border-box;
+            border-radius: 8px;
+        }
+        .login-form a{
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 21px;
+            color: #737373;
+            text-decoration: none;
+        }
+        .login-form .sigin{
+            width: 100%;
+            height: 42px;
+            color: #fff;
+            background-color: #000;
+            border-radius: 8px;
+
+        }
+        .login-form .sigin-google{
+            width: 100%;
+            height: 42px;
+            color: #3b3b3b;
+            background-color: #ffffff;
+            border-radius: 8px;  
         }
     </style>
 </head>
@@ -38,14 +87,25 @@ color: #000;
 
     <section class="login">
         <div class="login-left">
-<div class="header">
-    <h1>login</h1>
-</div>
+            <div class="header">
+                <h1>login</h1>
+                <p>wallaslaklakslakslalskalsklaksak</p>
+            </div>
+            <div class="login-form">
+                <label for="email" class="form-label">Email </label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                <a href="">Forgot password</a>
+                <button class="sigin">Sign in</button>
+                <button class="sigin-google"><i class="bi bi-google"></i>Sign In with Google</button>
+            </div>
         </div>
         <div class="login-right">
 
         </div>
-        
+
     </section>
 
 </body>
