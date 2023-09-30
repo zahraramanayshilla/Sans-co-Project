@@ -13,6 +13,11 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- link-font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
+    <!-- link-swipper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <style>
         .navbar {
             z-index: 3;
@@ -96,7 +101,7 @@
         #hero {
 
             /* padding: 0 30px; */
-            
+
             background-image: url(./img/img-galery/bg-gallery.jpeg);
             background-color: rgb(0, 0, 0, 0.5);
             background-blend-mode: multiply;
@@ -104,6 +109,32 @@
             background-position: center;
             background-size: cover;
             height: 100vh;
+            width: 100%;
+        }
+
+        .swiper-container {
+            overflow: hidden;
+            margin-top: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 200px;
+        }
+
+        .swiper-slide {
+
+            background-position: center;
+            background-size: cover;
+            width: 300px;
+            height: 300px;
+            background: #000;
+        }
+
+        .swiper-slide img {
+            display: block;
             width: 100%;
         }
     </style>
@@ -158,7 +189,49 @@
     </dialog>
 
     <section id="hero">
-        
+        <div class="container-fluid">
+            <div class="row">
+                <div class="swiper-container mySwiper ">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="img/img-galery/galeri1.png" alt="">
+                        </div>
+                        <div class="swiper-slide"><img src="img/img-galery/galeri2.png" alt="">
+                        </div>
+                        <div class="swiper-slide"><img src="img/img-galery/galeri3.png" alt="">
+                        </div>
+                        <div class="swiper-slide"><img src="img/img-galery/galeri4.png" alt="">
+                        </div>
+                        <div class="swiper-slide"><img src="img/img-galery/galeri5.png" alt="">
+                        </div>
+                        <div class="swiper-slide"><img src="img/img-galery/galeri6.png" alt="">
+                        </div>
+                        <div class="swiper-slide"><img src="img/img-galery/galeri7.png" alt="">
+                        </div>
+                        <div class="swiper-slide"><img src="img/img-galery/galeri1.png" alt="">
+                        </div>
+                        <div class="swiper-slide"><img src="img/img-galery/galeri2.png" alt="">
+                        </div>
+                        <div class="swiper-slide"><img src="img/img-galery/galeri1.png" alt="">
+                        </div>
+                        <div class="swiper-slide"><img src="img/img-galery/galeri2.png" alt="">
+                        </div>
+                        <div class="swiper-slide"><img src="img/img-galery/galeri3.png" alt="">
+                        </div>
+                        <div class="swiper-slide"><img src="img/img-galery/galeri4.png" alt="">
+                        </div>
+                        <div class="swiper-slide"><img src="img/img-galery/galeri5.png" alt="">
+                        </div>
+                        <div class="swiper-slide"><img src="img/img-galery/galeri6.png" alt="">
+                        </div>
+                        <div class="swiper-slide"><img src="img/img-galery/galeri7.png" alt="">
+                        </div>
+                        <div class="swiper-slide"><img src="img/img-galery/galeri1.png" alt="">
+                        </div>
+                        <div class="swiper-slide"><img src="img/img-galery/galeri2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -228,7 +301,26 @@
             </div>
         </div>
     </footer>
-
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          effect: "coverflow",
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: "auto",
+          coverflowEffect: {
+            rotate: 20,
+            stretch: 0,
+            depth: 200,
+            modifier: 1,
+            slideShadows: true,
+          },
+         loop:true,
+         autoplay:{
+            delay:500,
+            disableOnInteraction:false,
+         },
+        });
+      </script>
 
     <script src="./js/scripts.js"></script>
 </body>
