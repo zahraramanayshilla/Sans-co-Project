@@ -94,7 +94,6 @@
 
         .reservasi-info>:hover {
             font-weight: 500;
-            background-color: #251e22;
         }
 
         /* hero */
@@ -152,7 +151,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item mx-2">
-                        <a class="nav-link " href="home.html">Home</a>
+                        <a class="nav-link"" href="home.html">Home</a>
                     </li>
                     <li class="nav-item mx-2">
                         <a class="nav-link" href="about.html">About us</a>
@@ -161,7 +160,7 @@
                         <a class="nav-link" href="sheilamenu.html">Menu</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link active" aria-current="page" href="gallery2.html">Gallery</a>
+                        <a class="nav-link  active" aria-current="page href="gallery.html">Gallery</a>
                     </li>
                     <li class="nav-item mx-2">
                         <a class="nav-link" href="special-offers.html">Special offers</a>
@@ -182,8 +181,11 @@
     <!-- reservasi-btn-modal -->
     <dialog class="reservasi-modal" id="reservasi-modal">
         <div class="reservasi-info text-white">
-            <div>Meeting Room</div>
-            <div>event</div>
+            <div><a class="text-white text-decoration-none"
+                    href="./admin,login.reservasi/reservasi-meeting.html">Meeting Room</a>
+            </div>
+            <div> <a class="text-white text-decoration-none"
+                    href="./admin,login.reservasi/reservasi-event.html">event</a></div>
             <button class="button close-button m-2">Close</button>
         </div>
     </dialog>
@@ -304,22 +306,22 @@
 
     <script>
         var swiper = new Swiper(".mySwiper", {
-          effect: "coverflow",
-          grabCursor: true,
-          centeredSlides: true,
-          slidesPerView: "auto",
-          coverflowEffect: {
-            rotate: 20,
-            stretch: 0,
-            depth: 200,
-            modifier: 1,
-            slideShadows: true,
-          },
-         loop:true,
-         autoplay:{
-            delay:500,
-            disableOnInteraction:false,
-         },
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 20,
+                stretch: 0,
+                depth: 200,
+                modifier: 1,
+                slideShadows: true,
+            },
+            loop: true,
+            autoplay: {
+                delay: 500,
+                disableOnInteraction: false,
+            },
         });
     </script>
 

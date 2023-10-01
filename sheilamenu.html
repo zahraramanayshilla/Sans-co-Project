@@ -15,9 +15,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap" />
     <title>menu page</title>
     <style>
-        /* navbar */
         body {
             background-color: #251e22;
+            scroll-behavior: smooth;
         }
 
         .navbar {
@@ -47,6 +47,57 @@
             background-color: #382D33;
         }
 
+
+        /* btn-modal */
+        .reservasi-modal {
+            cursor: pointer;
+            /* style-modal */
+            border: none;
+            left: 67rem;
+            bottom: 74vh;
+
+            position: fixed;
+            top: 75px;
+            right: 100px;
+            width: 165px;
+            padding: 5px;
+            box-sizing: border-box;
+            box-shadow: 0px 0px 10px 0px rgb(209, 209, 209, 0.3);
+            background-color: #382D33;
+
+        }
+
+        .reservasi-modal .button {
+            background-color: #251e22;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .reservasi-modal .button:hover {
+            background-color: #55444e;
+        }
+
+        .reservasi-modal::backdrop {
+            background-color: rgba(0, 0, 0, 0.5)
+        }
+
+        .reservasi-info {
+            text-align: center;
+            box-sizing: border-box;
+
+        }
+
+        .reservasi-info>div {
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        .reservasi-info>:hover {
+            font-weight: 500;
+        }
+
         /* menubtn */
 
         .menu img {
@@ -56,7 +107,7 @@
 
         .menu>button {
             position: absolute;
-            
+
             top: 450px;
 
             height: 35px;
@@ -93,6 +144,7 @@
 </head>
 
 <body>
+   
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg  navbar-dark bg-transparent position-fixed w-100">
         <div class="container">
@@ -104,31 +156,42 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item mx-2">
-                        <a class="nav-link " href="home.html">Home</a>
+                        <a class="nav-link "  href="home.html">Home</a>
                     </li>
                     <li class="nav-item mx-2">
                         <a class="nav-link" href="about.html">About us</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link active" aria-current="page" href="sheilamenu.html">Menu</a>
+                        <a class="nav-link active"aria-current="page" href="sheilamenu.html">Menu</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="gallery2.html">Gallery</a>
+                        <a class="nav-link" href="gallery.html">Gallery</a>
                     </li>
                     <li class="nav-item mx-2">
                         <a class="nav-link" href="special-offers.html">Special offers</a>
                     </li>
+
                 </ul>
                 <!-- reservation btn -->
                 <div
-                    class="btn-reservasi d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
-                    <a href="#reservation" class="text-white text-decoration-none px-3 py-1"
+                    class="open-button btn-reservasi d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
+                    <a onclick="reservasiModal();" href="#reservation" class="text-white text-decoration-none px-3 py-1"
                         style="border: 4px solid #382D33; border-radius: 0;">RESERVATION</a>
-
                 </div>
             </div>
         </div>
     </nav>
+
+    <!-- reservasi-btn-modal -->
+    <dialog class="reservasi-modal" id="reservasi-modal">
+        <div class="reservasi-info text-white">
+            <div><a class="text-white text-decoration-none" href="./admin,login.reservasi/reservasi-meeting.html">Meeting Room</a>
+            </div>
+            <div> <a class="text-white text-decoration-none" href="./admin,login.reservasi/reservasi-event.html">event</a></div>
+            <button class="button close-button m-2">Close</button>
+        </div>
+    </dialog>
+
 
     <section id="hero">
         <div class="container h-100">
@@ -212,7 +275,7 @@
     </footer>
 
 
-    <script src="./js/scripts.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>

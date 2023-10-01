@@ -54,8 +54,8 @@
         }
 
 
-        /* btn-modal */
-        .reservasi-modal {
+       /* btn-modal */
+       .reservasi-modal {
             cursor: pointer;
             /* style-modal */
             border: none;
@@ -102,7 +102,6 @@
 
         .reservasi-info>:hover {
             font-weight: 500;
-            background-color: #251e22;
         }
 
         /* hero */
@@ -147,7 +146,7 @@
             position: relative;
         } */
 
-       
+
 
         .container>img {
             margin-top: -10px;
@@ -294,16 +293,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item mx-2">
-                        <a class="nav-link "  href="home.html">Home</a>
+                        <a class="nav-link " href="home.html">Home</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link active"aria-current="page" href="about.html">About us</a>
+                        <a class="nav-link active"aria-current="page"  href="about.html">About us</a>
                     </li>
                     <li class="nav-item mx-2">
                         <a class="nav-link" href="sheilamenu.html">Menu</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="gallery2.html">Gallery</a>
+                        <a class="nav-link" href="gallery.html">Gallery</a>
                     </li>
                     <li class="nav-item mx-2">
                         <a class="nav-link" href="special-offers.html">Special offers</a>
@@ -319,6 +318,17 @@
             </div>
         </div>
     </nav>
+    <!-- reservasi-btn-modal -->
+    <dialog class="reservasi-modal" id="reservasi-modal">
+        <div class="reservasi-info text-white">
+            <div><a class="text-white text-decoration-none"
+                    href="./admin,login.reservasi/reservasi-meeting.html">Meeting Room</a>
+            </div>
+            <div> <a class="text-white text-decoration-none"
+                    href="./admin,login.reservasi/reservasi-event.html">event</a></div>
+            <button class="button close-button m-2">Close</button>
+        </div>
+    </dialog>
 
     <!-- <nav class="nav">
         <img src="./img/img-about/logo-nav.png" class="logo">
@@ -409,7 +419,7 @@
         </div>
     </div>
 
-    
+
     <!-- footer -->
     <footer class="text-white pt-0 pb-4" style="background-color: #382D33;">
         <div class="container text-center text-md-start">
