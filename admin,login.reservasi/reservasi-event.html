@@ -17,6 +17,7 @@
     <style>
         body {
             background-color: #251e22;
+            scroll-behavior: smooth;
         }
 
         .navbar {
@@ -46,6 +47,58 @@
             background-color: #382D33;
         }
 
+
+        /* btn-modal */
+        .reservasi-modal {
+            cursor: pointer;
+            /* style-modal */
+            border: none;
+            left: 67rem;
+            bottom: 74vh;
+
+            position: fixed;
+            top: 75px;
+            right: 100px;
+            width: 165px;
+            padding: 5px;
+            box-sizing: border-box;
+            box-shadow: 0px 0px 10px 0px rgb(209, 209, 209, 0.3);
+            background-color: #382D33;
+
+        }
+
+        .reservasi-modal .button {
+            background-color: #251e22;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .reservasi-modal .button:hover {
+            background-color: #55444e;
+        }
+
+        .reservasi-modal::backdrop {
+            background-color: rgba(0, 0, 0, 0.5)
+        }
+
+        .reservasi-info {
+            text-align: center;
+            box-sizing: border-box;
+
+        }
+
+        .reservasi-info>div {
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        .reservasi-info>:hover {
+            font-weight: 500;
+        }
+
+        /* modal reservasi */
         .modal-body a:hover {
             background-color: #382D33;
         }
@@ -60,6 +113,8 @@
         .modal-footer>input {
             background-color: #0a0000;
         }
+
+
 
         .scroll-bg {
 
@@ -100,32 +155,44 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="#home">Home</a>
+                        <a class="nav-link "  href="../home.html">Home</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="#about-us">About us</a>
+                        <a class="nav-link" href="../about.html">About us</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="#menu">Menu</a>
+                        <a class="nav-link" href="../sheilamenu.html">Menu</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="#gallery">Gallery</a>
+                        <a class="nav-link" href="../gallery.html">Gallery</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="#special-offers">Special offers</a>
+                        <a class="nav-link" href="../special-offers.html">Special offers</a>
                     </li>
 
                 </ul>
                 <!-- reservation btn -->
                 <div
-                    class="btn-reservasi d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
-                    <a href="#reservation" class="text-white text-decoration-none px-3 py-1"
+                    class="open-button btn-reservasi d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
+                    <a onclick="reservasiModal();" href="#reservation" class="text-white text-decoration-none px-3 py-1"
                         style="border: 4px solid #382D33; border-radius: 0;">RESERVATION</a>
                 </div>
             </div>
         </div>
     </nav>
 
+    <!-- reservasi-btn-modal -->
+    <dialog class="reservasi-modal" id="reservasi-modal">
+        <div class="reservasi-info text-white">
+            <div><a class="text-white text-decoration-none"
+                    href="reservasi-meeting.html">Meeting Room</a>
+            </div>
+            <div> <a class="text-white text-decoration-none"
+                    href="reservasi-event.html">event</a></div>
+            <button class="button close-button m-2">Close</button>
+        </div>
+    </dialog>
+    
     <section id="reservasi" class="pb-5">
         <div class="container">
             <div class="row">
@@ -312,78 +379,40 @@
     <div class="scroll-bg">
         <div class="scroll-div">
             <div class="scroll-object">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis animi velit architecto corporis nobis
-                inventore cupiditate a alias quasi blanditiis minus eos quo sit, tenetur hic iusto dolor accusamus
-                voluptas?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sapiente dignissimos ullam rerum, dicta
-                commodi autem molestiae voluptate, et eos, a sed. Impedit, magni eum quo molestiae esse rem dolorem!
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto aliquid optio voluptatibus ex impedit
-                consequuntur sequi. Officiis ipsum eum laborum soluta cum neque fuga rem! Voluptate libero mollitia
-                exercitationem architecto.
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam quae qui alias eum eius modi fugiat
-                cumque reprehenderit vitae temporibus quis impedit maxime recusandae laborum quia, nobis eos magni
-                dignissimos.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis animi velit architecto corporis nobis
-                inventore cupiditate a alias quasi blanditiis minus eos quo sit, tenetur hic iusto dolor accusamus
-                voluptas?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sapiente dignissimos ullam rerum, dicta
-                commodi autem molestiae voluptate, et eos, a sed. Impedit, magni eum quo molestiae esse rem dolorem!
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto aliquid optio voluptatibus ex impedit
-                consequuntur sequi. Officiis ipsum eum laborum soluta cum neque fuga rem! Voluptate libero mollitia
-                exercitationem architecto.
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam quae qui alias eum eius modi fugiat
-                cumque reprehenderit vitae temporibus quis impedit maxime recusandae laborum quia, nobis eos magni
-                dignissimos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis animi velit architecto
-                corporis nobis inventore cupiditate a alias quasi blanditiis minus eos quo sit, tenetur hic iusto dolor
-                accusamus voluptas?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sapiente dignissimos ullam rerum, dicta
-                commodi autem molestiae voluptate, et eos, a sed. Impedit, magni eum quo molestiae esse rem dolorem!
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto aliquid optio voluptatibus ex impedit
-                consequuntur sequi. Officiis ipsum eum laborum soluta cum neque fuga rem! Voluptate libero mollitia
-                exercitationem architecto.
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam quae qui alias eum eius modi fugiat
-                cumque reprehenderit vitae temporibus quis impedit maxime recusandae laborum quia, nobis eos magni
-                dignissimos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis animi velit architecto
-                corporis nobis inventore cupiditate a alias quasi blanditiis minus eos quo sit, tenetur hic iusto dolor
-                accusamus voluptas?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sapiente dignissimos ullam rerum, dicta
-                commodi autem molestiae voluptate, et eos, a sed. Impedit, magni eum quo molestiae esse rem dolorem!
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto aliquid optio voluptatibus ex impedit
-                consequuntur sequi. Officiis ipsum eum laborum soluta cum neque fuga rem! Voluptate libero mollitia
-                exercitationem architecto.
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam quae qui alias eum eius modi fugiat
-                cumque reprehenderit vitae temporibus quis impedit maxime recusandae laborum quia, nobis eos magni
-                dignissimos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis animi velit architecto
-                corporis nobis inventore cupiditate a alias quasi blanditiis minus eos quo sit, tenetur hic iusto dolor
-                accusamus voluptas?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sapiente dignissimos ullam rerum, dicta
-                commodi autem molestiae voluptate, et eos, a sed. Impedit, magni eum quo molestiae esse rem dolorem!
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto aliquid optio voluptatibus ex impedit
-                consequuntur sequi. Officiis ipsum eum laborum soluta cum neque fuga rem! Voluptate libero mollitia
-                exercitationem architecto.
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam quae qui alias eum eius modi fugiat
-                cumque reprehenderit vitae temporibus quis impedit maxime recusandae laborum quia, nobis eos magni
-                dignissimos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis animi velit architecto
-                corporis nobis inventore cupiditate a alias quasi blanditiis minus eos quo sit, tenetur hic iusto dolor
-                accusamus voluptas?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sapiente dignissimos ullam rerum, dicta
-                commodi autem molestiae voluptate, et eos, a sed. Impedit, magni eum quo molestiae esse rem dolorem!
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto aliquid optio voluptatibus ex impedit
-                consequuntur sequi. Officiis ipsum eum laborum soluta cum neque fuga rem! Voluptate libero mollitia
-                exercitationem architecto.
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam quae qui alias eum eius modi fugiat
-                cumque reprehenderit vitae temporibus quis impedit maxime recusandae laborum quia, nobis eos magni
-                dignissimos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis animi velit architecto
-                corporis nobis inventore cupiditate a alias quasi blanditiis minus eos quo sit, tenetur hic iusto dolor
-                accusamus voluptas?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sapiente dignissimos ullam rerum, dicta
-                commodi autem molestiae voluptate, et eos, a sed. Impedit, magni eum quo molestiae esse rem dolorem!
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto aliquid optio voluptatibus ex impedit
-                consequuntur sequi. Officiis ipsum eum laborum soluta cum neque fuga rem! Voluptate libero mollitia
-                exercitationem architecto.
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam quae qui alias eum eius modi fugiat
-                cumque reprehenderit vitae temporibus quis impedit maxime recusandae laborum quia, nobis eos magni
-                dignissimos.
+                <h5>Biaya Sewa Tempat: </h5>
+                <li>Tidak ada biaya sewa, tetapi ada minimal order Rp 35.000 per orang.</li>
+                <li>Belum termasuk pajak 10%.</li>
+                <br>
+                <h5>Fasilitas:</h5>
+                <li>1 Mic</li>
+                <li>1 Projector (VGA/HDMI)</li>
+                <li>1 Screen</li>
+                <li>1 Kiup (amplifier Mini)</li>
+                <br>
+                <h5>Waktu:</h5>
+                <li>Durasi 3 Jam, lebih dari itu dikenakan biaya tambahan.</li>
+                <li>Persiapan acara maksimal 15 menit sebelumnya.</li>
+
+                <li>Contoh biaya tambahan untuk waktu tambahan.</li>
+
+                <br>
+                <h5>Area:</h5>
+                <li>Panggung minimal 30 orang: Event Space Depan</li>
+                <li> Panggung minimal 50 orang: Event Space Depan, Event Space Belakang</li>
+                <li> Panggung minimal 70 orang: Event Space Depan, Event Space Belakang, Amphiteater</li>
+                <br>
+                <h5>Menu:</h5>
+                <li>Berbagai paket makanan dengan harga berbeda.</li>
+                <li> Menu reguler maksimal 5 varian untuk jumlah di bawah 40 orang.</li>
+                <br>
+                <h5>Tambahan:</h5>
+                <li>Biaya service 5% untuk reservasi minimal 50 orang.</li>
+                <li> Protokol kesehatan harus diikuti.</li>
+                <li> Pembayaran uang muka 50% dari total bayar.</li>
+                <li> Pembatalan reservasi dikenakan biaya dan charge untuk membawa makanan/minuman dari luar.</li>
+                <br>
+
+                <strong>Pastikan memahami ketentuan di atas sebelum melakukan reservasi.</strong>
             </div>
         </div>
     </div>
