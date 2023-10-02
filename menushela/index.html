@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link boostrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- link-font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap" />
+    <title>menu makan minum</title>
+    <style>
+        /* navbar */
+        body {
+            background-color: #000000;
+        }
+
+        
+
+        .button {
+            
+            color: black;
+            transition: .3s;
+            width: 100px;
+            height: 50px;
+        }
+
+        .navbar {
+            z-index: 3;
+        }
+
+        .nav-link {
+            font-size: 16px;
+        }
+
+        .nav-link.active {
+            font-weight: 700;
+        }
+
+        /* navbar-color */
+        .nav-color {
+            background-color: #251e22;
+            transition: all ease-in-out 0.3s;
+        }
+
+        .bg-transparent {
+            transition: all ease-in 0.3s;
+        }
+
+        /* buton hover */
+        .btn-reservasi:hover {
+            background-color: #382D33;
+        }
+
+        /* corosel */
+        #fitur h2 {
+            color: white;
+            font-size: 48px;
+            font-weight: 500;
+        }
+
+        .card-fitur img {
+            width: 300px;
+            height: 400px;
+        }
+        .shel {
+            width: 100%;
+            height: 100px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .shel > a {
+            text-decoration: none;
+        }
+        .shel > a > button {
+            width: 120px;
+            height: 60px;
+            background-color: white;
+            border-radius: 10px;
+            border: rgb(194, 194, 11) solid 3px;
+        }
+        .shel > a > button:nth-child(1) {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    <h1>Menu</h1>
+    </div>
+    <div class="shel">
+    <a href="#makanan-menu"><button>Makanan</button></a>
+    <a href="#minuman-menu"><button>Minuman</button></a>
+    <section id="minuman" class="minuman-menu"></section>
+    
+    </div>
+    </div>
+    
+    <!-- menumakan -->
+    <section id="makanan-menu" class="mt-5 overflow-hidden">
+        <div class="container">
+            <div class="row mb-3">
+                <div class="col-9">
+                    <h2>Menu Makanan</h2>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-10 d-flex justify-content-start ">
+                        <div class="card-fitur me-3">
+                            <img src="./image/menumakan (1).png" alt="">
+                        </div>
+                        <div class="card-fitur me-3">
+                            <img src="./image/menumakan (2).png" alt="">
+                        </div>
+                        <div class="card-fitur me-3">
+                            <img src="./image/menumakan (3).png" alt="">
+                        </div>
+                        <div class="card-fitur me-3">
+                            <img src="./image/menumakan (4).png" alt="">
+                        </div>
+                        <div class="card-fitur me-3">
+                            <img src="./image/menumakan (5).png" alt="">
+                        </div>
+                        <div class="card-fitur me-3">
+                            <img src="./image/menumakan (6).png" alt="">
+                        </div>
+                        <div class="card-fitur me-3">
+                            <img src="./image/menumakan (7).png" alt="">
+                        </div>
+                        <div class="card-fitur me-3">
+                            <img src="./image/menumakan (8).png" alt="">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="minuman">
+        <div class="container ">
+            <div class="row m-5 p-4 ">
+                <div class="col-6 d-flex justify-content-center">
+                    <img style="width: 400px; height: 600px;" src="./image/menu minum.png" alt="">
+                   
+                </div>
+                <div class="col-6 d-flex justify-content-center">
+                    <img style="width: 400px; height: 600px;"  src="./image/menu minum2.png" alt="">                   
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- menuminum -->
+    <section id="fitur" class="mt-5 overflow-hidden">
+        <div class="container">
+            <div class="row mb-3">
+                <div class="col-9">
+                    <h2>Menu Minuman</h2>
+                </div>
+
+            </div>
+            <div class="container">
+                <div class="row">
+                    <section id="minuman-menu" class="minuman-menu"></section>
+                    <div class="col-10 d-flex justify-content-start">
+                        <section id="menu-minuman" class="mt-5 overflow-hidden">
+                            <div class="container">
+                                <div class="row mb-3">
+                                    <div class="col-9">
+                                        <h2>Menu Minuman</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="card-fitur me-3">
+                            <img src="./image/menuminum (1).png" alt="">
+                        </div>
+                        <div class="card-fitur me-3">
+                            <img src="./image/menuminum (2).png" alt="">
+                        </div>
+                        <div class="card-fitur me-3">
+                            <img src="./image/menuminum (3).png" alt="">
+                        </div>
+                        <div class="card-fitur me-3">
+                            <img src="./image/menuminum (4).png" alt="">
+                        </div>
+                        <div class="card-fitur me-3">
+                            <img src="./image/menuminum (5).png" alt="">
+                        </div>
+                        <div class="card-fitur me-3">
+                            <img src="./image/menuminum (6).png" alt="">
+                        </div>
+                        <div class="card-fitur me-3">
+                            <img src="./image/menuminum (7).png" alt="">
+                        </div>
+                        <div class="card-fitur me-3">
+                            <img src="./image/menuminum (8).png" alt="">
+                        </div>
+                        <div class="card-fitur me-3">
+                            <img src="./image/menuminum (9).png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
