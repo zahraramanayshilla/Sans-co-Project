@@ -16,18 +16,11 @@
     <!-- icon bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
+        @import url(responsive.css);
         body {
+            
             background-color: #251e22;
             scroll-behavior: smooth;
-        }
-
-        @media(max-width:990px) {
-            .sidebar {
-                background-color: rgba(255, 255, 255, 0.15);
-                backdrop-filter: blur(10px);
-
-            }
-
         }
 
         .navbar {
@@ -58,13 +51,13 @@
         }
 
 
-        /* btn-modal */
-        .reservasi-modal {
+       /* btn-modal */
+       .reservasi-modal {
             cursor: pointer;
             /* style-modal */
             border: none;
-            left: 64rem;
-            bottom: 67vh;
+            left: 67rem;
+            bottom: 74vh;
 
             position: fixed;
             top: 75px;
@@ -113,6 +106,7 @@
             background-image: url(./img/img-home/background\ home.png);
             background-blend-mode: multiply;
             background-repeat: no-repeat;
+            background-attachment: fixed;
             background-position: center;
             background-size: cover;
             height: 100vh;
@@ -129,58 +123,58 @@
             width: 239px;
             height: 240px;
         }
+        .about{
+            background-image: url(./img/img-home/Union.png); 
+            background-repeat: no-repeat; 
+            position: relative; 
+            background-size: cover; 
+           
+            background-position: center;
+            margin-top: -200px;
+             bottom: 50px;
+
+        }
     </style>
 </head>
 
 <body>
 
+   
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg  navbar-dark bg-transparent position-fixed w-100">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="./img/logo-nav.png" alt=""></a>
-            <!-- togler btn(garis3) -->
-            <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <!-- sidebar -->
-            <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel">
-                <!-- sidebar head -->
-                <div class="offcanvas-header text-white border-bottom">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="./img/logo-nav.png" alt="">
-                    </h5>
-                    <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body d-flex flex-column flex-lg-row p-4" id="navbarNav">
-                    <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
-                        <li class="nav-item mx-2">
-                            <a class="nav-link active" aria-current="page" href="home.html">Home</a>
-                        </li>
-                        <li class="nav-item mx-2">
-                            <a class="nav-link" href="about.html">About us</a>
-                        </li>
-                        <li class="nav-item mx-2">
-                            <a class="nav-link" href="sheilamenu.html">Menu</a>
-                        </li>
-                        <li class="nav-item mx-2">
-                            <a class="nav-link" href="gallery2.html">Gallery</a>
-                        </li>
-                        <li class="nav-item mx-2">
-                            <a class="nav-link" href="special-offers.html">Special offers</a>
-                        </li>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link  active"aria-current="page"  href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link"  href="about.html">About us</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="sheilamenu.html">Menu</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="special-offers.html">Special offers</a>
+                    </li>
 
-                    </ul>
-                    <!-- reservation btn -->
-                    <div
-                        class="open-button btn-reservasi d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
-                        <a onclick="reservasiModal();" href="#reservation"
-                            class="text-white text-decoration-none px-3 py-1"
-                            style="border: 4px solid #382D33; border-radius: 0;">RESERVATION</a>
-                    </div>
+                </ul>
+                <!-- reservation btn -->
+                <div
+                    class="open-button btn-reservasi d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
+                    <a onclick="reservasiModal();" href="#reservation" class="text-white text-decoration-none px-3 py-1"
+                        style="border: 4px solid #382D33; border-radius: 0;">RESERVATION</a>
                 </div>
             </div>
+        </div>
     </nav>
 
     <!-- reservasi-btn-modal -->
@@ -208,17 +202,16 @@
     </section>
 
     <!-- About -->
-    <section id="about" class="container-fluid vh-100 d-flex justify-content-center align-items-center "
-        style=" background-image: url(./img/img-home/Union.png); background-repeat: no-repeat; position: relative; background-size: cover; margin-top: -200px; bottom: 50px;">
+    <section id="about" class="about container-fluid vh-100 w-100 d-flex justify-content-center align-items-center ">
         <div class="container h-100 align-content-center">
-            <div class="row h-100">
-                <div class="col-md-6 text-center text-white" style="margin-top: 250px;">
+            <div class=" about-object  row h-100">
+                <div class=" text-about col-md-6 text-center text-white" style="margin-top: 250px;">
                     <h1>Sans Co</h1>
                     <h5 class="fw-light">Berdiri pada tanggal 11 januari 2022 dengan konsep kafe yang menyediakan
                         Working sapace dan meeting room</h5>
                 </div>
-                <img class="img-about position-absolute "
-                    style="width: 532px; height: 410px; margin-top:100px; margin-left: 600px;"
+                <img class="img-fluid img-about position-absolute "
+                    style="width: 532px; height: 410px; margin-top:100px; margin-left: 560px;"
                     src="./img/img-home/Group 73.png" alt="">
             </div>
         </div>
@@ -228,15 +221,15 @@
     <section id="menu page">
         <div class="container-fluid pb-5 ">
             <div class="row">
-                <div class="col">
-                    <img style="display: block;margin-left: auto;margin-right: auto;" src="./img/img-home/tulisan-menu.png" alt="">
+                <div class="col pt-4">
+                    <img class="im" style="display: block;margin-left: auto;margin-right: auto;" src="./img/img-home/tulisan-menu.png" alt="">
                 </div>
-                <div class="col-12 d-md-flex justify-content-center">
-                    <img class="m-1" src="./img/img-home/menu1.png" alt="">
-                    <img class="m-1" src="./img/img-home/menu2.png" alt="">
-                    <img class="m-1 pt-5 mt-4" src="./img/img-home/menu3.png" alt="">
-                    <img class="m-1" src="./img/img-home/menu4.png" alt="">
-                    <img class="m-1" src="./img/img-home/menu5.png" alt=""></div>
+                <div class=" col-12 d-md-flex justify-content-center">
+                    <img class="img-fluid m-1" src="./img/img-home/menu1.png" alt="">
+                    <img class="img-fluid m-1" src="./img/img-home/menu2.png" alt="">
+                    <img class="img-fluid m-1 pt-5 mt-4" src="./img/img-home/menu3.png" alt="">
+                    <img class="img-fluid m-1" src="./img/img-home/menu4.png" alt="">
+                    <img class="img-fluid m-1" src="./img/img-home/menu5.png" alt=""></div>
             </div>
         </div>
 
