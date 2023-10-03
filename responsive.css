@@ -1,15 +1,23 @@
 @media screen and (max-width : 922px) {}
 
-@media screen and (max-width : 768px) {}
-
-@media screen and (max-width : 320px) {
-
-  .menu-page{
-    display: flex;
-    flex-direction: column;
+@media screen and (max-width : 768px) {
+  .menu-page img {
+    width: 20%;
+    height: auto;
   }
-  .hero-img{
-    width: 200px;
+
+  .img-about {
+    position: absolute;
+    left: 50%;
+    width: 30%;
+    height: auto;
+    margin-top: 200px;
+  }
+
+  .hero-img {
+    width: 100px;
     height: 100px;
   }
 }
+
+@media screen and (max-width : 320px) {}
