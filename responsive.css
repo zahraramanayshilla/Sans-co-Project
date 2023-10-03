@@ -1,30 +1,14 @@
 @media screen and (max-width : 922px) {}
 
-@media screen and (min-width : 480px) and (max-width : 768px) {
-    .text-about h1 {
-        width: 35%;  
-      line-height: 50px;
-      
-         
-      }
-      .text-about h5 {
-          color: aqua;
-          font-size: 14px;
-          max-width: 200px; 
-      }
-       .img-about  {
-          display: flex;
-          flex-wrap: nowrap;
-          max-width: 350px;
-          right: 5PX;
-          height: 100px;
-      }
+@media screen and (max-width : 768px) {}
 
-      menu{
-        width: 200px;
-        display: flex;
-        flex-wrap: nowrap;
-      }
+@media screen and (max-width : 320px) {
+
+  .menu-page{
+    display: flex;
+    flex-direction: column;
+  }
+  .img-about{
+
+  }
 }
-
-@media screen and (max-width : 480px) {}
