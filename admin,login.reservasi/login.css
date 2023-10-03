@@ -13,22 +13,26 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: aquamarine;
+    background-color: rgb(255, 255, 255);
+    column-gap: 30px ;
 }
 
 .form {
     max-width: 430px;
     width: 100%;
     padding: 30px;
-    background-color: aqua;
+    background-color: #382D33;
     border-radius: 10px;
-
+}
+.form .signup{
+    opacity: 0;
+    pointer-events: none;
 }
 
 header {
     font-size: 28px;
     font-weight: 600;
-    color: #000;
+    color: #ffffff;
     text-align: center;
 }
 
@@ -36,11 +40,12 @@ form {
     margin-top: 30px;
 }
 
-form .field {
+.form .field {
     position: relative;
     height: 50px;
     width: 100%;
     margin-top: 20px;
+    border-radius: 6px;
 }
 
 .field input,
@@ -53,9 +58,13 @@ form .field {
 }
 
 .field input {
-
+    outline: none;
     padding: 0 15px;
     border: 1px solid #CACACA;
+}
+
+.field input:focus {
+    border-bottom-width: 2px;
 }
 
 .eye-icon {
@@ -87,4 +96,37 @@ form .field {
 
 .form a:hover {
     text-decoration: underline;
+}
+
+.line {
+    position: relative;
+    height: 1px;
+    width: 100%;
+    margin: 36px 0;
+    background-color: #8b8b8b;
+}
+
+.line::before {
+    content: 'or';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #382D33;
+    color: #ffffff;
+    padding: 0 15px;
+
+}
+
+.media-option a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.google-icon {
+    position: absolute;
+    top: 50%;
+    left: 90px;
+    transform: translateY(-50%);
 }
