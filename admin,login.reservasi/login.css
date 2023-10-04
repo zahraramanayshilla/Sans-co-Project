@@ -18,17 +18,25 @@
 }
 
 .form {
+    position: absolute;
     max-width: 430px;
     width: 100%;
     padding: 30px;
     background-color: #382D33;
     border-radius: 10px;
 }
-.form .signup{
+.form.signup{
     opacity: 0;
     pointer-events: none;
 }
-
+.forms.show-signup .form.signup{
+    opacity: 1;
+    pointer-events: auto;
+}
+.forms.show-signup .form.login{
+    opacity: 0;
+    pointer-events: none;
+}
 header {
     font-size: 28px;
     font-weight: 600;
@@ -55,6 +63,11 @@ form {
     border: none;
     font-size: 16px;
     border-radius: 10px;
+}
+
+.field button:hover{
+background-color: #8b8b8b;
+color: #ffffff;
 }
 
 .field input {
@@ -126,8 +139,16 @@ form {
 }
 
 .google-icon {
+    display: fixed;
     position: absolute;
     top: 50%;
     left: 90px;
     transform: translateY(-50%);
+}
+
+@media screen and (max-width: 400px) {
+    .form{
+        padding: 30px 20px;
+    }
+    
 }
