@@ -4,182 +4,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- link boostrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <!-- link-font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap" />
-    <title>menu makan minum</title>
+    <title>Document</title>
     <style>
-        /* navbar */
-        body {
-            background-color: #000000;
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
 
-        .navbar {
-            z-index: 3;
+        main {
+            width: 100%;
+            height: 840px;
+            margin: 10px auto;
+            position: relative;
+            padding: 5px 0;
         }
 
-        .nav-link {
-            font-size: 16px;
+        main .text {
+            padding: 10px;
+            text-align: center;
+            color: #554;
         }
 
-        .nav-link.active {
-            font-weight: 700;
+        .text h1 {
+            font-size: 50px;
         }
 
-        /* navbar-color */
-        .nav-color {
-            background-color: #251e22;
-            transition: all ease-in-out 0.3s;
+        .text p {
+            width: 60%;
+            padding: 5px;
+            margin: auto;
+            line-height: 30px;
         }
 
-        .bg-transparent {
-            transition: all ease-in 0.3s;
-        }
-
-        .shel {
-            margin-left: 50%;
-            scroll-behavior: smooth;
-            width: 100px;
-            height: 50px;
+        main header {
+            width: 98%;
+            height: 60px;
+            margin: 0 auto;
+            align-items: center;
             display: flex;
-            
+            padding: 20px;
+            justify-content: space-between;
+            border-bottom: 2px solid #ddd;
         }
-
-        /* buton hover */
-        .btn-reservasi:hover {
-            background-color: #382D33;
+        header p span {
+            font-size: 40px;
+            margin: 0 5px;
+            cursor: pointer;
+            color: #555;
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            line-height: 19px;
+            text-align: center;
+            border-radius: 3px;
         }
-
-        /* corosel */
-        #fitur h2 {
+        header p span:hover{
+            background: #222;
             color: white;
-            font-size: 48px;
-            font-weight: 500;
         }
-
-        .card-fitur img {
-            width: 300px;
-            height: 400px;
+        section{
+            width: 98%;
+            height: 600px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            overflow-x: auto;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-    <h1>Menu</h1>
-    </div>
-    <div class="shel">
-    <button>Makanan</button>
-    <button>Minuman</button>
-    </div>
-
-    <!-- menumakan -->
-    <section id="fitur" class="mt-5 overflow-hidden">
-        <div class="container">
-            <div class="row mb-3">
-                <div class="col-9">
-                    <h2>Menu Makanan</h2>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-10 d-flex justify-content-start ">
-                        <div class="card-fitur me-3">
-                            <img src="./img/img-menu/menumakan (1).png" alt="">
-                        </div>
-                        <div class="card-fitur me-3">
-                            <img src="./img/img-menu/menumakan (2).png" alt="">
-                        </div>
-                        <div class="card-fitur me-3">
-                            <img src="./img/img-menu/menumakan (3).png" alt="">
-                        </div>
-                        <div class="card-fitur me-3">
-                            <img src="./img/img-menu/menumakan (4).png" alt="">
-                        </div>
-                        <div class="card-fitur me-3">
-                            <img src="./img/img-menu/menumakan (5).png" alt="">
-                        </div>
-                        <div class="card-fitur me-3">
-                            <img src="./img/img-menu/menumakan (6).png" alt="">
-                        </div>
-                        <div class="card-fitur me-3">
-                            <img src="./img/img-menu/menumakan (7).png" alt="">
-                        </div>
-                        <div class="card-fitur me-3">
-                            <img src="./img/img-menu/menumakan (8).png" alt="">
-                        </div>
-
-                    </div>
-                </div>
-            </div>
+    <main>
+        <div class="text">
+            <h1>halooo</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, architecto. Nesciunt cupiditate
+                non ex hic quasi possimus placeat commodi nisi pariatur enim. Tempora dolorum rerum neque quam dolor
+                quae reiciendis.</p>
         </div>
-    </section>
+        <header>
+            <h1>top produk</h1>
+            <p>
+                <span>&#139;</span>
+                <span>&#155;</span>
+            </p>
 
-    <section id="minuman">
-        <div class="container ">
-            <div class="row m-5 p-4 ">
-                <div class="col-6 d-flex justify-content-center">
-                    <img style="width: 400px; height: 600px;" src="./img/img-menu/menu minum.png" alt="">
-                   
+        </header>
+        <section>
+            <div class="product">
+                <picture>
+                    <img src="./img/img-menu/menumakan (1).png" alt="">
+                </picture>
+                <div class="details">
+                    <p>
+                        <b>product one</b>
+                        <small>best seller</small>
+                        <samp>Rp.20.000</samp>
+                    </p>
                 </div>
-                <div class="col-6 d-flex justify-content-center">
-                    <img style="width: 400px; height: 600px;"  src="./img/img-menu/menu minum2.png" alt="">                   
-                </div>
-                
-            </div>
-        </div>
-    </section>
-
-    <!-- menuminum -->
-    <section id="fitur" class="mt-5 overflow-hidden">
-        <div class="container">
-            <div class="row mb-3">
-                <div class="col-9">
-                    <h2>Menu Minuman</h2>
-                </div>
-
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-10 d-flex justify-content-start">
-                        <div class="card-fitur me-3">
-                            <img src="./img/img-menu/menuminum (1).png" alt="">
-                        </div>
-                        <div class="card-fitur me-3">
-                            <img src="./img/img-menu/menuminum (2).png" alt="">
-                        </div>
-                        <div class="card-fitur me-3">
-                            <img src="./img/img-menu/menuminum (3).png" alt="">
-                        </div>
-                        <div class="card-fitur me-3">
-                            <img src="./img/img-menu/menuminum (4).png" alt="">
-                        </div>
-                        <div class="card-fitur me-3">
-                            <img src="./img/img-menu/menuminum (5).png" alt="">
-                        </div>
-                        <div class="card-fitur me-3">
-                            <img src="./img/img-menu/menuminum (6).png" alt="">
-                        </div>
-                        <div class="card-fitur me-3">
-                            <img src="./img/img-menu/menuminum (7).png" alt="">
-                        </div>
-                        <div class="card-fitur me-3">
-                            <img src="./img/img-menu/menuminum (8).png" alt="">
-                        </div>
-                        <div class="card-fitur me-3">
-                            <img src="./img/img-menu/menuminum (9).png" alt="">
-                        </div>
-                    </div>
+                <div class="button">
+                    <p class="star">
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                    </p>
                 </div>
             </div>
-        </div>
-    </section>
-
+            <div class="product">
+                <picture>
+                    <img src="./img/img-menu/menumakan (1).png" alt="">
+                </picture>
+                <div class="details">
+                    <p>
+                        <b>product one</b>
+                        <small>best seller</small>
+                        <samp>Rp.20.000</samp>
+                    </p>
+                </div>
+                <div class="button">
+                    <p class="star">
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                    </p>
+                </div>
+            </div>
+            <div class="product">
+                <picture>
+                    <img src="./img/img-menu/menumakan (1).png" alt="">
+                </picture>
+                <div class="details">
+                    <p>
+                        <b>product one</b>
+                        <small>best seller</small>
+                        <samp>Rp.20.000</samp>
+                    </p>
+                </div>
+                <div class="button">
+                    <p class="star">
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                    </p>
+                </div>
+            </div>
+            <div class="product">
+                <picture>
+                    <img src="./img/img-menu/menumakan (1).png" alt="">
+                </picture>
+                <div class="details">
+                    <p>
+                        <b>product one</b>
+                        <small>best seller</small>
+                        <samp>Rp.20.000</samp>
+                    </p>
+                </div>
+                <div class="button">
+                    <p class="star">
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                    </p>
+                </div>
+            </div>
+            <div class="product">
+                <picture>
+                    <img src="./img/img-menu/menumakan (1).png" alt="">
+                </picture>
+                <div class="details">
+                    <p>
+                        <b>product one</b>
+                        <small>best seller</small>
+                        <samp>Rp.20.000</samp>
+                    </p>
+                </div>
+                <div class="button">
+                    <p class="star">
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                    </p>
+                </div>
+            </div>
+             <div class="product">
+                <picture>
+                    <img src="./img/img-menu/menumakan (1).png" alt="">
+                </picture>
+                <div class="details">
+                    <p>
+                        <b>product one</b>
+                        <small>best seller</small>
+                        <samp>Rp.20.000</samp>
+                    </p>
+                </div>
+                <div class="button">
+                    <p class="star">
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                        <strong>&star;</strong>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>
