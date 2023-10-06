@@ -18,7 +18,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300&family=Poppins:wght@100;200&display=swap');
 
-        @import url(responsive.css);
+        @import url(../static/responsive.css);
 
         body {
             background-color: #251e22;
@@ -40,7 +40,7 @@
 
         /* navbar-color */
         .nav-color {
-            background-color: #251e22;
+            background-color: #382D33;
             transition: all ease-in-out 0.3s;
         }
 
@@ -106,7 +106,7 @@
 
         /* hero */
         #hero {
-            background-image: url(./img/img-home/background\ home.png);
+            background-image: url(../img/img-home/background\ home.png);
             background-blend-mode: multiply;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -128,7 +128,7 @@
         }
 
         .about {
-            background-image: url(./img/img-home/Union.png);
+            background-image: url(../img/img-home/Union.png);
             background-repeat: no-repeat;
             background-size: cover;
             width: 100%;
@@ -154,7 +154,8 @@
             color: white;
         }
         .dropdown:hover{
-            background-color: #382D33;
+            color: black;
+            background-color: #ffffff;
         }
         .dropdown-menu {
             background-color: #382D33;
@@ -172,7 +173,7 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg  navbar-dark bg-transparent position-fixed w-100">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="./img/logo-nav.png" alt=""></a>
+            <a class="navbar-brand" href="#"><img src="../img/logo-nav.png" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -198,13 +199,13 @@
                 </ul>
                 <!-- reservation btn -->
                 <form class="d-flex">
-                    <button class="nav-item dropdown px-3 py-1 " style="border: 4px solid #382D33; ">
+                    <button class="nav-item dropdown px-3 py-1 " style="border: 4px solid #ffffff; ">
                       <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Reservation
                       </a>
                       <ul class="dropdown-menu mt-2">
-                        <li><a class="dropdown-item" href="./admin,login.reservasi/reservasi-meeting.html">Meeting Room</a></li>
-                        <li><a class="dropdown-item" href="./admin,login.reservasi/reservasi-event.html">Event</a></li>
+                        <li><a class="dropdown-item" href="reservasi-meeting.html">Meeting Room</a></li>
+                        <li><a class="dropdown-item" href="reservasi-event.html">Event</a></li>
                       </ul>
                     </li></button>
                   </form>
@@ -219,7 +220,7 @@
             <div class="row h-100">
                 <div class="col-md-6 my-auto d-md-flex">
                     <img class=" img-fluid position-absolute top-50 start-50 translate-middle mt-5"
-                        src="./img/img-home/Sans co home.png">
+                        src="../img/img-home/Sans co home.png">
                 </div>
             </div>
         </div>
@@ -237,7 +238,7 @@
                         Working sapace dan meeting room</p>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6  order-1 order-lg-2">
-                    <img src="./img/img-home/Group 73.png" class="img-fluid img-about" alt="">
+                    <img src="../img/img-home/Group 73.png" class="img-fluid img-about" alt="">
                 </div>
             </div>
         </div>
@@ -249,14 +250,14 @@
             <div class="row">
                 <div class="col pt-5">
                     <img class="img-fluid" style="display: block;margin-left: auto;margin-right: auto;"
-                    src="./img/img-home/tulisan-menu.png" alt="">
+                    src="../img/img-home/tulisan-menu.png" alt="">
 
                     <div class="menu-page col-12 d-md-flex justify-content-center">
-                        <img class="img-fluid m-1" src="./img/img-home/menu1.png" alt="">
-                        <img class="img-fluid m-1" src="./img/img-home/menu2.png" alt="">
-                        <img class="img-fluid m-1 pt-5 mt-4 menu3" src="./img/img-home/menu3.png" alt="">
-                        <img class="img-fluid m-1" src="./img/img-home/menu4.png" alt="">
-                        <img class="img-fluid m-1" src="./img/img-home/menu5.png" alt="">
+                        <img class="img-fluid m-1" src="../img/img-home/menu1.png" alt="">
+                        <img class="img-fluid m-1" src="../img/img-home/menu2.png" alt="">
+                        <img class="img-fluid m-1 pt-5 mt-4 menu3" src="../img/img-home/menu3.png" alt="">
+                        <img class="img-fluid m-1" src="../img/img-home/menu4.png" alt="">
+                        <img class="img-fluid m-1" src="../img/img-home/menu5.png" alt="">
                     </div>
                 </div>
 
@@ -270,7 +271,7 @@
         <div class="row text-center text-md-start">
             <!-- logo footer -->
             <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                <img class="img-fluid" src="./img/logo-footer.png" alt="">
+                <img class="img-fluid" src="../img/logo-footer.png" alt="">
             </div>
             <!-- conten -->
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
@@ -329,7 +330,7 @@
 </footer>
  
 
-    <script src="js/scripts.js"></script>
+    <script src="../js/scripts.js"></script>
 </body>
 
 </html>
