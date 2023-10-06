@@ -16,7 +16,7 @@
     <!-- icon bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <title>About Us</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../about us/style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200&family=Ubuntu&display=swap');
@@ -40,7 +40,7 @@
 
         /* navbar-color */
         .nav-color {
-            background-color: #251e22;
+            background-color: #382D33;
             transition: all ease-in-out 0.3s;
         }
 
@@ -48,62 +48,20 @@
             transition: all ease-in 0.3s;
         }
 
-        /* buton hover */
-        .btn-reservasi:hover {
+        .dropdown{
+            background: none;
+            color: white;
+        }
+        .dropdown:hover{
+            color: black;
+            background-color: #ffffff;
+        }
+        .dropdown-menu {
             background-color: #382D33;
         }
-
-
-       /* btn-modal */
-       .reservasi-modal {
-            cursor: pointer;
-            /* style-modal */
-            border: none;
-            left: 67rem;
-            bottom: 74vh;
-
-            position: fixed;
-            top: 75px;
-            right: 100px;
-            width: 165px;
-            padding: 5px;
-            box-sizing: border-box;
-            box-shadow: 0px 0px 10px 0px rgb(209, 209, 209, 0.3);
-            background-color: #382D33;
-
+        .dropdown-item{
+            color: white;
         }
-
-        .reservasi-modal .button {
-            background-color: #251e22;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-        }
-
-        .reservasi-modal .button:hover {
-            background-color: #55444e;
-        }
-
-        .reservasi-modal::backdrop {
-            background-color: rgba(0, 0, 0, 0.5)
-        }
-
-        .reservasi-info {
-            text-align: center;
-            box-sizing: border-box;
-
-        }
-
-        .reservasi-info>div {
-            width: 100%;
-            padding: 5px;
-            box-sizing: border-box;
-        }
-
-        .reservasi-info>:hover {
-            font-weight: 500;
-        }
-
         /* hero */
         #hero {
             background-image: url(../img/img-about/Rectangle\ 12.png);
@@ -114,6 +72,542 @@
             width: 100%;
             height: 546px;
         }
+
+        .nav {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0%;
+    left: 280px;
+    position: fixed;
+}
+
+.logo {
+    position: relative;
+    width: 90px;
+    right: 200px;
+
+}
+
+.nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+.nav ul li a {
+    color: #ffff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+
+
+.container > img {
+    margin-top: -10px;
+    margin-left: -10px;
+    width: 105%;
+    height: 0%;
+}
+
+.child {
+    background-color: #382D33;
+    width: 450px;
+    height: 200px;
+    position: relative;
+    left: 450px;
+    bottom: 120px;
+    border-radius: 30px;
+}
+
+.anak {
+    position: relative;
+    top: 80px;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 35px;
+    text-align: center;
+}
+
+.kedua > img {
+    position: absolute;
+    width: 400px;
+    height: 550px;
+    margin-left: 130px;
+    margin-top: 10px;
+}
+
+.pat {
+    position: relative;
+    background-color: #382D33;
+    width: 300px;
+    height: 400px;
+    top: 60px;
+    left: 80px;
+    
+}
+
+.budak {
+    margin-top: -300px;
+    margin-left: 700px;
+}
+
+.budak > div {
+    font-family: 'Mulish', sans-serif;
+    font-size: 30px;
+    
+}
+
+.budak > p {
+    font-family: 'Mulish', sans-serif;
+    font-size: 19px;
+
+}
+
+.budak > h3{
+    font-family: 'Ubuntu', sans-serif;
+    
+}
+
+.service {
+    font-family: 'Nutino Sans', sans-serif;
+    text-align: center;
+    margin-top: 350px;
+    font-size: 30px;
+
+}
+
+.oser {
+    margin-top: 60px;
+    margin-left: 25%;
+}
+
+.oser > img {
+    margin-top: 40px;
+}
+
+.bola {
+    position: relative;
+    background-color: #382D33;
+    width: 350px;
+    height: 00px;
+    bottom: 100px;
+
+}
+
+.bola > div {
+    margin-top: -500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.visit {
+    text-align: center;
+    justify-content: center;
+    margin-top: 150px;
+    align-items: center;
+    
+}
+
+.tivit {
+    font-size: 30px;
+}
+
+.visit > b{
+    font-family: 'Mulish', sans-serif;
+    font-size: 35px;
+}
+
+.visit > p {
+    font-family: 'Mulish', sans-serif;
+    font-size: 20px;
+}
+
+.visit > div {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+.potokami {
+    margin-left: -170px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+.paragrap {
+    margin: 50px;
+    background-color: #382D33;
+    width: 100%;
+    height: 520px;
+    margin-top: 100px;
+}
+.paragrap > img {
+    margin-top: -200px;
+}
+.paragrap > h1 {
+    text-align: center;
+color: white;
+font-weight: bold;
+}
+
+.test {
+    color: white;
+    font-family: 'Poppins' sans-serif; 
+    margin-top: 15px;
+    text-align: center;
+}
+
+.test2 {
+    color: white;
+    text-align: center;
+    font-family: 'Poppins' sans-serif;
+    font-size: 28px;
+}
+
+@media screen and (max-width: 460px){
+    .container {
+        flex-direction: column;
+    }
+
+    .child {
+        left: -200px;
+        width: 150px;
+        height: 80px;
+        position: relative;
+        left: 100px;
+        bottom: 50px;
+        border-radius: 15px;
+
+    }
+
+    .anak {
+        position: relative;
+        top: 0px;
+        color: white;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 1rem;
+        text-align: center;
+        top: 2rem;
+    }
+    
+    .kedua > img {
+        position: absolute;
+        width: 9rem;
+        height: 13rem;
+        margin-left: 7rem;
+        margin-top: -14rem;
+    }
+
+    .pat {
+        position: relative;
+        background-color: #382D33;
+        width: 6rem;
+        height: 9rem;
+        top: -1rem;
+        left: 5rem;
+        
+        
+    }
+
+    .budak {
+        margin-top: 5rem;
+        margin-left: 0rem;
+        text-align: center;
+    }
+    
+    .budak > div {
+        font-family: 'Mulish', sans-serif;
+        font-size: 15px;
+            
+    }
+    
+    .budak > p {
+        font-family: 'Mulish', sans-serif;
+        font-size: 10px ;
+    
+    }
+    
+    .budak > h3{
+        font-family: 'Ubuntu', sans-serif;
+        
+    }
+    
+    .service {
+        font-family: 'Nutino Sans', sans-serif;
+        text-align: center;
+        margin-top: 5rem;
+        font-size: 1rem;
+    
+    }
+    
+    .oser {
+        margin-top: 60px;
+        margin-left: 25%;
+    }
+    
+    .oser > img {
+        margin-top: 40px;
+    
+    }
+    
+    .bola {
+        position: relative;
+        background-color: #382D33;
+        width: 350px;
+        height: 00px;
+        bottom: 100px;
+    
+    }
+    
+    .bola > div {
+        margin-top: -500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .visit {
+        text-align: center;
+        justify-content: center;
+        margin-top: 70px;
+        align-items: center;
+        
+    }
+    
+    .tivit {
+        font-size: 25px;
+    }
+    
+    .visit > b{
+        font-family: 'Mulish', sans-serif;
+        font-size: 25px;
+    }
+    
+    .visit > p {
+        font-family: 'Mulish', sans-serif;
+        font-size: 15px;
+    }
+    
+    .visit > div {
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        
+        
+    }
+    
+    .potokami {
+        margin-left: -5px;
+        width: 100%;
+        
+        margin-top: -4rem;
+    }
+    
+    .paragrap {
+        margin: 50px;
+        background-color: #382D33;
+        width: 100%;
+        height: 10rem;
+        margin-top: 100px;
+        margin-left: -2rem;
+    }
+    .paragrap > img {
+        width: 7rem;
+        height: 7rem;
+        margin-top: -200px;
+    }
+    .paragrap > h1 {
+        text-align: center;
+    color: white;
+    font-weight: bold;
+    }
+
+    .paragrap > p {
+        font-size: 0rem;
+    }
+
+    .test {
+        color: black;
+        font-family: 'Poppins' sans-serif; 
+        margin-top: 3rem;
+    }
+
+    .test2 {
+        color: white;
+        text-align: center;
+        font-family: 'Poppins' sans-serif;
+        font-size: 1rem;
+    }
+
+    
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .container > img {
+        margin-top: -10px;
+        margin-left: -10px;
+        width: 105%;
+        height: 0%;
+    }
+    
+    .child {
+        background-color: #382D33;
+        width: 350px;
+        height: 150px;
+        position: relative;
+        left: 200px;
+        bottom: 90px;
+        border-radius: 30px;
+    }
+    
+    .anak {
+        position: relative;
+        top: 55px;
+        color: white;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 35px;
+        text-align: center;
+    }
+    
+    .kedua > img {
+        position: absolute;
+        width: 300px;
+        height: 450px;
+        margin-left: 220px;
+        margin-top: -480px;
+    }
+    
+    .pat {
+        position: relative;
+        background-color: #382D33;
+        width: 200px;
+        height: 300px;
+        top: -20px;
+        left: 180px;
+        
+    }
+    
+    .budak {
+        margin-top: 200px;
+        margin-left: 0px;
+        text-align: center;
+    }
+    
+    .budak > div {
+        font-family: 'Mulish', sans-serif;
+        font-size: 30px;
+        
+    }
+    
+    .budak > p {
+        font-family: 'Mulish', sans-serif;
+        font-size: 20px;
+    
+    }
+    
+    .budak > h3{
+        font-family: 'Ubuntu', sans-serif;
+        
+    }
+    
+    .service {
+        font-family: 'Nutino Sans', sans-serif;
+        text-align: center;
+        margin-top: 150px;
+        font-size: 30px;
+    
+    }
+    
+    
+    .visit {
+        text-align: center;
+        justify-content: center;
+        margin-top: 150px;
+        align-items: center;
+        
+    }
+    
+    .tivit {
+        font-size: 30px;
+    }
+    
+    .visit > b{
+        font-family: 'Mulish', sans-serif;
+        font-size: 35px;
+    }
+    
+    .visit > p {
+        font-family: 'Mulish', sans-serif;
+        font-size: 20px;
+    }
+    
+    .visit > div {
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        
+        
+    }
+    
+    .potokami {
+        margin-left: -53px;
+        width: 100%;
+        
+        margin-top: 10rem;
+    }
+    
+    .paragrap {
+        margin: 50px;
+        background-color: #382D33;
+        width: 100%;
+        height: 15rem;
+        margin-top: 100px;
+        margin-left: -2rem;
+    }
+    .paragrap > img {
+        width: 15rem;
+        height: 15rem;
+        margin-top: -300px;
+    }
+    .paragrap > h1 {
+        text-align: center;
+    color: white;
+    font-weight: bold;
+    }
+
+    .paragrap > p {
+        font-size: 0rem;
+    }
+
+    .test {
+        color: black;
+        font-family: 'Poppins' sans-serif; 
+        margin-top: 13rem;
+    }
+
+    .test2 {
+        color: white;
+        text-align: center;
+        font-family: 'Poppins' sans-serif;
+        font-size: 1rem;
+    }
+
+    
+}
+
+     
+
+
 
         /* .nav {
             display: flex;
@@ -145,7 +639,7 @@
             font-size: 18px;
             position: relative;
         } */
-        .container>img {
+        /* .container>img {
             margin-top: -10px;
             margin-left: -10px;
             width: 105%;
@@ -273,11 +767,12 @@
             margin-left: -100px;
 
 
-        }
+        } */
     </style>
 </head>
 
 <body>
+
 
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg  navbar-dark bg-transparent position-fixed w-100">
@@ -290,10 +785,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item mx-2">
-                        <a class="nav-link " href="home.html">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link active"aria-current="page"  href="about.html">About us</a>
+                        <a class="nav-link" href="about.html">About us</a>
                     </li>
                     <li class="nav-item mx-2">
                         <a class="nav-link" href="sheilamenu.html">Menu</a>
@@ -307,43 +802,27 @@
 
                 </ul>
                 <!-- reservation btn -->
-                <div
-                    class="open-button btn-reservasi d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
-                    <a onclick="reservasiModal();" href="#reservation" class="text-white text-decoration-none px-3 py-1"
-                        style="border: 4px solid #382D33; border-radius: 0;">RESERVATION</a>
-                </div>
+                <form class="d-flex">
+                    <button class="nav-item dropdown px-3 py-1 " style="border: 4px solid #ffffff; ">
+                      <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Reservation
+                      </a>
+                      <ul class="dropdown-menu mt-2">
+                        <li><a class="dropdown-item" href="reservasi-meeting.html">Meeting Room</a></li>
+                        <li><a class="dropdown-item" href="reservasi-event.html">Event</a></li>
+                      </ul>
+                    </li></button>
+                  </form>
             </div>
         </div>
     </nav>
-    <!-- reservasi-btn-modal -->
-    <dialog class="reservasi-modal" id="reservasi-modal">
-        <div class="reservasi-info text-white">
-            <div><a class="text-white text-decoration-none"
-                    href="reservasi-meeting.html">Meeting Room</a>
-            </div>
-            <div> <a class="text-white text-decoration-none"
-                    href="reservasi-event.html">event</a></div>
-            <button class="button close-button m-2">Close</button>
-        </div>
-    </dialog>
-
-    <!-- <nav class="nav">
-        <img src="./img/img-about/logo-nav.png" class="logo">
-        <ul id="sidemenu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Special Offers</a></li>
-        </ul>
-    </nav> -->
 
     <!-- hero section -->
     <section id="hero">
         <div class="container h-100">
             <div class="row h-100">
-                <div class="col-md-6 my-auto d-md-flex">
-                    <div class="child">
+                <div class="col-md-6 my-auto d-md-flex ">
+                    <div class="img-fluid position-absolute top-50 start-50 translate-middle  child">
                         <h1 class="anak">About Us</h1>
                     </div>
                 </div>
@@ -352,67 +831,62 @@
     </section>
 
 
-    <!-- <div class="container">
-        <img src="./img/img-about/ats.jpg" alt="">
-       
-    </div> -->
-
-    <div class="kedua">
-        <img src="../img/img-about/sans.jpg" alt="">
-        <div class="budak">
-            <h3>About Us</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
-                Curabitur ultricies convallis nulla maximus varius. Quisque pretium<br>
-                vitae nibh ac placerat. Nulla consequat urna nec ipsum sodales ornare.<br>
-                Donec egestas lacus lorem, id elementum nisi tempus non. Nulla egestas<br>
-                tellus et dui hendrerit molestie. In hac habitasse platea dictumst.<br>
-                Proin id augue vitae urna elementum imperdiet. Maecenas mattis massa<br>
-                lacinia arcu convallis porta. Sed non leo nec ex accumsan faucibus. <br>
-                Ut sed turpis sit amet nibh facilisis faucibus in tincidunt nisi. <br>
-                Sed elit mi, lacinia eu mauris consectetur, mattis scelerisque mi.<br>
-                Nulla ac sapien est. Curabitur bibendum, mi a fringilla aliquam, orci<br>
-                urna molestie nunc, eu luctus enim purus at metus. Sed id leo ac lectus<br>
-                accumsan dignissim ut ut lorem. Sed ut vulputate felis, quis maximus metus.
+    <div class="pat"></div>
+    <div class="container">
+        <div class="kedua">
+            
+            <img src="../about us/image/sans.jpg" alt="">
+            <div class="budak">
+            <div>About Us</div>
+            <p>Cafe Sans Co di Dago, Bandung, adalah destinasi unik yang menggabungkan seni,
+            kopi berkualitas tinggi, dan kreativitas dalam satu tempat. Suasana artistik dengan mural yang
+            memukau menciptakan lingkungan yang ramah dan nyaman bagi pengunjung. Dalam menu kopi,
+            pengunjung dapat menikmati berbagai minuman kopi berkualitas dari espresso yang kuat hingga
+            kopi susu yang lembut. Tempat ini bukan hanya sekadar kafe; Cafe Sans Co adalah pusat budaya dengan
+            serangkaian acara seni dan kegiatan kreatif seperti pameran seni dan pertunjukan musik. Dengan suasana
+            yang tenang dan musik yang menyenangkan, tempat ini menjadi tempat ideal untuk bersantai sambil
+            menikmati kopi dan seni lokal. Cafe Sans Co tidak hanya memanjakan lidah dengan cita rasa kopi yang 
+            istimewa tetapi juga memberikan pengalaman yang menginspirasi dan memikat bagi pengunjungnya.
+            Jika Anda mencari tempat yang menggabungkan keindahan seni, kenikmatan kopi, dan suasana yang hangat,
+            Cafe Sans Co di Dago adalah destinasi yang sempurna untuk dinikmati.
             </p>
+            </div>
+    </div>
+
+    </div>
+    <div style="position: relative; top: -30px;" class="service">Our Service</div>
+
+    <div class="oser">
+        
+
+        <div class="potokami">
+            <div class="paragrap">
+                <img src="../about us/image/coworking.png" alt="">
+                <div class="test2">Coworking Space</div>
+                <p class="test">Coworking space cafe adalah tempat di mana orang bisa bekerja sambil menikmati suasana kafe. Mereka menyediakan meja kerja, internet cepat, dan makanan minuman kafe. Konsep ini memadukan lingkungan kerja dengan atmosfer santai, cocok bagi pekerja independen dan freelancer.</p>
+            </div>
+            <div class="paragrap">
+                <img src="../about us/image/meet.png" alt="">
+                <div class="test2">Meeting Room</div>
+                <p class="test">Room meeting cafe adalah ruang pertemuan di kafe atau restoran yang dirancang untuk pertemuan bisnis dan kolaborasi. Mereka dilengkapi dengan fasilitas seperti meja, kursi, proyektor, dan peralatan audiovisual. Tujuannya adalah memberikan lingkungan santai bagi pertemuan sambil menikmati suasana kafe. Ruangan ini dapat disewa dengan tarif per jam, sering dengan layanan katering. Penting untuk mencari room meeting cafe yang sesuai dengan kebutuhan fasilitas dan lokasi Anda.</p>
+            </div>
+            <div class="paragrap">
+                <img src="../about us/image/cafe.png" alt="">
+                <div class="test2">Cafe Space</div>
+                <p class="test">Event space di cafe memberikan tempat yang nyaman dan terorganisir untuk acara-acara khusus seperti pertemuan bisnis, pesta, atau pertunjukan musik. Dengan fasilitas dan pelayanan yang tepat, cafe ini memudahkan pelanggan dalam mengadakan acara dengan lancar. Reservasi, harga, fasilitas, dan aturan yang jelas adalah faktor penting yang perlu diperhatikan dalam menggunakan event space di cafe, menciptakan pengalaman yang menyenangkan bagi peserta acara.</p>
+            </div>
         </div>
+
+        
     </div>
-
-    <div class="service">Our Service</div>
-
-    <div class="our">
-        <img src="../img/img-about/foro.jpg" alt="">
-        <div></div>
-
-        <img src="../img/img-about/meet.png" alt="">
-        <div></div>
-
-        <img src="../img/img-about/cafe.png" alt="">
-        <div></div>
-    </div>
-
-    <div class="fnt">
-        <b>Coworking Space</b>
-    </div>
-
-    <div class="fnt2">
-        <b>Meeting Room</b>
-    </div>
-
-    <div class="fnt3">
-        <b>Cafe Space</b>
-    </div>
-
     <div class="visit">
-        <b>Visit Us</b>
+        <div class="tivit">Visit Us</div>
         <p>Alamat : Jl. Ir. H. Juanda No.347,<br>
             RW.05, Dago, Coblong, Bandung<br>
             City, West Java 40135
         </p>
         <div>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.13325136043!2d107.616053574222!3d-6.874633693124113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7cf90c5ca63%3A0x4c0cdd03d96d2f0b!2sSans%20Co.!5e0!3m2!1sid!2sid!4v1695566837031!5m2!1sid!2sid"
-                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.13325136043!2d107.616053574222!3d-6.874633693124113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7cf90c5ca63%3A0x4c0cdd03d96d2f0b!2sSans%20Co.!5e0!3m2!1sid!2sid!4v1695566837031!5m2!1sid!2sid" width="1400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
 
@@ -481,7 +955,7 @@
         </div>
     </footer>
 
-    <script src="js/scripts.js"></script>
+    <script src="../js/scripts.js"></script>
 </body>
 
 </html>
