@@ -12,19 +12,19 @@ def home():
     return render_template('home.html')
 
 @app.route('/about')
-def dashboard():
+def about():
     return render_template('about.html')
 
 @app.route('/menu')
-def edit():
+def menu():
     return render_template('sheilamenu.html')
 
 @app.route('/gallery')
-def add():
+def gallery():
     return render_template('gallery.html')
 
 @app.route('/special-offers')
-def add():
+def specialoffers():
     return render_template('special-offers.html')
 
 
