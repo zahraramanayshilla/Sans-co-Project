@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Mulish', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    column-gap: 30px ;
+}
+
+.form {
+    position: absolute;
+    max-width: 430px;
+    width: 100%;
+    padding: 30px;
+    background-color: #382D33;
+    border-radius: 10px;
+}
+.form.signup{
+    opacity: 0;
+    pointer-events: none;
+}
+.forms.show-signup .form.signup{
+    opacity: 1;
+    pointer-events: auto;
+}
+.forms.show-signup .form.login{
+    opacity: 0;
+    pointer-events: none;
+}
+header {
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+}
+
+form {
+    margin-top: 30px;
+}
+
+.form .field {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 6px;
+}
+
+.field input,
+.field button {
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.field button:hover{
+background-color: #8b8b8b;
+color: #ffffff;
+}
+
+.field input {
+    outline: none;
+    padding: 0 15px;
+    border: 1px solid #CACACA;
+}
+
+.field input:focus {
+    border-bottom-width: 2px;
+}
+
+.eye-icon {
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #8b8b8b;
+    position: absolute;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.form-link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.form-link span,
+.form-link a {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.form a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.form a:hover {
+    text-decoration: underline;
+}
+
+.line {
+    position: relative;
+    height: 1px;
+    width: 100%;
+    margin: 36px 0;
+    background-color: #8b8b8b;
+}
+
+.line::before {
+    content: 'or';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #382D33;
+    color: #ffffff;
+    padding: 0 15px;
+
+}
+
+.media-option a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.google-icon {
+    display: fixed;
+    position: absolute;
+    top: 50%;
+    left: 90px;
+    transform: translateY(-50%);
+}
+
+@media screen and (max-width: 400px) {
+    .form{
+        padding: 30px 20px;
+    }
+    
+}

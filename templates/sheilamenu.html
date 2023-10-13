@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link boostrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+         <!-- icon bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- link-font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap" />
+    <title>menu</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300&family=Poppins:wght@100;200&display=swap');
+
+        body {
+            background-color: #251e22;
+            background-blend-mode: multiply;
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            z-index: 3;
+        }
+
+        .nav-link {
+            font-size: 16px;
+        }
+
+        .nav-link.active {
+            font-weight: 700;
+        }
+
+        /* navbar-color */
+        .nav-color {
+            background-color: #382D33;
+            transition: all ease-in-out 0.3s;
+        }
+
+        .bg-transparent {
+            transition: all ease-in 0.3s;
+        }
+        .dropdown{
+            background: none;
+            color: white;
+        }
+        .dropdown:hover{
+            color: black;
+            background-color: #ffffff;
+        }
+        .dropdown-menu {
+            background-color: #382D33;
+        }
+        .dropdown-item{
+            color: white;
+        }
+
+        /* hero */
+        #hero {
+            background-image: url(../img/img-menu/bg-menu.png);
+            background-blend-mode: multiply;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+            width: 100%;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        main {
+            width: 100%;
+            height: 840px;
+            margin: 10px auto;
+            position: relative;
+            padding: 5px 0;
+        }
+
+        main .text {
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        .text h1 {
+            font-size: 40px;
+        }
+
+        .text p {
+            width: 60%;
+            padding: 5px;
+            margin: auto;
+            line-height: 30px;
+        }
+
+        main header {
+            width: 98%;
+            height: 60px;
+            margin: 0 auto;
+            align-items: center;
+            display: flex;
+            padding: 20px;
+            justify-content: space-between;
+            border-bottom: 2px solid #ddd;
+        }
+
+        header p span {
+            font-size: 40px;
+            margin: 0 5px;
+            cursor: pointer;
+            color: #ffffff;
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            line-height: 19px;
+            text-align: center;
+            border-radius: 3px;
+        }
+
+        header p span:hover {
+            background: #382D33;
+            color: white;
+        }
+
+        section {
+            width: 98%;
+            height: 600px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            overflow-x: auto;
+        }
+
+        section::-webkit-scrollbar {
+            display: none;
+        }
+
+        section .product {
+            min-width: 24%;
+            height: 100%;
+            margin: 0 20px 0 0;
+            border-radius: 20px;
+            position: relative;
+            left: 0;
+            transition: 0.5s;
+
+        }
+
+        picture {
+            width: 100%;
+            height: 70%;
+            display: flex;
+            overflow: hidden;
+            margin-bottom: 20px;
+
+        }
+
+        picture img {
+            width: 100%;
+        }
+
+     
+        @media (max-width: 768px) {
+            .text h1 {
+                font-size: 35px;
+            }
+
+            .text p {
+                width: 90%;
+            }
+
+            header p span {
+                font-size: 30px;
+            }
+
+            section .product {
+                min-width: 49%;
+                margin: 0 10px 0 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg  navbar-dark bg-transparent position-fixed w-100">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="../img/logo-nav.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="about.html">About us</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link  active" aria-current="page"  href="sheilamenu.html">Menu</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="special-offers.html">Special offers</a>
+                    </li>
+
+                </ul>
+                <!-- reservation btn -->
+                <form class="d-flex">
+                    <button class="nav-item dropdown px-3 py-1 " style="border: 4px solid #ffffff; ">
+                      <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Reservation
+                      </a>
+                      <ul class="dropdown-menu mt-2">
+                        <li><a class="dropdown-item" href="reservasi-meeting.html">Meeting Room</a></li>
+                        <li><a class="dropdown-item" href="reservasi-event.html">Event</a></li>
+                      </ul>
+                    </li></button>
+                  </form>
+            </div>
+        </div>
+    </nav>
+
+     <!-- hero section -->
+     <section id="hero">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-md-6 my-auto d-md-flex">
+                    <img class=" img-fluid position-absolute top-50 start-50 translate-middle mt-5"
+                        src="../img/img-menu/sansco-menu.png">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <div class="text">
+            <h1>All Menu </h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, architecto. Nesciunt cupiditate
+                non ex hic quasi possimus placeat commodi nisi pariatur enim. Tempora dolorum rerum neque quam dolor
+                quae reiciendis.</p>
+        </div>
+        <header>
+            <p>
+                <span>&#139;</span>
+                <span>&#155;</span>
+            </p>
+
+        </header>
+        <section class="pt-5">
+            <div class="product">
+                <picture>
+                    <img src="../img/img-menu/menumakan (1).png" alt="">
+                </picture>
+               
+             
+            </div>
+            <div class="product">
+                <picture>
+                    <img src="../img/img-menu/menumakan (2).png" alt="">
+                </picture>
+              
+            </div>
+            <div class="product">
+                <picture>
+                    <img src="../img/img-menu/menumakan (3).png" alt="">
+               
+            </div>
+            <div class="product">
+                <picture>
+                    <img src="../img/img-menu/menumakan (4).png" alt="">
+                </picture>
+               
+            </div>
+            <div class="product">
+                <picture>
+                    <img src="../img/img-menu/menumakan (5).png" alt="">
+                </picture>
+            
+            </div>
+            <div class="product">
+                <picture>
+                    <img src="../img/img-menu/menumakan (6).png" alt="">
+                </picture>
+                
+            </div>
+            <div class="product">
+                <picture>
+                    <img src="../img/img-menu/menumakan (7).png" alt="">
+                </picture>
+          
+            </div>
+            <div class="product">
+                <picture>
+                    <img src="../img/img-menu/menumakan (8).png" alt="">
+                </picture>
+           
+            </div>
+            <div class="product">
+                <picture>
+                    <img src="../img/img-menu/menuminum (1).png" alt="">
+                </picture>
+            </div>
+            <div class="product">
+                <picture>
+                    <img src="../img/img-menu/menuminum (2).png" alt="">
+                </picture>
+            </div>
+            <div class="product">
+                <picture>
+                    <img src="../img/img-menu/menuminum (3).png" alt="">
+                </picture>
+            </div>   <div class="product">
+                <picture>
+                    <img src="../img/img-menu/menuminum (4).png" alt="">
+                </picture>
+            </div>   <div class="product">
+                <picture>
+                    <img src="../img/img-menu/menuminum (5).png" alt="">
+                </picture>
+            </div>   <div class="product">
+                <picture>
+                    <img src="../img/img-menu/menuminum (6).png" alt="">
+                </picture>
+            </div>   <div class="product">
+                <picture>
+                    <img src="../img/img-menu/menuminum (7).png" alt="">
+                </picture>
+            </div>   <div class="product">
+                <picture>
+                    <img src="../img/img-menu/menuminum (8).png" alt="">
+                </picture>
+            </div>
+        </div>   <div class="product">
+            <picture>
+                <img src="../img/img-menu/menuminum (9).png" alt="">
+            </picture>
+        </div>
+        </section>
+    </main>
+
+
+    <!-- footer -->
+    <footer class="text-white pt-5 pb-4" style="background-color: #382D33;">
+        <div class="container text-center text-md-start">
+            <div class="row text-center text-md-start">
+                <!-- logo footer -->
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <img class="img-fluid" src="../img/logo-footer.png" alt="">
+                </div>
+                <!-- conten -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-white">Content</h5>
+                    <p>
+                        <a href="home.html" class="text-white" style="text-decoration: none;"> Home</a>
+                    </p>
+
+                    <p>
+                        <a href="about.html" class="text-white" style="text-decoration: none;"> About Us</a>
+                    </p>
+
+                    <p>
+                        <a href="sheilamenu.html" class="text-white" style="text-decoration: none;"> Menu</a>
+                    </p>
+
+                    <p> <a href="gallery.html" class="text-white" style="text-decoration: none;"> Gallery</a>
+                    </p>
+
+                </div>
+                <!-- contac -->
+                <div class="col-md-3 col-lg-2 col-md-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-white"> Contacts</h5>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;"> 022-20458359</a>
+                    </p>
+
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;"> sanscoworking@gmail.com</a>
+                    </p>
+
+                    <p>
+                       <a href="https://instagram.com/sans.space?igshid=MmU2YjMzNjRlOQ=="> <i class="bi bi-instagram text-white"></i></a>
+                    </p>
+
+                </div>
+                <!-- open hour -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-white"> Opening Hours</h5>
+
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;"> Everyday 10.00 - 05.00</a>
+                    </p>
+                </div>
+            </div>
+
+
+            <hr class=" mt-4 mb-4">
+
+            <div class="row text-md-center">
+                <div class="col-md-12">
+                    <p>Copyrights ⓒ 2023 Sans Co Cafe & CoWorking Space</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="../js/scripts.js"></script>
+    <script>
+        let span = document.getElementsByTagName('span');
+        let product = document.getElementsByClassName('product');
+        let product_page = Math.ceil(product.length / 4);
+        let l = 0;
+        let movePer = 25.34;
+        let maxMove = 203;
+
+        // mobile view
+        let mobile_view = window.matchMedia("(max-width: 768px)");
+        if (mobile_view.matches) {
+            movePer = 50.36;
+            maxMove = 504;
+        }
+
+        let right_mover = () => {
+            l = l + movePer;
+            if (product == 1) { l = 0 }
+            for (const i of product) {
+                if (l > maxMove) { l = l - movePer; }
+                i.style.left = '-' + l + '%';
+            }
+        }
+
+
+        let left_mover = () => {
+            l = l - movePer;
+            if (l <= 0) { l = 0; }
+            for (const i of product) {
+                if (product_page > 1)
+                    i.style.left = '-' + l + '%';
+            }
+        }
+
+        span[1].onclick = () => { right_mover(); }
+        span[0].onclick = () => { left_mover(); }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link boostrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- link-font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap" />
+    <!-- icon bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <title>About Us</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200&family=Ubuntu&display=swap');
+
+        body {
+            background-color: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            z-index: 3;
+        }
+
+        .nav-link {
+            font-size: 16px;
+        }
+
+        .nav-link.active {
+            font-weight: 700;
+        }
+
+        /* navbar-color */
+        .nav-color {
+            background-color: #382D33;
+            transition: all ease-in-out 0.3s;
+        }
+
+        .bg-transparent {
+            transition: all ease-in 0.3s;
+        }
+
+        .dropdown {
+            background: none;
+            color: white;
+        }
+
+        .dropdown:hover {
+            color: black;
+            background-color: #ffffff;
+        }
+
+        .dropdown-menu {
+            background-color: #382D33;
+        }
+
+        .dropdown-item {
+            color: white;
+        }
+
+        /* hero */
+        #hero {
+            background-image: url(../img/img-about/Rectangle\ 12.png);
+            background-blend-mode: multiply;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            height: 546px;
+        }
+
+        .logo {
+            position: relative;
+            width: 90px;
+            right: 200px;
+
+        }
+
+      
+        .child {
+            margin-top: 10rem;
+            background-color: #382D33;
+            width: 450px;
+            height: 200px;
+
+
+            border-radius: 30px;
+        }
+
+        .anak {
+            position: relative;
+            top: 80px;
+            color: white;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 35px;
+            text-align: center;
+        }
+
+        .kedua>img {
+            position: absolute;
+            width: 400px;
+            height: 550px;
+            margin-left: 130px;
+            margin-top: 10px;
+        }
+
+        .pat {
+            position: relative;
+            background-color: #382D33;
+            width: 300px;
+            height: 400px;
+            top: 150px;
+            left: 80px;
+
+        }
+
+        .budak {
+            margin-top: -200px;
+            margin-left: 700px;
+        }
+
+        .budak h3 {
+            font-family: 'Mulish', sans-serif;
+            font-size: 30px;
+
+        }
+
+        .budak>p {
+            font-family: 'Mulish', sans-serif;
+            font-size: 19px;
+
+        }
+
+        .budak>h3 {
+            font-family: 'Ubuntu', sans-serif;
+
+        }
+
+        .service {
+            font-family: 'Nutino Sans', sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            font-size: 30px;
+
+        }
+
+        .oser {
+            margin-top: 60px;
+            margin-left: 25%;
+        }
+
+        .oser>img {
+            margin-top: 40px;
+        }
+
+        .bola {
+            position: relative;
+            background-color: #382D33;
+            width: 350px;
+            height: 00px;
+            bottom: 100px;
+
+        }
+
+        .bola>div {
+            margin-top: -500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .visit {
+            text-align: center;
+            justify-content: center;
+            margin-top: 150px;
+            align-items: center;
+
+        }
+
+        .tivit {
+            font-size: 30px;
+        }
+
+        .visit>b {
+            font-family: 'Mulish', sans-serif;
+            font-size: 35px;
+        }
+
+        .visit>p {
+            font-family: 'Mulish', sans-serif;
+            font-size: 20px;
+        }
+
+        .visit>div {
+            position: relative;
+            align-items: center;
+            justify-content: center;
+
+
+        }
+
+
+        .paragrap {
+            margin: 50px;
+            background-color: #382D33;
+            width: 100%;
+            height: 520px;
+            margin-top: 100px;
+        }
+
+    
+
+        .test {
+            color: white;
+            font-family: 'Poppins' sans-serif;
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .test2 {
+            color: white;
+            text-align: center;
+            font-family: 'Poppins' sans-serif;
+            font-size: 28px;
+        }
+
+        @media screen and (max-width: 460px) {
+
+            .child {
+                margin-top: 15rem;
+                background-color: #382D33;
+                width: 17rem;
+                height: 5rem;
+                border-radius: 30px;
+            }
+
+            .anak {
+                position: relative;
+                top: 30px;
+                color: white;
+                font-family: 'Ubuntu', sans-serif;
+                font-size: 20px;
+                text-align: center;
+            }
+
+            .kedua>img {
+
+                width: 9rem;
+                height: 13rem;
+                margin-left: 7rem;
+                margin-top: -16rem;
+            }
+
+            .pat {
+
+                position: relative;
+                background-color: #382D33;
+                width: 6rem;
+                height: 9rem;
+                margin-top: 4rem;
+                left: 5rem;
+
+
+            }
+
+            .budak {
+                margin-top: 5rem;
+                margin-left: 0rem;
+                text-align: center;
+            }
+
+            .budak h3 {
+                font-family: 'Mulish', sans-serif;
+                margin-top: 200px;
+                font-size: 15px;
+
+            }
+
+            .budak>p {
+                font-family: 'Mulish', sans-serif;
+                font-size: 10px;
+
+            }
+
+            .budak>h3 {
+                font-family: 'Ubuntu', sans-serif;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+      <!-- navbar -->
+      <nav class="navbar navbar-expand-lg  navbar-dark bg-transparent position-fixed w-100">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="../img/logo-nav.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link  active" aria-current="page"  href="about.html">About us</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link " href="sheilamenu.html">Menu</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="special-offers.html">Special offers</a>
+                    </li>
+
+                </ul>
+                <!-- reservation btn -->
+                <form class="d-flex">
+                    <button class="nav-item dropdown px-3 py-1 " style="border: 4px solid #ffffff; ">
+                      <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Reservation
+                      </a>
+                      <ul class="dropdown-menu mt-2">
+                        <li><a class="dropdown-item" href="reservasi-meeting.html">Meeting Room</a></li>
+                        <li><a class="dropdown-item" href="reservasi-event.html">Event</a></li>
+                      </ul>
+                    </li></button>
+                  </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- hero section -->
+    <section id="hero">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-md-6 my-auto d-md-flex ">
+                    <div class="img-fluid position-absolute top-50 start-50 translate-middle  child">
+                        <h1 class="anak">About Us</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="pat"></div>
+    <div class="container-fluid">
+        <div class="kedua">
+            <img src="../about us/image/sans.jpg" alt="">
+        </div>
+        <div class="budak">
+            <h3>About us</h3>
+            <p>Cafe Sans Co di Dago, Bandung, adalah destinasi unik yang menggabungkan seni,
+                kopi berkualitas tinggi, dan kreativitas dalam satu tempat. Suasana artistik dengan mural yang
+                memukau menciptakan lingkungan yang ramah dan nyaman bagi pengunjung. Dalam menu kopi,
+                pengunjung dapat menikmati berbagai minuman kopi berkualitas dari espresso yang kuat hingga
+                kopi susu yang lembut. Tempat ini bukan hanya sekadar kafe; Cafe Sans Co adalah pusat budaya dengan
+                serangkaian acara seni dan kegiatan kreatif seperti pameran seni dan pertunjukan musik. Dengan
+                suasana
+                yang tenang dan musik yang menyenangkan, tempat ini menjadi tempat ideal untuk bersantai sambil
+                menikmati kopi dan seni lokal. Cafe Sans Co tidak hanya memanjakan lidah dengan cita rasa kopi yang
+                istimewa tetapi juga memberikan pengalaman yang menginspirasi dan memikat bagi pengunjungnya.
+                Jika Anda mencari tempat yang menggabungkan keindahan seni, kenikmatan kopi, dan suasana yang
+                hangat,
+                Cafe Sans Co di Dago adalah destinasi yang sempurna untuk dinikmati.
+            </p>
+        </div>
+
+
+    </div>
+
+    <div class="service">Our Service</div>
+    </div>
+    <div class="container-fluid p-5 d-flex justify-content-center align-items-center ">
+        <div class="row">
+            <div class="col">
+
+                <div class="card mt-3"
+                    style=" border: none; background-color: #382D33; border-radius: 220px 220px 15px 15px">
+                    <img src="../about us/image/coworking.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="text-center text-white mt-3">Meeting Room</h3>
+                        <p class="text-center text-white m-3">Room meeting cafe adalah ruang pertemuan di kafe atau
+                            restoran yang dirancang untuk
+                            pertemuan bisnis dan kolaborasi. Mereka dilengkapi dengan fasilitas seperti meja, kursi,
+                            proyektor, dan peralatan audiovisual. Tujuannya adalah memberikan lingkungan santai bagi
+                            pertemuan sambil menikmati suasana kafe. Ruangan ini dapat disewa dengan tarif per jam,
+                            sering
+                            dengan layanan katering. Penting untuk mencari room meeting cafe yang sesuai dengan
+                            kebutuhan
+                            fasilitas dan lokasi Anda.</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col">
+
+                <div class="card mt-3"
+                    style=" border: none; background-color: #382D33; border-radius: 220px 220px 15px 15px">
+                    <img src="../about us/image/meet.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="text-center text-white mt-3">Coworking Space</h3>
+
+                        <p class="text-center text-white m-3">Coworking space cafe adalah tempat di mana orang bisa
+                            bekerja sambil menikmati
+                            suasana kafe. Mereka menyediakan meja kerja, internet cepat, dan makanan minuman kafe.
+                            Konsep
+                            ini memadukan lingkungan kerja dengan atmosfer santai, cocok bagi pekerja independen dan
+                            freelancer.</p>
+                        <br><br><br><br>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col">
+
+                <div class="card mt-3"
+                    style=" border: none; background-color: #382D33; border-radius: 220px 220px 15px 15px">
+                    <img src="../about us/image/cafe.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="text-center text-white mt-3">Cafe Space</h3>
+                        <p class="text-center text-white m-3">Event space di cafe memberikan tempat yang nyaman dan
+                            terorganisir untuk acara-acara
+                            khusus seperti pertemuan bisnis, pesta, atau pertunjukan musik. Dengan fasilitas dan
+                            pelayanan
+                            yang tepat, cafe ini memudahkan pelanggan dalam mengadakan acara dengan lancar. Reservasi,
+                            harga, fasilitas, dan aturan yang jelas adalah faktor penting yang perlu diperhatikan dalam
+                            menggunakan event space di cafe, menciptakan pengalaman yang menyenangkan bagi peserta
+                            acara.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <div class="visit">
+        <div class="tivit">Visit Us</div>
+        <p>Alamat : Jl. Ir. H. Juanda No.347,<br>
+            RW.05, Dago, Coblong, Bandung<br>
+            City, West Java 40135
+        </p>
+        <div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.13325136043!2d107.616053574222!3d-6.874633693124113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7cf90c5ca63%3A0x4c0cdd03d96d2f0b!2sSans%20Co.!5e0!3m2!1sid!2sid!4v1695566837031!5m2!1sid!2sid"
+                style="border:0; width:100%; height:400px;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+
+    <!-- footer -->
+    <footer class="text-white pt-0 pb-4" style="background-color: #382D33;">
+        <div class="container text-center text-md-start">
+            <div class="row text-center text-md-start">
+                <!-- logo footer -->
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <img src="../img/logo-footer.png" alt="">
+                </div>
+                <!-- conten -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-white">Content</h5>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;"> Home</a>
+                    </p>
+
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;"> About Us</a>
+                    </p>
+
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;"> Menu</a>
+                    </p>
+
+                    <p> <a href="#" class="text-white" style="text-decoration: none;"> Contact</a>
+                    </p>
+
+                </div>
+                <!-- contac -->
+                <div class="col-md-3 col-lg-2 col-md-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-white"> Contacts</h5>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;"> 022-20458359</a>
+                    </p>
+
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;"> sanscoworking@gmail.com</a>
+                    </p>
+
+                    <p>
+                        <i class="bi bi-instagram "></i>
+                    </p>
+
+                </div>
+                <!-- open hour -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-white"> Opening Hours</h5>
+
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;"> Everyday 10.00 - 05.00</a>
+                    </p>
+                </div>
+            </div>
+
+
+            <hr class=" mt-4 mb-4">
+
+            <div class="row text-md-center">
+                <div class="col-md-12">
+                    <p>Copyrights ⓒ 2023 Sans Co Cafe & CoWorking Space</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/scripts.js"></script>
+</body>
+
+</html>
