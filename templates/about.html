@@ -16,291 +16,14 @@
     <!-- icon bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <title>About Us</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200&family=Ubuntu&display=swap');
-
-        body {
-            background-color: #ffffff;
-            scroll-behavior: smooth;
-        }
-
-        .navbar {
-            z-index: 3;
-        }
-
-        .nav-link {
-            font-size: 16px;
-        }
-
-        .nav-link.active {
-            font-weight: 700;
-        }
-
-        /* navbar-color */
-        .nav-color {
-            background-color: #382D33;
-            transition: all ease-in-out 0.3s;
-        }
-
-        .bg-transparent {
-            transition: all ease-in 0.3s;
-        }
-
-        .dropdown {
-            background: none;
-            color: white;
-        }
-
-        .dropdown:hover {
-            color: black;
-            background-color: #ffffff;
-        }
-
-        .dropdown-menu {
-            background-color: #382D33;
-        }
-
-        .dropdown-item {
-            color: white;
-        }
-
-        /* hero */
-        #hero {
-            background-image: url(../img/img-about/Rectangle\ 12.png);
-            background-blend-mode: multiply;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            width: 100%;
-            height: 546px;
-        }
-
-        .logo {
-            position: relative;
-            width: 90px;
-            right: 200px;
-
-        }
-
-      
-        .child {
-            margin-top: 10rem;
-            background-color: #382D33;
-            width: 450px;
-            height: 200px;
-
-
-            border-radius: 30px;
-        }
-
-        .anak {
-            position: relative;
-            top: 80px;
-            color: white;
-            font-family: 'Ubuntu', sans-serif;
-            font-size: 35px;
-            text-align: center;
-        }
-
-        .kedua>img {
-            position: absolute;
-            width: 400px;
-            height: 550px;
-            margin-left: 130px;
-            margin-top: 10px;
-        }
-
-        .pat {
-            position: relative;
-            background-color: #382D33;
-            width: 300px;
-            height: 400px;
-            top: 150px;
-            left: 80px;
-
-        }
-
-        .budak {
-            margin-top: -200px;
-            margin-left: 700px;
-        }
-
-        .budak h3 {
-            font-family: 'Mulish', sans-serif;
-            font-size: 30px;
-
-        }
-
-        .budak>p {
-            font-family: 'Mulish', sans-serif;
-            font-size: 19px;
-
-        }
-
-        .budak>h3 {
-            font-family: 'Ubuntu', sans-serif;
-
-        }
-
-        .service {
-            font-family: 'Nutino Sans', sans-serif;
-            text-align: center;
-            margin-top: 100px;
-            font-size: 30px;
-
-        }
-
-        .oser {
-            margin-top: 60px;
-            margin-left: 25%;
-        }
-
-        .oser>img {
-            margin-top: 40px;
-        }
-
-        .bola {
-            position: relative;
-            background-color: #382D33;
-            width: 350px;
-            height: 00px;
-            bottom: 100px;
-
-        }
-
-        .bola>div {
-            margin-top: -500px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .visit {
-            text-align: center;
-            justify-content: center;
-            margin-top: 150px;
-            align-items: center;
-
-        }
-
-        .tivit {
-            font-size: 30px;
-        }
-
-        .visit>b {
-            font-family: 'Mulish', sans-serif;
-            font-size: 35px;
-        }
-
-        .visit>p {
-            font-family: 'Mulish', sans-serif;
-            font-size: 20px;
-        }
-
-        .visit>div {
-            position: relative;
-            align-items: center;
-            justify-content: center;
-
-
-        }
-
-
-        .paragrap {
-            margin: 50px;
-            background-color: #382D33;
-            width: 100%;
-            height: 520px;
-            margin-top: 100px;
-        }
-
-    
-
-        .test {
-            color: white;
-            font-family: 'Poppins' sans-serif;
-            margin-top: 15px;
-            text-align: center;
-        }
-
-        .test2 {
-            color: white;
-            text-align: center;
-            font-family: 'Poppins' sans-serif;
-            font-size: 28px;
-        }
-
-        @media screen and (max-width: 460px) {
-
-            .child {
-                margin-top: 15rem;
-                background-color: #382D33;
-                width: 17rem;
-                height: 5rem;
-                border-radius: 30px;
-            }
-
-            .anak {
-                position: relative;
-                top: 30px;
-                color: white;
-                font-family: 'Ubuntu', sans-serif;
-                font-size: 20px;
-                text-align: center;
-            }
-
-            .kedua>img {
-
-                width: 9rem;
-                height: 13rem;
-                margin-left: 7rem;
-                margin-top: -16rem;
-            }
-
-            .pat {
-
-                position: relative;
-                background-color: #382D33;
-                width: 6rem;
-                height: 9rem;
-                margin-top: 4rem;
-                left: 5rem;
-
-
-            }
-
-            .budak {
-                margin-top: 5rem;
-                margin-left: 0rem;
-                text-align: center;
-            }
-
-            .budak h3 {
-                font-family: 'Mulish', sans-serif;
-                margin-top: 200px;
-                font-size: 15px;
-
-            }
-
-            .budak>p {
-                font-family: 'Mulish', sans-serif;
-                font-size: 10px;
-
-            }
-
-            .budak>h3 {
-                font-family: 'Ubuntu', sans-serif;
-
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../static/about.css">
 </head>
 
 <body>
-      <!-- navbar -->
-      <nav class="navbar navbar-expand-lg  navbar-dark bg-transparent position-fixed w-100">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg  navbar-dark bg-transparent position-fixed w-100">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="../img/logo-nav.png" alt=""></a>
+            <a class="navbar-brand" href="#"><img src="../static/img/logo-nav.png" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="bi bi-list"></i>
@@ -308,38 +31,38 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="home.html">Home</a>
+                        <a class="nav-link " href="/">Home</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link  active" aria-current="page"  href="about.html">About us</a>
+                        <a class="nav-link active" aria-current="page" href="/about">About us</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link " href="sheilamenu.html">Menu</a>
+                        <a class="nav-link" href="/menu">Menu</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="gallery.html">Gallery</a>
+                        <a class="nav-link" href="/gallery">Gallery</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="special-offers.html">Special offers</a>
+                        <a class="nav-link" href="/special-offers">Special offers</a>
                     </li>
 
                 </ul>
                 <!-- reservation btn -->
                 <form class="d-flex">
                     <button class="nav-item dropdown px-3 py-1 " style="border: 4px solid #ffffff; ">
-                      <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Reservation
-                      </a>
-                      <ul class="dropdown-menu mt-2">
-                        <li><a class="dropdown-item" href="reservasi-meeting.html">Meeting Room</a></li>
-                        <li><a class="dropdown-item" href="reservasi-event.html">Event</a></li>
-                      </ul>
-                    </li></button>
-                  </form>
+                        <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Reservation
+                        </a>
+                        <ul class="dropdown-menu mt-2">
+                            <li><a class="dropdown-item" href="/meeting">Meeting Room</a></li>
+                            <li><a class="dropdown-item" href="/event">Event</a></li>
+                        </ul>
+                        </li>
+                    </button>
+                </form>
             </div>
         </div>
     </nav>
-
     <!-- hero section -->
     <section id="hero">
         <div class="container h-100">
@@ -357,7 +80,7 @@
     <div class="pat"></div>
     <div class="container-fluid">
         <div class="kedua">
-            <img src="../about us/image/sans.jpg" alt="">
+            <img src="../static/img/img-about/sans.jpg" alt="">
         </div>
         <div class="budak">
             <h3>About us</h3>
@@ -379,8 +102,9 @@
 
 
     </div>
+    <br><br><br><br><br>
 
-    <div class="service">Our Service</div>
+    <div class="service pt-5">Our Service</div>
     </div>
     <div class="container-fluid p-5 d-flex justify-content-center align-items-center ">
         <div class="row">
@@ -388,7 +112,7 @@
 
                 <div class="card mt-3"
                     style=" border: none; background-color: #382D33; border-radius: 220px 220px 15px 15px">
-                    <img src="../about us/image/coworking.png" class="card-img-top" alt="...">
+                    <img src="../static/img/img-about/coworking.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h3 class="text-center text-white mt-3">Meeting Room</h3>
                         <p class="text-center text-white m-3">Room meeting cafe adalah ruang pertemuan di kafe atau
@@ -408,7 +132,7 @@
 
                 <div class="card mt-3"
                     style=" border: none; background-color: #382D33; border-radius: 220px 220px 15px 15px">
-                    <img src="../about us/image/meet.png" class="card-img-top" alt="...">
+                    <img src="../static/img/img-about/meet.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h3 class="text-center text-white mt-3">Coworking Space</h3>
 
@@ -427,7 +151,7 @@
 
                 <div class="card mt-3"
                     style=" border: none; background-color: #382D33; border-radius: 220px 220px 15px 15px">
-                    <img src="../about us/image/cafe.png" class="card-img-top" alt="...">
+                    <img src="../static/img/img-about/cafe.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h3 class="text-center text-white mt-3">Cafe Space</h3>
                         <p class="text-center text-white m-3">Event space di cafe memberikan tempat yang nyaman dan
@@ -466,29 +190,29 @@
 
 
     <!-- footer -->
-    <footer class="text-white pt-0 pb-4" style="background-color: #382D33;">
+    <footer class="text-white pt-5 pb-4" style="background-color: #382D33;">
         <div class="container text-center text-md-start">
             <div class="row text-center text-md-start">
                 <!-- logo footer -->
                 <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <img src="../img/logo-footer.png" alt="">
+                    <img class="img-fluid" src="../static/img/logo-footer.png" alt="">
                 </div>
                 <!-- conten -->
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                     <h5 class="text-uppercase mb-4 font-weight-bold text-white">Content</h5>
                     <p>
-                        <a href="#" class="text-white" style="text-decoration: none;"> Home</a>
+                        <a href="/" class="text-white" style="text-decoration: none;"> Home</a>
                     </p>
 
                     <p>
-                        <a href="#" class="text-white" style="text-decoration: none;"> About Us</a>
+                        <a href="/about" class="text-white" style="text-decoration: none;"> About Us</a>
                     </p>
 
                     <p>
-                        <a href="#" class="text-white" style="text-decoration: none;"> Menu</a>
+                        <a href="/menu" class="text-white" style="text-decoration: none;"> Menu</a>
                     </p>
 
-                    <p> <a href="#" class="text-white" style="text-decoration: none;"> Contact</a>
+                    <p> <a href="/gallery" class="text-white" style="text-decoration: none;"> Gallery</a>
                     </p>
 
                 </div>
@@ -504,7 +228,8 @@
                     </p>
 
                     <p>
-                        <i class="bi bi-instagram "></i>
+                        <a href="https://instagram.com/sans.space?igshid=MmU2YjMzNjRlOQ=="> <i
+                                class="bi bi-instagram text-white"></i></a>
                     </p>
 
                 </div>
@@ -529,7 +254,7 @@
         </div>
     </footer>
 
-    <script src="../js/scripts.js"></script>
+    <script src="../static/js/scripts.js"></script>
 </body>
 
 </html>

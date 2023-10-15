@@ -15,160 +15,63 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap" />
     <!-- icon bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300&family=Poppins:wght@100;200&display=swap');
-
-        @import url(../static/responsive.css);
-
-        body {
-            background-color: #251e22;
-            background-blend-mode: multiply;
-            scroll-behavior: smooth;
-        }
-
-        .navbar {
-            z-index: 3;
-        }
-
-        .nav-link {
-            font-size: 16px;
-        }
-
-        .nav-link.active {
-            font-weight: 700;
-        }
-
-        /* navbar-color */
-        .nav-color {
-            background-color: #382D33;
-            transition: all ease-in-out 0.3s;
-        }
-
-        .bg-transparent {
-            transition: all ease-in 0.3s;
-        }
-
-        /* buton hover */
-        .btn-reservasi:hover {
-            background-color: #382D33;
-        }
-        .dropdown{
-            background: none;
-            color: white;
-        }
-        .dropdown:hover{
-            color: black;
-            background-color: #ffffff;
-        }
-        .dropdown-menu {
-            background-color: #382D33;
-        }
-        .dropdown-item{
-            color: white;
-        }
-
-
-        
-        /* hero */
-        #hero {
-            background-image: url(../img/img-home/background\ home.png);
-            background-blend-mode: multiply;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-position: center;
-            background-size: cover;
-            height: 100vh;
-            width: 100%;
-        }
-
-        .img-about {
-            vertical-align: bottom;
-        }
-
-        .menu {
-            vertical-align: bottom;
-            margin: 0;
-            width: 239px;
-            height: 240px;
-        }
-
-        .about {
-            background-image: url(../img/img-home/Union.png);
-            background-repeat: no-repeat;
-            background-size: cover;
-            width: 100%;
-            height: 100%;
-            background-position: center;
-            margin-top: -200px;
-            bottom: 50px;
-
-        }
-
-        .about h1 {
-            padding-top: 280px;
-            color: white;
-            text-align: center;
-        }
-
-        .about p {
-            color: white;
-            text-align: center;
-        }
-       
-    </style>
+    <link rel="stylesheet" href="../static/home.css">
 </head>
 
 <body>
-  <!-- navbar -->
-  <nav class="navbar navbar-expand-lg  navbar-dark bg-transparent position-fixed w-100">
-    <div class="container">
-        <a class="navbar-brand" href="#"><img src="../img/logo-nav.png" alt=""></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="bi bi-list"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item mx-2">
-                    <a class="nav-link active"aria-current="page"  href="home.html">Home</a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link" href="about.html">About us</a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link  "  href="sheilamenu.html">Menu</a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link" href="gallery.html">Gallery</a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link" href="special-offers.html">Special offers</a>
-                </li>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg  navbar-dark bg-transparent position-fixed w-100">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="../static/img/logo-nav.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="/about">About us</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="/menu">Menu</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="/gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="/special-offers">Special offers</a>
+                    </li>
 
-            </ul>
-            <!-- reservation btn -->
-            <form class="d-flex">
-                <button class="nav-item dropdown px-3 py-1 " style="border: 4px solid #ffffff; ">
-                  <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Reservation
-                  </a>
-                  <ul class="dropdown-menu mt-2">
-                    <li><a class="dropdown-item" href="reservasi-meeting.html">Meeting Room</a></li>
-                    <li><a class="dropdown-item" href="reservasi-event.html">Event</a></li>
-                  </ul>
-                </li></button>
-              </form>
+                </ul>
+                <!-- reservation btn -->
+                <form class="d-flex">
+                    <button class="nav-item dropdown px-3 py-1 " style="border: 4px solid #ffffff; ">
+                        <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Reservation
+                        </a>
+                        <ul class="dropdown-menu mt-2">
+                            <li><a class="dropdown-item" href="/meeting">Meeting Room</a></li>
+                            <li><a class="dropdown-item" href="/event">Event</a></li>
+                            <br>
+                            <li><a class="dropdown-item" href="/adminm">Login Admin</a></li>
+                        </ul>
+                        </li>
+                    </button>
+                </form>
+            </div>
         </div>
-    </div>
-</nav>
-   
+    </nav>
+
     <!-- hero section -->
     <section id="hero">
         <div class="container h-100">
             <div class="row h-100">
                 <div class="col-md-6 my-auto d-md-flex">
                     <img class=" img-fluid position-absolute top-50 start-50 translate-middle mt-5"
-                        src="../img/img-home/Sans co home.png">
+                        src="../static/img/img-home/Sans co home.png">
                 </div>
             </div>
         </div>
@@ -180,13 +83,14 @@
             <div class="about-object row">
                 <div class=" text-about col-lg-6 col-md-6 col-sm-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1 text-center"
                     style="margin-top: -200px;">
-                    <h1 class= "text-white">Sans Co</h1>
-                    <p class=" text-white fw-light">Berdiri pada tanggal 11 januari 2022 dengan konsep kafe yang
-                        menyediakan
-                        Working sapace dan meeting room</p>
+                    <h1 class="text-white">Sans Co</h1>
+                    <p class=" text-white fw-light">Cafe Sans Co adalah sebuah cafe yang terletak di Kota Bandung yaitu
+                        ada di daerah Dago Atas, Cafe ini sudah ada sejak 21 April 2019.
+                        Cafe Sans Co ini menyiapkan tempat untuk bekerja ( Co-working Space ), Meeting Room, dan untuk
+                        Event.</p>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6  order-1 order-lg-2">
-                    <img src="../img/img-home/Group 73.png" class="img-fluid img-about" alt="">
+                    <img src="../static/img/img-home/Group 73.png" class="img-fluid img-about" alt="">
                 </div>
             </div>
         </div>
@@ -198,14 +102,14 @@
             <div class="row">
                 <div class="col pt-5">
                     <img class="img-fluid" style="display: block;margin-left: auto;margin-right: auto;"
-                    src="../img/img-home/tulisan-menu.png" alt="">
+                        src="../static/img/img-home/tulisan-menu.png" alt="">
 
                     <div class="menu-page col-12 d-md-flex justify-content-center">
-                        <img class="img-fluid m-1" src="../img/img-home/menu1.png" alt="">
-                        <img class="img-fluid m-1" src="../img/img-home/menu2.png" alt="">
-                        <img class="img-fluid m-1 pt-5 mt-4 menu3" src="../img/img-home/menu3.png" alt="">
-                        <img class="img-fluid m-1" src="../img/img-home/menu4.png" alt="">
-                        <img class="img-fluid m-1" src="../img/img-home/menu5.png" alt="">
+                        <img class="img-fluid m-1" src="../static/img/img-home/menu1.png" alt="">
+                        <img class="img-fluid m-1" src="../static/img/img-home/menu2.png" alt="">
+                        <img class="img-fluid m-1 pt-5 mt-4 menu3" src="../static/img/img-home/menu3.png" alt="">
+                        <img class="img-fluid m-1" src="../static/img/img-home/menu4.png" alt="">
+                        <img class="img-fluid m-1" src="../static/img/img-home/menu5.png" alt="">
                     </div>
                 </div>
 
@@ -213,72 +117,73 @@
 
     </section>
 
-  <!-- footer -->
-  <footer class="text-white pt-5 pb-4" style="background-color: #382D33;">
-    <div class="container text-center text-md-start">
-        <div class="row text-center text-md-start">
-            <!-- logo footer -->
-            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                <img class="img-fluid" src="../img/logo-footer.png" alt="">
+    <!-- footer -->
+    <footer class="text-white pt-5 pb-4" style="background-color: #382D33;">
+        <div class="container text-center text-md-start">
+            <div class="row text-center text-md-start">
+                <!-- logo footer -->
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <img class="img-fluid" src="../static/img/logo-footer.png" alt="">
+                </div>
+                <!-- conten -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-white">Content</h5>
+                    <p>
+                        <a href="/" class="text-white" style="text-decoration: none;"> Home</a>
+                    </p>
+
+                    <p>
+                        <a href="/about" class="text-white" style="text-decoration: none;"> About Us</a>
+                    </p>
+
+                    <p>
+                        <a href="/menu" class="text-white" style="text-decoration: none;"> Menu</a>
+                    </p>
+
+                    <p> <a href="/gallery" class="text-white" style="text-decoration: none;"> Gallery</a>
+                    </p>
+
+                </div>
+                <!-- contac -->
+                <div class="col-md-3 col-lg-2 col-md-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-white"> Contacts</h5>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;"> 022-20458359</a>
+                    </p>
+
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;"> sanscoworking@gmail.com</a>
+                    </p>
+
+                    <p>
+                        <a href="https://instagram.com/sans.space?igshid=MmU2YjMzNjRlOQ=="> <i
+                                class="bi bi-instagram text-white"></i></a>
+                    </p>
+
+                </div>
+                <!-- open hour -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-white"> Opening Hours</h5>
+
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;"> Everyday 10.00 - 05.00</a>
+                    </p>
+                </div>
             </div>
-            <!-- conten -->
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 font-weight-bold text-white">Content</h5>
-                <p>
-                    <a href="home.html" class="text-white" style="text-decoration: none;"> Home</a>
-                </p>
 
-                <p>
-                    <a href="about.html" class="text-white" style="text-decoration: none;"> About Us</a>
-                </p>
 
-                <p>
-                    <a href="sheilamenu.html" class="text-white" style="text-decoration: none;"> Menu</a>
-                </p>
+            <hr class=" mt-4 mb-4">
 
-                <p> <a href="gallery.html" class="text-white" style="text-decoration: none;"> Gallery</a>
-                </p>
-
-            </div>
-            <!-- contac -->
-            <div class="col-md-3 col-lg-2 col-md-3 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 font-weight-bold text-white"> Contacts</h5>
-                <p>
-                    <a href="#" class="text-white" style="text-decoration: none;"> 022-20458359</a>
-                </p>
-
-                <p>
-                    <a href="#" class="text-white" style="text-decoration: none;"> sanscoworking@gmail.com</a>
-                </p>
-
-                <p>
-                   <a href="https://instagram.com/sans.space?igshid=MmU2YjMzNjRlOQ=="> <i class="bi bi-instagram text-white"></i></a>
-                </p>
-
-            </div>
-            <!-- open hour -->
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 font-weight-bold text-white"> Opening Hours</h5>
-
-                <p>
-                    <a href="#" class="text-white" style="text-decoration: none;"> Everyday 10.00 - 05.00</a>
-                </p>
+            <div class="row text-md-center">
+                <div class="col-md-12">
+                    <p>Copyrights ⓒ 2023 Sans Co Cafe & CoWorking Space</p>
+                </div>
             </div>
         </div>
+    </footer>
 
 
-        <hr class=" mt-4 mb-4">
-
-        <div class="row text-md-center">
-            <div class="col-md-12">
-                <p>Copyrights ⓒ 2023 Sans Co Cafe & CoWorking Space</p>
-            </div>
-        </div>
-    </div>
-</footer>
- 
-
-    <script src="../js/scripts.js"></script>
+    <script src="../static/js/scripts.js"></script>
 </body>
 
 </html>

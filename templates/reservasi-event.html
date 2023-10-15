@@ -9,13 +9,14 @@
         crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
+    <!-- cdn-jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <!-- icon bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <title>reservation</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        
         body {
             background-color: #251e22;
             background-blend-mode: multiply;
@@ -48,18 +49,22 @@
         .btn-reservasi:hover {
             background-color: #382D33;
         }
-        .dropdown{
+
+        .dropdown {
             background: none;
             color: white;
         }
-        .dropdown:hover{
+
+        .dropdown:hover {
             color: black;
             background-color: #ffffff;
         }
+
         .dropdown-menu {
             background-color: #382D33;
         }
-        .dropdown-item{
+
+        .dropdown-item {
             color: white;
         }
 
@@ -106,13 +111,51 @@
             padding: 40px;
         }
     </style>
+    <script>
+        function booking() {
+            let nama = $('#nama').val();
+            let telepon = $('#telepon').val();
+            let komunitas = $('#komunitas').val();
+            let date = $('#date').val();
+            let time = $('#time').val();
+            let durasi = $('#durasi').val();
+            let jumlah = $('#jumlah').val();
+            let piliharea = $('#piliharea').val();
+            let pilihmenu= $('#pilihmenu').val();
+            let jammenu = $('#jammenu').val();
+            let dp = $('#dp').val();
+
+            $.ajax({
+                type: 'POST',
+                url: '/event/post',
+                data: {
+                    nama_give: nama,
+                    telepon_give: telepon,
+                    komunitas_give: komunitas,
+                    date_give: date,
+                    time_give: time,
+                    durasi_give: durasi,
+                    jumlah_give: jumlah,
+                    piliharea_give:piliharea,
+                    pilihmenu_give:pilihmenu,
+                    jammenu_give: jammenu,
+                    dp_give: dp
+                },
+                success: function (response) {
+                    alert(response.msg)
+                    window.location.href = '/'
+                }
+            })
+
+        }
+    </script>
 </head>
 
 <body>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg  navbar-dark bg-transparent position-fixed w-100">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="../img/logo-nav.png" alt=""></a>
+            <a class="navbar-brand" href="#"><img src="../static/img/logo-nav.png" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -120,34 +163,35 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item mx-2">
-                        <a class="nav-link "  href="home.html">Home</a>
+                        <a class="nav-link " href="/">Home</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="about.html">About us</a>
+                        <a class="nav-link" href="/about">About us</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="sheilamenu.html">Menu</a>
+                        <a class="nav-link" href="/menu">Menu</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="gallery.html">Gallery</a>
+                        <a class="nav-link" href="/gallery">Gallery</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="special-offers.html">Special offers</a>
+                        <a class="nav-link" href="/special-offers">Special offers</a>
                     </li>
 
                 </ul>
                 <!-- reservation btn -->
                 <form class="d-flex">
                     <button class="nav-item dropdown px-3 py-1 " style="border: 4px solid #ffffff; ">
-                      <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Reservation
-                      </a>
-                      <ul class="dropdown-menu mt-2">
-                        <li><a class="dropdown-item" href="reservasi-meeting.html">Meeting Room</a></li>
-                        <li><a class="dropdown-item" href="reservasi-event.html">Event</a></li>
-                      </ul>
-                    </li></button>
-                  </form>
+                        <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Reservation
+                        </a>
+                        <ul class="dropdown-menu mt-2">
+                            <li><a class="dropdown-item" href="/meeting">Meeting Room</a></li>
+                            <li><a class="dropdown-item" href="/event">Event</a></li>
+                        </ul>
+                        </li>
+                    </button>
+                </form>
             </div>
         </div>
     </nav>
@@ -181,156 +225,75 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body  ">
-                    <div class="form-group m-2">
-
-                        <input type="text" name="Nama" placeholder="Nama" class="form-control">
+                    <div class="form-group m-3">
+                        <label for="">Nama</label>
+                        <input type="text" name="Nama" placeholder="Nama" class="form-control" id="nama">
                     </div>
-                    <div class="form-group m-2">
-
-                        <input type="text" placeholder="Nomer telepon" class="form-control">
+                    <div class="form-group m-3">
+                        <label for="">Telepon</label>
+                        <input type="number" placeholder="Nomer telepon" class="form-control" id="telepon">
                     </div>
-                    <div class="form-group m-2">
-
-                        <input type="text" placeholder="Instansi/komunitas" class="form-control">
+                    <div class="form-group m-3">
+                        <label for="">Instansi/komunitas</label>
+                        <input type="text" placeholder="Instansi/komunitas" class="form-control" id="komunitas">
                     </div>
-                    <div class="form-group m-2">
-
-                        <input type="date" placeholder="Hari/Tanggal" class="form-control">
+                    <div class="form-group m-3">
+                        <label for="">Tanggal</label>
+                        <input type="date" placeholder="Hari/Tanggal" class="form-control" id="date">
                     </div>
-                    <div class="form-group m-2">
+                    <div class="form-group m-3">
                         <label for="">jam </label>
-                        <input type="time" placeholder="Jam" class="form-control">
+                        <input type="time" placeholder="Jam" class="form-control" id="time">
                     </div>
-                    <div class="form-group m-2">
-
-                        <input type="text" placeholder="Durasi" class="form-control">
+                    <div class="form-group m-3">
+                        <label for="">Durasi</label>
+                        <input type="number" placeholder="Durasi" class="form-control" id="durasi">
                     </div>
-                    <div class="form-group m-2">
-
-                        <input type="text" placeholder="jumlah orang" class="form-control">
+                    <div class="form-group m-3">
+                        <label for="">jumlah orang</label>
+                        <input type="number" placeholder="jumlah orang" class="form-control" id="jumlah">
                     </div>
-                    <div class="form-group m-2">
-
-                        <input type="text" placeholder="Area" class="form-control">
+                    <div class="form-group m-3">
+                        <label for="">Area</label>
+                        <!-- <input type="text" placeholder="Area" class="form-control" id="durasi"> -->
                     </div>
-                    <div class="form-group m-2 col-6">
-                        <div class="text">
-                            <label for="">Menu</label>
-                        </div>
-                        <label class="radio-button">
-                            <input type="radio" name="radio-group" id="option1" placeholder="Area">
-                            <span class="radio-label">1. Paket A (45K) </span>
-                        </label>
-                        <label class="radio-button">
-                            <input type="radio" name="radio-group" id="option2" placeholder="Area">
-                            <span class="radio-label">2. Paket B (45K)
-                            </span>
-                        </label>
-                        <label class="radio-button">
-                            <input type="radio" name="radio-group" id="option3" placeholder="Area">
-                            <span class="radio-label">3. Paket Gold (40K) </span>
-                        </label>
-                        <label class="radio-button">
-                            <input type="radio" name="radio-group" id="option4" placeholder="Area">
-                            <span class="radio-label"> 4. Paket Silver (35K)
-                            </span>
-                        </label>
+                    <div class="form-group m-3">
+                        <select name="" class="form-control"  id="piliharea" aria-label="select exampleModal" style="max-width: 100%; padding: 4px;">
+                            <option value="" hidden>Select the subject</option>
+                            <option disabled></option>
+                            <option>min 30 Orang : Event Space depan</option>
+                            <option>min 50 orang: Event Space Depan, Event Space Belakang</option>
+                            <option>min70 orang: Event Space Depan, Event Space Belakang, Amphiteater</option>
+                        </select>
                     </div>
-                    <div class="form-group m-2">
+                    <div class="form-group m-3">
+                        <label for="">Menu</label>
+                    </div>
+                    <div class="form-group m-3">
+                        <select class="form-control"  id="pilihmenu" aria-label="select exampleModal">
+                            <option value="" hidden>Select the subject</option>
+                            <option disabled></option>
+                            <option>1. Paket A (45K)</option>
+                            <option>3. Paket B (45K)</option>
+                            <option>3. Paket Gold (40K)</option>
+                            <option>4. Paket Silver (35K)</option>
+                        </select>
+                    </div>
+                  
+                    <div class="form-group m-3">
                         <label for="">jam keluar menu </label>
-                        <input type="time" placeholder="Jam keluar Menu" class="form-control">
+                        <input type="time" placeholder="Jam keluar Menu" class="form-control" id="jammenu">
                     </div>
-                    <div class="form-group m-2">
+                    <div class="form-group m-3">
 
-                        <input type="text" placeholder="DP" class="form-control">
+                        <input type="text" placeholder="DP" class="form-control" id="dp">
                     </div>
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn-here" style="border-radius:5px ;">BOOKING NOW</button>
+                    <button type="button" class="btn-here" onclick="booking()" style="border-radius:5px ;">BOOKING
+                        NOW</button>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- card-menu -->
-    <div class="container-fluid p-5 d-flex justify-content-center align-items-center ">
-        <div class="row">
-            <div class="col">
-
-                <div class="card mt-3" style="width: 18rem;">
-                    <img src="../img/img-admin/Rectangle 150.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h6>1. Paket Platinum A (45K) </h6>
-                        <p class="card-text">
-                            - Nasi Putih<br>
-                            - Beef Blackpepper <br>
-                            - Telur Ceplok<br>
-                            - Selada Timun<br>
-                            - Ice Lemon Tea<br>
-                            <br>
-                            <br>
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col">
-
-                <div class="card mt-3" style="width: 18rem;">
-                    <img src="../img/img-admin/Rectangle 155.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h6>2. Paket Platinum B (45K)
-                        </h6>
-                        <p class="card-text">- Nasi Putih<br>
-                            - Ayam Bakar Madu<br>
-                            - Tahu Tempe<br>
-                            - Selada Timun<br>
-                            - Sambal Bawang<br>
-                            - Ice Lemon Tea<br>
-                            <br>
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col">
-
-                <div class="card mt-3" style="width: 18rem;">
-                    <img src="../img/img-admin/Rectangle 152.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h6>3. Paket Gold (40K)
-                        </h6>
-                        <p class="card-text">- Nasi Putih<br>
-                            - Ayam Goreng Kremes<br>
-                            - Tahu Tempe<br>
-                            - Timun Selada<br>
-                            - Sambal Bawang<br>
-                            - Kerupuk<br>
-                            - Ice Lemon Tea<br>
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col">
-
-                <div class="card mt-3" style="width: 18rem;">
-                    <img src="../img/img-admin/Rectangle 151.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h6> 4. Paket Silver (35K)
-                        </h6>
-                        <p class="card-text">- Nasi Putih<br>
-                            - Chicken Crispy Asam Manis<br>
-                            - Selada Timun<br>
-                            - Kerupuk<br>
-                            - Sweet Ice Tea<br>
-                            <br>
-                            <br>
-                        </p>
-                    </div>
-                </div>
-
             </div>
         </div>
     </div>
@@ -376,30 +339,113 @@
         </div>
     </div>
 
+    <!-- card-menu -->
+    <div class="container-fluid p-5 d-flex justify-content-center align-items-center ">
+        <div class="row">
+            <div class="col">
+
+                <div class="card mt-3" style="width: 18rem;">
+                    <img src="../static/img/img-admin/Rectangle 150.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6>1. Paket Platinum A (45K) </h6>
+                        <p class="card-text">
+                            - Nasi Putih<br>
+                            - Beef Blackpepper <br>
+                            - Telur Ceplok<br>
+                            - Selada Timun<br>
+                            - Ice Lemon Tea<br>
+                            <br>
+                            <br>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col">
+
+                <div class="card mt-3" style="width: 18rem;">
+                    <img src="../static/img/img-admin/Rectangle 155.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6>3. Paket Platinum B (45K)
+                        </h6>
+                        <p class="card-text">- Nasi Putih<br>
+                            - Ayam Bakar Madu<br>
+                            - Tahu Tempe<br>
+                            - Selada Timun<br>
+                            - Sambal Bawang<br>
+                            - Ice Lemon Tea<br>
+                            <br>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col">
+
+                <div class="card mt-3" style="width: 18rem;">
+                    <img src="../static/img/img-admin/Rectangle 152.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6>3. Paket Gold (40K)
+                        </h6>
+                        <p class="card-text">- Nasi Putih<br>
+                            - Ayam Goreng Kremes<br>
+                            - Tahu Tempe<br>
+                            - Timun Selada<br>
+                            - Sambal Bawang<br>
+                            - Kerupuk<br>
+                            - Ice Lemon Tea<br>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col">
+
+                <div class="card mt-3" style="width: 18rem;">
+                    <img src="../static/img/img-admin/Rectangle 151.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6> 4. Paket Silver (35K)
+                        </h6>
+                        <p class="card-text">- Nasi Putih<br>
+                            - Chicken Crispy Asam Manis<br>
+                            - Selada Timun<br>
+                            - Kerupuk<br>
+                            - Sweet Ice Tea<br>
+                            <br>
+                            <br>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
     <!-- footer -->
-    <footer class="text-white" style="background-color: #382D33; margin-top: 40px; bottom: 0;">
+    <footer class="text-white pt-5 pb-4" style="background-color: #382D33;">
         <div class="container text-center text-md-start">
             <div class="row text-center text-md-start">
                 <!-- logo footer -->
                 <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <img src="../img/logo-footer.png" alt="">
+                    <img class="img-fluid" src="../static/img/logo-footer.png" alt="">
                 </div>
                 <!-- conten -->
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                     <h5 class="text-uppercase mb-4 font-weight-bold text-white">Content</h5>
                     <p>
-                        <a href="#" class="text-white" style="text-decoration: none;"> Home</a>
+                        <a href="/" class="text-white" style="text-decoration: none;"> Home</a>
                     </p>
 
                     <p>
-                        <a href="#" class="text-white" style="text-decoration: none;"> About Us</a>
+                        <a href="/about" class="text-white" style="text-decoration: none;"> About Us</a>
                     </p>
 
                     <p>
-                        <a href="#" class="text-white" style="text-decoration: none;"> Menu</a>
+                        <a href="/menu" class="text-white" style="text-decoration: none;"> Menu</a>
                     </p>
 
-                    <p> <a href="#" class="text-white" style="text-decoration: none;"> Contact</a>
+                    <p> <a href="/gallery" class="text-white" style="text-decoration: none;"> Gallery</a>
                     </p>
 
                 </div>
@@ -415,7 +461,8 @@
                     </p>
 
                     <p>
-                        <i class="bi bi-instagram "></i>
+                        <a href="https://instagram.com/sans.space?igshid=MmU2YjMzNjRlOQ=="> <i
+                                class="bi bi-instagram text-white"></i></a>
                     </p>
 
                 </div>
@@ -439,7 +486,9 @@
             </div>
         </div>
     </footer>
-    <script src="../js/scripts.js"></script>
+
+
+    <script src="../static/js/scripts.js"></script>
 </body>
 
 </html>

@@ -13,14 +13,14 @@ if(getStatus && getStatus ==="close"){
     sidebar.classList.toggle("close");
 }
 
-modeToggle.addEventListener("click", () =>{
-    body.classList.toggle("dark");
-    if(body.classList.contains("dark")){
-        localStorage.setItem("mode", "dark");
-    }else{
-        localStorage.setItem("mode", "light");
-    }
-});
+// modeToggle.addEventListener("click", () =>{
+//     body.classList.toggle("dark");
+//     if(body.classList.contains("dark")){
+//         localStorage.setItem("mode", "dark");
+//     }else{
+//         localStorage.setItem("mode", "light");
+//     }
+// });
 
 sidebarToggle.addEventListener("click", () => {
     sidebar.classList.toggle("close");

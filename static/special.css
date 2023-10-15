@@ -1,0 +1,54 @@
+body {
+    background-color: #ffffff;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    z-index: 3;
+}
+
+.nav-link {
+    font-size: 16px;
+}
+
+.nav-link.active {
+    font-weight: 700;
+}
+
+/* navbar-color */
+.nav-color {
+    background-color: #382D33;
+    transition: all ease-in-out 0.3s;
+}
+
+.bg-transparent {
+    transition: all ease-in 0.3s;
+}
+
+.dropdown {
+    background: none;
+    color: white;
+}
+
+.dropdown:hover {
+    color: black;
+    background-color: #ffffff;
+}
+
+.dropdown-menu {
+    background-color: #382D33;
+}
+
+.dropdown-item {
+    color: white;
+}
+
+#hero {
+    background-image: url(../static/img/img-special/bg.png);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}

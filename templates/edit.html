@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!-- link boostrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- icon bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../static/home.css">
+    <!-- link-font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&family=Poppins:wght@100;200&display=swap"
+        rel="stylesheet">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <title>Admin</title>
+    <link rel="stylesheet" href="../static/admin.css">
+    <script src="../static/js/data.js"></script>
+    <script>
+        function edit() {
+            let nama = $('#nama').val();
+            let telepon = $('#telepon').val();
+            let komunitas = $('#komunitas').val();
+            let date = $('#date').val();
+            let time = $('#time').val();
+            let durasi = $('#durasi').val();
+            let jumlah = $('#jumlah').val();
+            let piliharea = $('#piliharea').val();
+            let pilihmenu= $('#pilihmenu').val();
+            let jammenu = $('#jammenu').val();
+            let dp = $('#dp').val();
+            let id = $('#_id').val();
+            $.ajax({
+                type: 'POST',
+                url: '/edit',
+                data: {
+                    nama_give: nama,
+                    telepon_give: telepon,
+                    komunitas_give: komunitas,
+                    date_give: date,
+                    time_give: time,
+                    durasi_give: durasi,
+                    jumlah_give: jumlah,
+                    piliharea_give:piliharea,
+                    pilihmenu_give:pilihmenu,
+                    jammenu_give: jammenu,
+                    dp_give: dp,
+                    id_give: id
+                },
+                success: function (response) {
+                    alert(response.msg)
+                    window.location.href = '/admine'
+                }
+            })
+
+        }
+    </script>
+    
+</head>
+
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="../static/img/img-admin/Logo 1.png " alt="">
+            </div>
+
+            <span class="logo_name">Sans.CO</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <!-- <li><a href="dashboard.html">
+                        <i class="uil uil-estate"></i>
+                        <span class="link-name">Dahsboard</span>
+                    </a></li> -->
+                <li><a href="/adminm">
+                        <i class="uil uil-files-landscapes"></i>
+                        <span class="link-name">Meeting Room</span>
+                    </a></li>
+                <li><a href="/admine">
+                        <i class="uil uil-chart"></i>
+                        <span class="link-name">Event</span>
+                    </a></li>
+
+            </ul>
+
+            <ul class="logout-mode">
+                <li><a href="#">
+                        <i class="uil uil-signout"></i>
+                        <span class="link-name">Logout</span>
+                    </a></li>
+
+                <li class="mode">
+
+                    <div class="mode-toggle">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here...">
+            </div>
+
+            <img src="../static/img/6.png" alt="">
+        </div>
+
+        <div class="dash-content">
+            <div class="overview">
+                <div class="title">
+                    <i class="uil uil-tachometer-fast-alt"></i>
+                    <span class="text">Event</span>
+                </div>
+
+               
+            </div>
+
+            <div class="activity">
+                <div class="title">
+                    <span class="text">Edit</span>
+                </div>
+            </div>
+
+
+            <div class="card border-0 shadow mb-4 ">
+                <div class="card-body mt-4">
+                    <div class="table-responsive">
+                        <form action="" method="post">
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Nama</label>
+                                <input type="hidden" class="form-control" value="{{data[0]['_id']}}" style="border-radius: 13px;" id="_id">
+
+                                <input type="text" class="form-control"value="{{data[0]['Nama']}}" style="border-radius: 13px;"
+                                    placeholder="Enter the Time" required id="nama" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Telepon</label>
+                                <input type="number" class="form-control"value="{{data[0]['Telepon']}}" style="border-radius: 13px;"
+                                    placeholder="Enter the Time" required id="telepon" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Komunitas</label>
+                                <input type="text" class="form-control"value="{{data[0]['Komunitas']}}" style="border-radius: 13px;"
+                                    placeholder="Enter the Time" required id="komunitas" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Telepon</label>
+                                <input type="text" class="form-control"value="{{data[0]['Telepon']}}" style="border-radius: 13px;"
+                                    placeholder="Enter the Time" required id="telepon" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Tanggal</label>
+
+                                <input type="date" class="form-control" value="{{data[0]['Tanggal']}}" style="border-radius: 13px;"
+                                    placeholder="Enter the Price" required id="date" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Jam</label>
+                                <input type="time" class="form-control"value="{{data[0]['Jam']}}" style="border-radius: 13px;"
+                                    placeholder="Enter the Time" required id="time" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Durasi</label>
+                                <input type="text" class="form-control" value="{{data[0]['Durasi']}}" style="border-radius: 13px;"
+                                    placeholder="Enter the time" required id="durasi" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Jumlah orang</label>
+                                <input type="number" class="form-control" value="{{data[0]['jumlah_orang']}}" style="border-radius: 13px;"
+                                    placeholder="Enter the time" required id="jumlah" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Area</label>
+                                <!-- <input type="text" "
+                                    placeholder="Enter the area" required id="piliharea" /> -->
+                                    <select name=""class="form-control"  style="border-radius: 13px;" id="piliharea" value="{{data[0]['Area']}}" aria-label="select exampleModal" style="max-width: 100%; padding: 4px;">
+                                        <option disabled></option>
+                                        <option>min 30 Orang : Event Space depan</option>
+                                        <option>min 50 orang: Event Space Depan, Event Space Belakang</option>
+                                        <option>min70 orang: Event Space Depan, Event Space Belakang, Amphiteater</option>
+                                    </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Menu</label>
+                                <!-- <input type="text" "
+                                    placeholder="Enter the area" required id="piliharea" /> -->
+                                    <select name=""class="form-control"  style="border-radius: 13px;" id="pilihmenu" value="{{data[0]['Menu']}}" aria-label="select exampleModal" style="max-width: 100%; padding: 4px;">
+                                        <option disabled></option>
+                                        <option>1. Paket A (45K)</option>
+                                        <option>3. Paket B (45K)</option>
+                                        <option>3. Paket Gold (40K)</option>
+                                        <option>4. Paket Silver (35K)</option>
+                                    </select>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Jam keluar manu</label>
+                                <input type="time" class="form-control"value="{{data[0]['Jam_keluar_menu']}}" style="border-radius: 13px;"
+                                    placeholder="Enter the Time" required id="jammenu" />
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">dp</label>
+                                <input type="number" class="form-control"value="{{data[0]['dp']}}" style="border-radius: 13px;"
+                                    placeholder="Enter the Time" required id="dp" />
+                            </div>
+                            
+                            <div class="mb-3 ">
+                                <button type="submit" class="btn btn-danger" onclick="edit()" style="margin-left: 90%;">Edit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+    </section>
+
+    <script src="../static/js/admin.js"></script>
+</body>
+
+</html>
