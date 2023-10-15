@@ -28,7 +28,6 @@ def about():
 
 @app.route('/menu')
 def menu():
-    # Mengambil data dari MongoDB
     return render_template('menu.html')
 
 @app.route('/gallery')
@@ -109,7 +108,7 @@ def post():
 
     db.event.insert_one(doc)
     return jsonify({
-        'msg':'data berhasil di simpan'
+        'msg':'Terimakasih sudah reservasi event'
     })
 
 
