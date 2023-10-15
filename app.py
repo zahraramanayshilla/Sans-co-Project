@@ -114,6 +114,13 @@ def post():
 
 
 
+# LOGIN
+
+
+
+
+
+
 # admin-page-meeting
 @app.route('/adminm', methods=['GET'])
 def adminm():
@@ -165,7 +172,6 @@ def ubahan():
 def deletee():
     id=request.args.get('id')
     db.meeting.delete_one({'_id':ObjectId(id)})
-
     data=list(db.meeting.find({}))
     return render_template('admin2.html',data=data)
 
