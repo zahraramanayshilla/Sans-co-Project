@@ -171,8 +171,11 @@ def ubahan():
 def deletee():
     id=request.args.get('id')
     db.meeting.delete_one({'_id':ObjectId(id)})
-    data=list(db.meeting.find({}))
-    return render_template('admin2.html',data=data)
+    return jsonify({
+        'msg':'Yakin untuk menghapus data reservasi Meeting room?'
+    })
+    # data=list(db.meeting.find({}))
+    # return render_template('admin2.html',data=data)
 
 
 
@@ -231,9 +234,11 @@ def ubah():
 def delete():
     id=request.args.get('id')
     db.event.delete_one({'_id':ObjectId(id)})
-
-    data=list(db.event.find({}))
-    return render_template('admin-event2.html',data=data)
+    return jsonify({
+        'msg':'Yakin untuk menghapus data reservasi event?'
+    })
+    # data=list(db.event.find({}))
+    # return render_template('admin-event2.html',data=data)
 
 
 

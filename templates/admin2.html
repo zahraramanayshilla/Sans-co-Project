@@ -23,12 +23,46 @@
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <title>Admin</title>
     <link rel="stylesheet" href="../static/admin.css">
-<!-- 
+
     <script type="">
-        $(document).ready(function () {
-            listing();
-        });
-    </script> -->
+        function delet() {
+            let nama = $('#nama').val();
+            let telepon = $('#telepon').val();
+            let komunitas = $('#komunitas').val();
+            let date = $('#date').val();
+            let time = $('#time').val();
+            let durasi = $('#durasi').val();
+            let jumlah = $('#jumlah').val();
+            let piliharea = $('#piliharea').val();
+            let pilihmenu= $('#pilihmenu').val();
+            let jammenu = $('#jammenu').val();
+            let dp = $('#dp').val();
+            let id = $('#_id').val();
+            $.ajax({
+                type: 'GET',
+                url: '/deletee',
+                data: {
+                    nama_give: nama,
+                    telepon_give: telepon,
+                    komunitas_give: komunitas,
+                    date_give: date,
+                    time_give: time,
+                    durasi_give: durasi,
+                    jumlah_give: jumlah,
+                    piliharea_give:piliharea,
+                    pilihmenu_give:pilihmenu,
+                    jammenu_give: jammenu,
+                    dp_give: dp,
+                    id_give: id
+                },
+                success: function (response) {
+                    alert(response.msg)
+                    window.location.href = '/adminm'
+                }
+            })
+
+        }
+    </script>
     <script src="../static/js/data.js"></script>
 
 </head>
@@ -189,7 +223,7 @@
                                         style="font-size:18px; color: white;" href="/editt?id={{_id}}"> <i
                                             class="bi bi-pencil "></i></a></button>
 
-                                <button type="button" class="btn btn-danger"> <a style="font-size:18px; color: white;"
+                                <button type="button" class="btn btn-danger"> <a style="font-size:18px; color: white;" onclick="delet()"
                                         href="/deletee?id={{_id}}"> <i class="bi bi-trash3"></i></a>
                                 </button>
                             </div>
