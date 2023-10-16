@@ -64,7 +64,7 @@ def posting():
         'Tanggal':date,
         'Jam':time,
         'Durasi':durasi,
-        'jumlah orang':jumlah,
+        'jumlah_orang':jumlah,
         'Area':pilih,
         'dp':dp
     }
@@ -112,15 +112,77 @@ def post():
     })
 
 
+# @app.route('/nyoba',methods=['GET'])
+# def nyoba():
+#     return render_template('nyoba.html')
+
+# @app.route('/nyoba/postingg',methods=['POST'])
+# def postingg():
+#     username = request.form.get('username_give')
+#     password = request.form.get('password_give')
+
+#     # print('nama','telepon','komunitas','date','time','durasi','jumlah','dp')
+
+#     doc={
+#         'username':username,
+#         'password':password,
+#     }
+#     db.login.insert_one(doc)
+#     return jsonify({
+#         'msg':'Terimakasih sudah Reserevasi'
+#     })
+
 
 # LOGIN
+@app.route('/login',methods=['GET'])
+def login():
+    token_receive = request.cookies.get(TOKEN_KEY)
+    try:
+        payload = jwt.decode(
+            token_receive,
+            SECRET_KEY,
+            algorithms=['HS256']
+        )
+        user_info = db.users.find_one({'username': payload.get('id')})
+        return redirect(url_for('adminm', user_info=user_info))
+    except (jwt.ExpiredSignatureError, jwt.exceptions.DecodeError):
+        msg = request.args.get('msg')
+        return render_template('login2.html', msg=msg)
 
+
+@app.route('/login_save', methods=['POST'])
+def login_save():
+    username_receive = request.form['username_login']
+    password_receive = request.form['password_login']
+    pw_hash = hashlib.sha256(password_receive.encode('utf-8')).hexdigest()
+    result = db.login.find_one({
+        'username': username_receive,
+        'password': password_receive
+    })
+    if result:
+        payload = {
+            'id': username_receive,
+            "exp": datetime.utcnow() + timedelta(seconds=60 * 60 * 1),
+        }
+        token = jwt.encode(payload, SECRET_KEY, algorithm="HS256")
+        return jsonify({'result': 'success', 'token': token})
+    else:
+        return jsonify({
+            "result": "fail",
+            "msg": "Kami tidak dapat menemukan pengguna dengan kombinasi id/kata sandi tersebut",
+        })
+    # return render_template('login2.html')
 
 
 
 
 
 # admin-page-meeting
+
+@app.route('/admin_dashboard', methods=['GET'])
+def admin_dashboard():
+    return render_template('dashboard.html')
+
 @app.route('/adminm', methods=['GET'])
 def adminm():
     data=db.meeting.find({})

@@ -40,3 +40,8 @@ function listing() {
 
 }
 
+function sign_out() {
+    $.removeCookie("mytoken", { path: "/" });
+    alert("Anda telah keluar");
+    window.location.href = "/login";
+  }

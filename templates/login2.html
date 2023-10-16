@@ -10,35 +10,40 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300&family=Poppins:wght@100;200&display=swap"
         rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
     <link rel="stylesheet" href="../static/login.css">
+    <script src="../static/js/login2.js"></script>
     <title>Document</title>
+
 </head>
 
 <body>
-   <section class="container forms">
-            <div class="form login">
-                <div class="form-content">
-                    <header>Login</header>
-                    <form action="#">
-                        <div class="field input-field">
-                            <input type="email" placeholder="Email" class="input">
-                        </div>
+    <section class="container forms">
+        <div class="form login">
+            <div class="form-content">
+                <header>Login</header>
+                <form action="#">
+                    <div class="field input-field">
+                        <input type="email" placeholder="Email" class="input" id="input-username">
+                    </div>
 
-                        <div class="field input-field">
-                            <input type="password" placeholder="Password" class="password">
-                            <i class='bx bx-hide eye-icon'></i>
-                        </div>
-
-                        <div class="form-link">
-                            <a href="#" class="forgot-pass">Forgot password?</a>
-                        </div>
-
-                        <div class="field button-field">
-                            <button>Login</button>
-                        </div>
-                    </form>
+                    <div class="field input-field">
+                        <input type="password" placeholder="Password" class="password" id="input-password">
+                        <i class='bx bx-hide eye-icon'></i>
+                    </div>
 
                     <div class="form-link">
+                        <a href="#" class="forgot-pass">Forgot password?</a>
+                    </div>
+
+                    <div class="field button-field">
+                        <button onclick="sign_in()">Login</button>
+                    </div>
+                </form>
+
+                <!-- <div class="form-link">
                         <span>Don't have an account? <a href="#" class="link signup-link">Signup</a></span>
                     </div>
                 </div>
@@ -48,13 +53,13 @@
             
                 <div class="media-option">
                     <a href="" class="field google" ><i class='bx bxl-google google-icon '></i>Log in with Google</a>
-                </div>
+                </div> -->
 
             </div>
 
             <!-- Signup Form -->
 
-            <div class="form signup">
+            <!-- <div class="form signup">
                 <div class="form-content">
                     <header>Signup</header>
                     <form action="#">
@@ -86,9 +91,9 @@
                 <div class="media-option">
                     <a href="" class="field google" ><i class='bx bxl-google google-icon '></i>Log in with Google</a>
                 </div>
-            </div>
-        </section>
-    <script src="../js/login.js"></script>
+            </div> -->
+    </section>
+    <script src="../static/js/login.js"></script>
 </body>
 
 </html>
