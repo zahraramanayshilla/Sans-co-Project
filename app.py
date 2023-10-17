@@ -144,7 +144,7 @@ def login():
             algorithms=['HS256']
         )
         user_info = db.users.find_one({'username': payload.get('id')})
-        return redirect(url_for('adminm', user_info=user_info))
+        return redirect(url_for('admin_dashboard', user_info=user_info))
     except (jwt.ExpiredSignatureError, jwt.exceptions.DecodeError):
         msg = request.args.get('msg')
         return render_template('login2.html', msg=msg)

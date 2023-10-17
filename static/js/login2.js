@@ -18,10 +18,16 @@ function sign_in() {
                 let token = response["token"];
                 $.cookie("mytoken", token, { path: "/" });
                 alert("Login Berhasil!");
-                window.location.href = "/adminm";
+                window.location.href = "/admin_dashboard";
             } else {
                 alert(response["msg"]);
             }
         },        
     });
 }
+
+function sign_out() {
+    $.removeCookie("mytoken", { path: "/" });
+    alert("Anda telah keluar");
+    window.location.href = "/login";
+  }
