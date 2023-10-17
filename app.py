@@ -1,3 +1,6 @@
+import os
+from os.path import join, dirname
+from dotenv import load_dotenv
 from flask import Flask, render_template,url_for,redirect,request,jsonify
 import requests
 import jwt
@@ -7,9 +10,7 @@ import hashlib
 from werkzeug.utils import secure_filename
 from pymongo.mongo_client import MongoClient
 from bson import ObjectId
-import os
-from os.path import join, dirname
-from dotenv import load_dotenv
+
 
 
 dotenv_path = join(dirname(__file__), '.env')
