@@ -1,0 +1,93 @@
+body {
+    background-color: #251e22;
+    background-blend-mode: multiply;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    z-index: 3;
+}
+
+.nav-link {
+    font-size: 16px;
+}
+
+.nav-link.active {
+    font-weight: 700;
+}
+
+/* navbar-color */
+.nav-color {
+    background-color: #382D33;
+    transition: all ease-in-out 0.3s;
+}
+
+.bg-transparent {
+    transition: all ease-in 0.3s;
+}
+
+/* buton hover */
+.btn-reservasi:hover {
+    background-color: #382D33;
+}
+
+.dropdown {
+    background: none;
+    color: white;
+}
+
+.dropdown:hover {
+    color: black;
+    background-color: #ffffff;
+}
+
+.dropdown-menu {
+    background-color: #382D33;
+}
+
+.dropdown-item {
+    color: white;
+}
+
+/* modal reservasi */
+.modal-body a:hover {
+    background-color: #382D33;
+}
+
+.btn-here:hover {
+    color: #fff;
+    background-color: #382D33;
+    font-weight: 500;
+
+}
+
+.modal-footer>input {
+    background-color: #0a0000;
+}
+
+
+
+.scroll-bg {
+
+    background-color: #ffffff;
+    width: 90%;
+    margin: 5px auto;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.scroll-div {
+
+    background-color: #ffffff;
+    height: 250px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.sroll-object {
+
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+    padding: 40px;
+}
