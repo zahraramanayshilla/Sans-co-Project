@@ -175,8 +175,6 @@ def login_save():
 
 
 
-
-
 # admin-page-meeting
 
 @app.route('/admin_dashboard', methods=['GET'])
