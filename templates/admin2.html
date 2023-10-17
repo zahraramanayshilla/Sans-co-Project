@@ -16,7 +16,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap" />
     <!-- icon bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-
+    <!-- Animate style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- jquery,cookie -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -63,12 +64,12 @@
 
         }
     </script>
-  
+
 
 </head>
 
 <body>
-    <nav>
+    <nav >
         <div class="logo-name">
             <div class="logo-image">
                 <img src="../static/img/img-admin/Logo 1.png " alt="">
@@ -95,7 +96,7 @@
             </ul>
 
             <ul class="logout-mode">
-                <li><a href="#" onclick="sign_out()" >
+                <li><a href="#" onclick="sign_out()">
                         <i class="uil uil-signout"></i>
                         <span class="link-name">Logout</span>
                     </a></li>
@@ -223,8 +224,8 @@
                                         style="font-size:18px; color: white;" href="/editt?id={{_id}}"> <i
                                             class="bi bi-pencil "></i></a></button>
 
-                                <button type="button" class="btn btn-danger"> <a style="font-size:18px; color: white;" onclick="delet()"
-                                        href="/deletee?id={{_id}}"> <i class="bi bi-trash3"></i></a>
+                                <button type="button" class="btn btn-danger"> <a style="font-size:18px; color: white;"
+                                        onclick="delet()" href="/deletee?id={{_id}}"> <i class="bi bi-trash3"></i></a>
                                 </button>
                             </div>
 

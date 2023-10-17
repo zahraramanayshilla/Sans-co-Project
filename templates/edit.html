@@ -21,6 +21,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&family=Poppins:wght@100;200&display=swap"
         rel="stylesheet">
+    <!-- Animate style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -38,7 +40,7 @@
             let durasi = $('#durasi').val();
             let jumlah = $('#jumlah').val();
             let piliharea = $('#piliharea').val();
-            let pilihmenu= $('#pilihmenu').val();
+            let pilihmenu = $('#pilihmenu').val();
             let jammenu = $('#jammenu').val();
             let dp = $('#dp').val();
             let id = $('#_id').val();
@@ -53,8 +55,8 @@
                     time_give: time,
                     durasi_give: durasi,
                     jumlah_give: jumlah,
-                    piliharea_give:piliharea,
-                    pilihmenu_give:pilihmenu,
+                    piliharea_give: piliharea,
+                    pilihmenu_give: pilihmenu,
                     jammenu_give: jammenu,
                     dp_give: dp,
                     id_give: id
@@ -67,7 +69,7 @@
 
         }
     </script>
-    
+
 </head>
 
 <body>
@@ -131,7 +133,7 @@
                     <span class="text">Event</span>
                 </div>
 
-               
+
             </div>
 
             <div class="activity">
@@ -147,86 +149,92 @@
                         <form action="" method="post">
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Nama</label>
-                                <input type="hidden" class="form-control" value="{{data[0]['_id']}}" style="border-radius: 13px;" id="_id">
+                                <input type="hidden" class="form-control" value="{{data[0]['_id']}}"
+                                    style="border-radius: 13px;" id="_id">
 
-                                <input type="text" class="form-control"value="{{data[0]['Nama']}}" style="border-radius: 13px;"
-                                    placeholder="Enter the Time" required id="nama" />
+                                <input type="text" class="form-control" value="{{data[0]['Nama']}}"
+                                    style="border-radius: 13px;" placeholder="Enter the Time" required id="nama" />
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Telepon</label>
-                                <input type="number" class="form-control"value="{{data[0]['Telepon']}}" style="border-radius: 13px;"
-                                    placeholder="Enter the Time" required id="telepon" />
+                                <input type="number" class="form-control" value="{{data[0]['Telepon']}}"
+                                    style="border-radius: 13px;" placeholder="Enter the Time" required id="telepon" />
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Komunitas</label>
-                                <input type="text" class="form-control"value="{{data[0]['Komunitas']}}" style="border-radius: 13px;"
-                                    placeholder="Enter the Time" required id="komunitas" />
+                                <input type="text" class="form-control" value="{{data[0]['Komunitas']}}"
+                                    style="border-radius: 13px;" placeholder="Enter the Time" required id="komunitas" />
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Telepon</label>
-                                <input type="text" class="form-control"value="{{data[0]['Telepon']}}" style="border-radius: 13px;"
-                                    placeholder="Enter the Time" required id="telepon" />
+                                <input type="text" class="form-control" value="{{data[0]['Telepon']}}"
+                                    style="border-radius: 13px;" placeholder="Enter the Time" required id="telepon" />
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Tanggal</label>
 
-                                <input type="date" class="form-control" value="{{data[0]['Tanggal']}}" style="border-radius: 13px;"
-                                    placeholder="Enter the Price" required id="date" />
+                                <input type="date" class="form-control" value="{{data[0]['Tanggal']}}"
+                                    style="border-radius: 13px;" placeholder="Enter the Price" required id="date" />
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Jam</label>
-                                <input type="time" class="form-control"value="{{data[0]['Jam']}}" style="border-radius: 13px;"
-                                    placeholder="Enter the Time" required id="time" />
+                                <input type="time" class="form-control" value="{{data[0]['Jam']}}"
+                                    style="border-radius: 13px;" placeholder="Enter the Time" required id="time" />
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Durasi</label>
-                                <input type="text" class="form-control" value="{{data[0]['Durasi']}}" style="border-radius: 13px;"
-                                    placeholder="Enter the time" required id="durasi" />
+                                <input type="text" class="form-control" value="{{data[0]['Durasi']}}"
+                                    style="border-radius: 13px;" placeholder="Enter the time" required id="durasi" />
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Jumlah orang</label>
-                                <input type="number" class="form-control" value="{{data[0]['jumlah_orang']}}" style="border-radius: 13px;"
-                                    placeholder="Enter the time" required id="jumlah" />
+                                <input type="number" class="form-control" value="{{data[0]['jumlah_orang']}}"
+                                    style="border-radius: 13px;" placeholder="Enter the time" required id="jumlah" />
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Area</label>
                                 <!-- <input type="text" "
                                     placeholder="Enter the area" required id="piliharea" /> -->
-                                    <select name=""class="form-control"  style="border-radius: 13px;" id="piliharea" value="{{data[0]['Area']}}" aria-label="select exampleModal" style="max-width: 100%; padding: 4px;">
-                                        <option disabled></option>
-                                        <option>min 30 Orang : Event Space depan</option>
-                                        <option>min 50 orang: Event Space Depan, Event Space Belakang</option>
-                                        <option>min70 orang: Event Space Depan, Event Space Belakang, Amphiteater</option>
-                                    </select>
+                                <select name="" class="form-control" style="border-radius: 13px;" id="piliharea"
+                                    value="{{data[0]['Area']}}" aria-label="select exampleModal"
+                                    style="max-width: 100%; padding: 4px;">
+                                    <option disabled></option>
+                                    <option>min 30 Orang : Event Space depan</option>
+                                    <option>min 50 orang: Event Space Depan, Event Space Belakang</option>
+                                    <option>min70 orang: Event Space Depan, Event Space Belakang, Amphiteater</option>
+                                </select>
                             </div>
 
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Menu</label>
                                 <!-- <input type="text" "
                                     placeholder="Enter the area" required id="piliharea" /> -->
-                                    <select name=""class="form-control"  style="border-radius: 13px;" id="pilihmenu" value="{{data[0]['Menu']}}" aria-label="select exampleModal" style="max-width: 100%; padding: 4px;">
-                                        <option disabled></option>
-                                        <option>1. Paket A (45K)</option>
-                                        <option>3. Paket B (45K)</option>
-                                        <option>3. Paket Gold (40K)</option>
-                                        <option>4. Paket Silver (35K)</option>
-                                    </select>
+                                <select name="" class="form-control" style="border-radius: 13px;" id="pilihmenu"
+                                    value="{{data[0]['Menu']}}" aria-label="select exampleModal"
+                                    style="max-width: 100%; padding: 4px;">
+                                    <option disabled></option>
+                                    <option>1. Paket A (45K)</option>
+                                    <option>3. Paket B (45K)</option>
+                                    <option>3. Paket Gold (40K)</option>
+                                    <option>4. Paket Silver (35K)</option>
+                                </select>
                             </div>
-                            
+
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Jam keluar manu</label>
-                                <input type="time" class="form-control"value="{{data[0]['Jam_keluar_menu']}}" style="border-radius: 13px;"
-                                    placeholder="Enter the Time" required id="jammenu" />
+                                <input type="time" class="form-control" value="{{data[0]['Jam_keluar_menu']}}"
+                                    style="border-radius: 13px;" placeholder="Enter the Time" required id="jammenu" />
                             </div>
-                            
+
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">dp</label>
-                                <input type="number" class="form-control"value="{{data[0]['dp']}}" style="border-radius: 13px;"
-                                    placeholder="Enter the Time" required id="dp" />
+                                <input type="number" class="form-control" value="{{data[0]['dp']}}"
+                                    style="border-radius: 13px;" placeholder="Enter the Time" required id="dp" />
                             </div>
-                            
+
                             <div class="mb-3 ">
-                                <button type="submit" class="btn btn-danger" onclick="edit()" style="margin-left: 90%;">Edit</button>
+                                <button type="submit" class="btn btn-danger" onclick="edit()"
+                                    style="margin-left: 90%;">Edit</button>
                             </div>
                         </form>
                     </div>
