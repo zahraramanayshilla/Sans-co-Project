@@ -112,27 +112,6 @@ def post():
     })
 
 
-# @app.route('/nyoba',methods=['GET'])
-# def nyoba():
-#     return render_template('nyoba.html')
-
-# @app.route('/nyoba/postingg',methods=['POST'])
-# def postingg():
-#     username = request.form.get('username_give')
-#     password = request.form.get('password_give')
-
-#     # print('nama','telepon','komunitas','date','time','durasi','jumlah','dp')
-
-#     doc={
-#         'username':username,
-#         'password':password,
-#     }
-#     db.login.insert_one(doc)
-#     return jsonify({
-#         'msg':'Terimakasih sudah Reserevasi'
-#     })
-
-
 # LOGIN
 @app.route('/login',methods=['GET'])
 def login():
@@ -171,7 +150,6 @@ def login_save():
             "result": "fail",
             "msg": "Kami tidak dapat menemukan pengguna dengan kombinasi id/kata sandi tersebut",
         })
-    # return render_template('login2.html')
 
 
 
