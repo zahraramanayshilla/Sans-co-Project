@@ -7,12 +7,23 @@ import hashlib
 from werkzeug.utils import secure_filename
 from pymongo.mongo_client import MongoClient
 from bson import ObjectId
+import os
+from os.path import join, dirname
+from dotenv import load_dotenv
+
+
+dotenv_path = join(dirname(__file__), '.env')
+load_dotenv(dotenv_path)
+
+
+MONGODB_URI = os.environ.get("mongodb://test:sparta@ac-tcz4ypm-shard-00-00.jrmp0f9.mongodb.net:27017,ac-tcz4ypm-shard-00-01.jrmp0f9.mongodb.net:27017,ac-tcz4ypm-shard-00-02.jrmp0f9.mongodb.net:27017/?ssl=true&replicaSet=atlas-cjylmf-shard-0&authSource=admin&retryWrites=true&w=majority")
+DB_NAME = os.environ.get("sansco")
+
 
 app = Flask(__name__)
 
 SECRET_KEY = "SPARTA"
 TOKEN_KEY = 'mytoken'
-
 
 client = MongoClient('mongodb://test:sparta@ac-tcz4ypm-shard-00-00.jrmp0f9.mongodb.net:27017,ac-tcz4ypm-shard-00-01.jrmp0f9.mongodb.net:27017,ac-tcz4ypm-shard-00-02.jrmp0f9.mongodb.net:27017/?ssl=true&replicaSet=atlas-cjylmf-shard-0&authSource=admin&retryWrites=true&w=majority')  # Ganti URL sesuai dengan pengaturan MongoDB Anda
 db = client.sansco  # Ganti 'mydatabase' dengan nama database Anda
