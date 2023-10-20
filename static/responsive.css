@@ -19,21 +19,14 @@
 
 @media screen and (min-width :320px) and (max-width :425px) {
   .menu-page img {
-    width: 15%;
+    width: 60px;
     vertical-align: bottom;
   }
 
-
   .img-about {
     display: none;
-
   }
 
-  .garis-menu {
-    margin-top: -200px;
-
-    width: 30%;
-  }
 
   .hero-img {
     width: 20%;
