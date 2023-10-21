@@ -47,6 +47,7 @@ body {
     background-image: url(../static/img/img-special/bg.png);
     background-blend-mode: multiply;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-position: center;
     background-size: cover;
     height: 100vh;
